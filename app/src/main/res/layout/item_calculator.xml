@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_left"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:singleLine="true"
+            android:text="4mm" />
+
+        <TextView
+            style="@style/VerticalLineStyle"
+            android:background="@color/main_tab_gray"
+            android:layout_marginBottom="12dp"
+            android:layout_marginTop="12dp" />
+
+        <TextView
+            android:id="@+id/tv_right"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:singleLine="true"
+            android:text="4mm" />
+
+        <TextView
+            style="@style/VerticalLineStyle"
+            android:background="@color/gray" />
+    </LinearLayout>
+
+    <TextView
+        style="@style/CommonLineStyle"
+        android:background="@color/gray" />
+
+</LinearLayout>

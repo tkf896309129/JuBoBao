@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="@color/white">
+
+
+    <TextView
+        android:id="@+id/tv_type_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:text="1.00mm"
+        android:textColor="@color/address_black_key"
+        android:textSize="@dimen/choose_pro_detail" />
+
+    <ImageView
+        android:id="@+id/iv_gou"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:src="@mipmap/gouxuan_icon" />
+
+    <!--分割线-->
+    <TextView style="@style/CommonLineStyle" />
+
+</RelativeLayout>

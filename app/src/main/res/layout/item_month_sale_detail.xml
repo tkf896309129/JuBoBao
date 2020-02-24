@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="78dp"
+                android:background="@color/white">
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="浙江兰州有限公司"/>
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_name"
+        android:layout_below="@+id/tv_name"
+        android:layout_marginTop="4dp"
+        android:text="2019-10-27"/>
+
+    <TextView
+        android:id="@+id/tv_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="20dp"
+        android:text="+2000"
+        android:textColor="@color/address_black_key"/>
+
+    <TextView
+        android:id="@+id/tv_sale_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_time"
+        android:layout_below="@+id/tv_time"
+        android:layout_marginTop="4dp"
+        android:text="所属销售：测试"/>
+
+    <TextView
+        style="@style/CommonLineStyle"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dp"/>
+
+</RelativeLayout>

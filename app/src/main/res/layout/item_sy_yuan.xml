@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/sectionTextView"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/selectBackColor"
+        android:paddingLeft="8dip"
+        android:text="A"
+        android:textSize="@dimen/address_key_size"
+        android:visibility="gone" />
+
+    <TextView style="@style/CommonLineStyle" />
+
+    <TextView
+        android:id="@+id/cityName"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:text="河北沙河昌辉镀膜色玻批发部" />
+
+    <TextView
+        style="@style/CommonLineStyle"
+        android:layout_marginBottom="10dp" />
+</LinearLayout>

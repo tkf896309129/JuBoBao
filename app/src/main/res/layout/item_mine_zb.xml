@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_class_type"
+            style="@style/CommonTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="类型：浙江温州门窗项目" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:text="2016-11-12" />
+
+        <TextView
+            android:id="@+id/tv_rest_days"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/tv_time"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:text="剩余6天" />
+
+        <TextView
+            android:id="@+id/tv_standard"
+            style="@style/CommonTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_class_type"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="规模：1000-5000(平方米)" />
+    </RelativeLayout>
+
+    <TextView
+        style="@style/CommonLineStyle"
+        android:layout_marginTop="10dp" />
+
+
+</LinearLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:textColor="@color/address_black_key"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="浙江兰州有限公司"/>
+
+        <TextView
+            android:id="@+id/tv_sale_name"
+            android:textColor="@color/address_black_key"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv_name"
+            android:layout_below="@+id/tv_name"
+            android:layout_marginTop="4dp"
+            android:text="2019-07-20"/>
+
+        <TextView
+            android:id="@+id/tv_all_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_sale_name"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/address_black_key"
+            android:textSize="14dp"/>
+
+        <TextView
+            android:id="@+id/tv_rest_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/tv_sale_name"
+            android:layout_marginRight="20dp"
+            android:textColor="@color/address_black_key"
+            android:textSize="14dp"/>
+
+    </RelativeLayout>
+
+    <TextView
+        style="@style/CommonLineStyle"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"/>
+</LinearLayout>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/tool_bar_style"></include>
+
+
+    <!--银行卡-->
+    <LinearLayout
+        style="@style/MainRelativityStyle"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingTop="15dp">
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="银行卡"
+            style="@style/CommonTextStyle" />
+
+        <TextView
+            android:id="@+id/tv_card_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="中国银行储蓄卡"
+            style="@style/CommonTextStyle"/>
+
+    </LinearLayout>
+
+
+    <!--卡号-->
+    <LinearLayout
+        style="@style/MainRelativityStyle"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="15dp"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="卡号"
+            style="@style/CommonTextStyle"/>
+
+        <TextView
+            android:id="@+id/tv_card_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="3234 2343 5656 3245 003"
+            style="@style/CommonTextStyle" />
+
+    </LinearLayout>
+
+    <!--分割线-->
+    <TextView style="@style/CommonLineStyle" />
+
+
+    <!--姓名-->
+
+    <LinearLayout
+        style="@style/MainRelativityStyle"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="卡号"
+            style="@style/CommonTextStyle"/>
+
+
+        <EditText
+            android:id="@+id/et_card_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/et_blank_bg"
+            android:hint="持卡人姓名"
+            style="@style/CommonTextStyle" />
+    </LinearLayout>
+
+    <!--分割线-->
+    <TextView style="@style/CommonLineStyle" />
+
+
+    <!--手机号-->
+    <LinearLayout
+        style="@style/MainRelativityStyle"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="手机号"
+            style="@style/CommonTextStyle"/>
+
+
+        <EditText
+            android:id="@+id/et_phone_num"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/et_blank_bg"
+            android:hint="银行预留手机号"
+            style="@style/CommonTextStyle" />
+    </LinearLayout>
+
+    <!--分割线-->
+    <TextView style="@style/CommonLineStyle" />
+
+    <!--身份证-->
+    <LinearLayout
+        style="@style/MainRelativityStyle"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="身份证"
+            style="@style/CommonTextStyle" />
+
+
+        <EditText
+            android:id="@+id/et_card_no"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/et_blank_bg"
+            android:hint="持卡人身份证号"
+            style="@style/CommonTextStyle" />
+    </LinearLayout>
+
+    <!--分割线-->
+    <TextView style="@style/CommonLineStyle" />
+
+</LinearLayout>

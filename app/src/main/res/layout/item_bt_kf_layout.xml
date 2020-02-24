@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_apply_name"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_man_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/address_black_key"
+            android:layout_marginLeft="10dp"
+            android:text="申请人(名称)"/>
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/et_blank_bg"
+            android:gravity="right|center_vertical"
+            android:paddingRight="10dp"
+            android:singleLine="true"
+            android:textSize="14dp"/>
+    </LinearLayout>
+
+    <TextView style="@style/CommonLineStyle"/>
+</LinearLayout>

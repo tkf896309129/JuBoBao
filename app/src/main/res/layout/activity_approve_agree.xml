@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+    <include layout="@layout/tool_bar_style"></include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <TextView style="@style/CommonLineStyle"/>
+
+            <RelativeLayout style="@style/MainRelativityStyle">
+
+                <TextView
+                    style="@style/CommonTextStyle"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="流程结束"/>
+
+                <Switch
+                    android:id="@+id/cb_finish"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="说明"
+                android:textSize="@dimen/address_key_size"/>
+
+            <TextView style="@style/CommonLineStyle"/>
+
+            <EditText
+                android:id="@+id/et_intro"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/et_blank_bg"
+                android:gravity="top"
+                android:hint="请填写意见说明(非必填)"
+                android:paddingLeft="10dp"
+                android:paddingTop="4dp"
+                android:textSize="@dimen/address_key_size"/>
+
+            <TextView style="@style/CommonLineStyle"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_rel_height">
+
+
+                <TextView
+                    style="@style/MyApplyLeftTextStyle"
+                    android:text="图片"/>
+
+                <ImageView
+                    android:id="@+id/iv_apply_camera"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@mipmap/picture"/>
+            </RelativeLayout>
+
+            <com.example.huoshangkou.jubowan.view.ScrollGridView
+                android:id="@+id/grid_view_apply"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:numColumns="3"></com.example.huoshangkou.jubowan.view.ScrollGridView>
+
+            <TextView
+                style="@style/CommonLineStyle"
+                android:layout_marginLeft="10dp"/>
+
+            <RelativeLayout
+                android:id="@+id/rl_next_choose"
+                style="@style/MainRelativityStyle">
+
+                <TextView
+                    style="@style/CommonTextStyle"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="转交至下一级审批人"/>
+
+
+                <TextView
+                    android:id="@+id/tv_choose_man"
+                    style="@style/CommonTextStyle"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:text="选择审批人"/>
+
+                <TextView
+                    style="@style/CommonLineStyle"
+                    android:layout_alignParentBottom="true"/>
+            </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyc_check_man"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"></android.support.v7.widget.RecyclerView>
+
+            <RelativeLayout
+                android:id="@+id/rl_cs_choose"
+                style="@style/MainRelativityStyle">
+
+                <TextView
+                    style="@style/CommonTextStyle"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="转交至抄送人(选填限3人)"/>
+
+
+                <TextView
+                    android:id="@+id/tv_cs_man"
+                    style="@style/CommonTextStyle"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:text="选择抄送人"/>
+
+            </RelativeLayout>
+
+            <TextView style="@style/CommonLineStyle"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyc_check"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"></android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

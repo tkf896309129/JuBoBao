@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:id="@+id/iv_head_pic"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/touxiang_icon" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/iv_head_pic"
+            android:text="帅的想哭"
+            android:textColor="@color/main_tab_blue" />
+
+
+        <TextView
+            android:id="@+id/tv_floor_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:text="1楼" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_content"
+        style="@style/CommonTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="奥斯电话费垃圾少部分哈市百布拉斯来说部分拉伸的办法了爱上的刻录机发生了看见的发布啦水电费辣的很方便" />
+
+
+    <com.example.huoshangkou.jubowan.view.ScrollListView
+        android:id="@+id/lv_common_back"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/common_back_blue"></com.example.huoshangkou.jubowan.view.ScrollListView>
+
+
+    <RelativeLayout style="@style/MainRelativityStyle">
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="06-21 15:33" />
+
+
+        <TextView
+            android:id="@+id/tv_replies"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/ll_zan_num"
+            android:drawableLeft="@mipmap/huifu_icon"
+            android:text="  回复" />
+
+        <RelativeLayout
+            android:id="@+id/ll_zan_num"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true">
+
+            <ImageView
+                android:id="@+id/iv_zan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/dianzan_off_icon" />
+
+            <TextView
+                android:id="@+id/tv_zan_anim"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/iv_zan"
+                android:layout_centerVertical="true"
+                android:text="+1"
+                android:textColor="@color/main_tab_blue"
+                android:visibility="gone" />
+
+
+            <TextView
+                android:id="@+id/tv_zan_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@+id/iv_zan"
+                android:text="236" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <TextView
+        style="@style/CommonLineStyle"
+        android:layout_marginLeft="10dp" />
+</LinearLayout>

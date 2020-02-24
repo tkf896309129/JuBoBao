@@ -1,0 +1,170 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.0"
+    defaultConfig {
+//        applicationId "com.example.huoshangkou.jubowan.test"
+        applicationId "com.example.huoshangkou.jubowan"
+        minSdkVersion 16
+//        targetSdkVersion 22
+        targetSdkVersion 26
+        versionCode 517
+        versionName "5.1.7"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+
+    signingConfigs {
+        def password = "254609697"
+        def alias = "jubobao"
+        def filePath = "D:\\jks\\JuBoBao.jks"  //如  ../facesharp.jks//签名文件路径
+
+        debug {
+            keyAlias alias
+            keyPassword password
+            storeFile file(filePath)
+            storePassword(password)
+        }
+        release {
+            keyAlias alias
+            keyPassword password
+            storeFile file(filePath)
+            storePassword(password)
+        }
+    }
+
+    buildTypes {
+//        release {
+//            minifyEnabled false
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//        }
+
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+            debuggable true
+            jniDebuggable true
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+            debuggable false
+            jniDebuggable false
+        }
+    }
+
+    sourceSets {
+        main {
+            jni.srcDirs = [] // This prevents the auto generation of Android.mk
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    //use legacy for android 6.0  2.
+    useLibrary 'org.apache.http.legacy'
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:26.+'
+    //    compile 'com.android.support:appcompat-v7:25.0.1'
+    //友盟相关
+    //友盟统计
+    //    compile 'com.umeng.analytics:analytics:latest.integration'
+    //    compile files('libs/libammsdk.jar')
+    compile files('libs/SocialSDK_QQ_Simplify.jar')
+    compile files('libs/SocialSDK_Sina_Simplify.jar')
+    compile files('libs/SocialSDK_WeiXin_Full.jar')
+    //微信分享jar包
+    //    compile files('libs/wechat-sdk-android-with-mta-1.0.2.jar')
+    compile files('libs/umeng_social_api.jar')
+    compile files('libs/umeng_social_net.jar')
+    compile files('libs/umeng_social_tool.jar')
+    compile files('libs/umeng_social_shareboard.jar')
+    compile files('libs/umeng_shareboard_widget.jar')
+    compile files('libs/httpmime-4.1.3.jar')
+    //fastjson 解析
+    //    compile 'com.alibaba:fastjson:1.2.23'
+    //okhttp网络请求
+    compile 'com.zhy:okhttputils:2.6.2'
+    //    compile 'com.yolanda.nohttp:nohttp:1.1.0'
+    compile 'org.xutils:xutils:3.3.4'
+    //注解框架 黄油刀
+    compile 'com.jakewharton:butterknife:7.0.1'
+    //广告栏
+    compile 'com.bigkoo:convenientbanner:2.0.5'
+    //design包 5.0特性
+    compile 'com.android.support:design:25.0.1'
+    //图片加载框架
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    //相册选择 包含可伸缩的图片
+    compile 'cn.finalteam:galleryfinal:1.4.8.7'
+    //图片压缩框架
+    compile 'com.zxy.android:tiny:0.0.6'
+    //下拉刷新控件
+    //    compile 'in.srain.cube:ultra-ptr:1.0.11'
+    //AndroidEventBus
+    compile 'org.simple:androideventbus:latest'
+    //刷新控件
+    compile project(':xRefreshLibrary')
+    //Android智能下拉刷新框架-SmartRefreshLayout
+    compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-14'
+    //PickerView三级选择器
+    //    compile 'com.bigkoo:pickerview:2.0.8'
+    compile 'com.contrarywind:Android-PickerView:3.0.8'
+    //状态栏改变
+    compile('com.github.niorgai:StatusBarCompat:2.1.2', {
+        exclude group: 'com.android.support'
+    })
+    compile files('libs/umeng_social_shareview.jar')
+    compile files('libs/fastjson-1.1.38.jar')
+    //运行时权限问题
+    compile 'com.yanzhenjie:permission:1.0.6'
+    //侧滑
+    compile 'com.github.mcxtzhang:SwipeDelMenuLayout:V1.3.0'
+    //环信导入
+    compile files('libs/hyphenatechat_3.3.2.jar')
+    compile 'com.github.FacePlusPlus:MegviiLicMgr-Android-SDK:0.3.0'
+    compile 'com.android.support:multidex:1.0.1'
+    compile project(':Pushlib')
+    //支付宝
+    compile(name: 'alipaySdk-15.6.5-20190718211159-noUtdid', ext: 'aar')
+    compile project(':sdk')
+    compile project(':SmallVideoLib')
+    compile files('libs/tbs_sdk_thirdapp_v3.0.jar')
+    compile 'com.just.agentweb:agentweb:2.0.1'
+    compile files('libs/BaiduLBS_Android.jar')
+    //微信小程序
+//    compile 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+'
+    //    compile 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:5.3.1'
+    //    compile 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:1.0.2'
+    //    compile 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:5.1.4'
+    //小米Push通道
+    compile 'com.umeng.sdk:push-xiaomi:1.0.0'
+    //华为Push通道
+    compile 'com.umeng.sdk:push-huawei:1.0.0'
+    //魅族Push通道
+    compile 'com.umeng.sdk:push-meizu:1.0.0'
+    compile 'com.umeng.umsdk:analytics:8.0.0'
+    compile 'com.umeng.umsdk:common:2.0.0'
+    //PushSDK必须依赖utdid库，所以需要加入对应依赖
+    compile 'com.umeng.umsdk:utdid:1.1.5.3'
+    compile project(':core')
+    compile files('libs/aip-java-sdk-4.9.0.jar')
+    compile files('libs/log4j-1.2.17.jar')
+    compile 'com.google.android.gms:play-services-appindexing:8.4.0'
+    compile project(':faceplatform-ui')
+    //桌面红点
+    compile 'me.leolin:ShortcutBadger:1.1.22@aar'
+    //    compile 'com.umeng.umsdk:huawei-basetb:2.6.3.305'
+    //    compile 'com.umeng.umsdk:huawei-pushtb:2.6.3.305'
+    //    compile 'com.umeng.umsdk:huawei-umengaccs:1.2.1’
+    compile files('libs/wechat-sdk-android-without-mta-5.4.0.jar')
+}

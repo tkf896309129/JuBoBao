@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_bg"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        style="@style/MainRelativityStyle"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:text="吨数(T)" />
+
+        <EditText
+            android:id="@+id/et_tons"
+            style="@style/CommonTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="120dp"
+            android:background="@drawable/et_blank_bg"
+            android:maxLength="6"
+            android:gravity="left|center_vertical"
+            android:inputType="numberDecimal" />
+    </RelativeLayout>
+
+    <TextView style="@style/CommonLineStyle" />
+
+    <RelativeLayout style="@style/MainRelativityStyle">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:text="公斤(KG)" />
+
+
+        <TextView
+            android:id="@+id/tv_kg"
+            style="@style/CommonTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="120dp"
+            android:background="@drawable/et_blank_bg"
+            android:gravity="left|center_vertical"
+            android:textColor="@color/red" />
+    </RelativeLayout>
+
+    <TextView style="@style/CommonLineStyle" />
+
+    <RelativeLayout style="@style/MainRelativityStyle">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:text="重量箱(箱数)" />
+
+        <TextView
+            android:id="@+id/tv_weight_num"
+            style="@style/CommonTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="120dp"
+            android:background="@drawable/et_blank_bg"
+            android:gravity="left|center_vertical"
+            android:textColor="@color/red" />
+    </RelativeLayout>
+
+    <TextView style="@style/CommonLineStyle" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="面积值"
+        android:textColor="@color/main_tab_blue" />
+
+    <TextView
+        style="@style/CommonLineStyle"
+        android:background="@color/gray" />
+
+    <GridView
+        android:id="@+id/grid_weight_area"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:numColumns="2"></GridView>
+
+
+</LinearLayout>

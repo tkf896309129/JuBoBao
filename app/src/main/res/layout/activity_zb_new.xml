@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+    <include layout="@layout/tool_bar_iamge"></include>
+
+    <LinearLayout
+        style="@style/MainRelativityStyle"
+        android:orientation="horizontal">
+
+        <!--选择专区-->
+        <LinearLayout
+            android:id="@+id/ll_select_tie"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_select_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableRight="@mipmap/ft_sanjiao_icon"
+                android:gravity="center"
+                android:text="项目类型 "
+                android:textColor="@color/address_black_key"
+                android:textSize="@dimen/address_edit_size"/>
+        </LinearLayout>
+
+        <!--分割线-->
+        <TextView
+            style="@style/VerticalLineStyle"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"/>
+
+        <!--普通帖-->
+        <LinearLayout
+            android:id="@+id/ll_standard"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_standard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableRight="@mipmap/ft_sanjiao_icon"
+                android:gravity="center"
+                android:text="项目规模 "
+                android:textColor="@color/address_black_key"
+                android:textSize="@dimen/address_edit_size"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/gray_bg"
+        android:layout_height="match_parent">
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/smart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <GridView
+                android:id="@+id/grid_zb_new"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="9dp"
+                android:layout_marginRight="9dp"
+                android:numColumns="2"></GridView>
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_put_zb"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="66dp"
+            android:layout_marginRight="40dp"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:scaleType="fitXY"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/zb_post"/>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

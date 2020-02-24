@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+
+    <include layout="@layout/tool_bar_style"></include>
+
+    <com.example.huoshangkou.jubowan.view.ForeverMarque
+        android:id="@+id/tv_ma_key"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:singleLine="true"
+        android:text="读聚玻早报，分享领取大红包                                  读聚玻早报，分享领取大红包"
+        android:textColor="@color/red"
+        android:visibility="gone"/>
+
+    <TextView style="@style/CommonLineStyle"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/item_no_data"></include>
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/x_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ListView
+                android:id="@+id/lv_refresh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></ListView>
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+    </RelativeLayout>
+</LinearLayout>

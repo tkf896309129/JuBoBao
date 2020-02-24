@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+    <include layout="@layout/tool_bar_style"></include>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="企业统一识别码"
+            android:textColor="@color/address_black_key"
+            android:textSize="15dp"/>
+
+        <EditText
+            android:id="@+id/et_code"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/et_blank_bg"
+            android:gravity="right|center_vertical"
+            android:hint="请输入企业统一识别码"
+            android:paddingRight="10dp"
+            android:textSize="14dp"/>
+    </LinearLayout>
+
+    <TextView
+        style="@style/CommonLineStyle"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_up_yyzz"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="上传营业执照"
+            android:textColor="@color/address_black_key"
+            android:textSize="15dp"/>
+
+        <TextView
+            android:id="@+id/tv_up_pic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:drawableRight="@mipmap/gray_right"
+            android:text="请上传 "/>
+    </RelativeLayout>
+
+    <TextView
+        style="@style/CommonLineStyle"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="邮箱"
+            android:textColor="@color/address_black_key"
+            android:textSize="15dp"/>
+
+        <EditText
+            android:id="@+id/et_email"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/et_blank_bg"
+            android:gravity="right|center_vertical"
+            android:hint="请输入电子邮箱"
+            android:paddingRight="10dp"
+            android:textSize="14dp"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="bottom"
+        android:paddingBottom="10dp"
+        android:paddingLeft="15dp"
+        android:text="企业法定代表人手机号验证"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="手机号"
+            android:textColor="@color/address_black_key"
+            android:textSize="15dp"/>
+
+        <EditText
+            android:id="@+id/et_phone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/et_blank_bg"
+            android:gravity="right|center_vertical"
+            android:inputType="phone"
+            android:paddingRight="15dp"
+            android:textSize="14dp"/>
+    </LinearLayout>
+
+    <TextView
+        style="@style/CommonLineStyle"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="验证码"
+            android:textColor="@color/address_black_key"
+            android:textSize="15dp"/>
+
+        <TextView
+            android:id="@+id/tv_country_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/tv_1"
+            android:drawableRight="@mipmap/down_push"
+            android:text="+86 "/>
+
+        <EditText
+            android:id="@+id/et_get_code"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/tv_get_code"
+            android:layout_toRightOf="@+id/tv_country_id"
+            android:background="@drawable/et_blank_bg"
+            android:gravity="right|center_vertical"
+            android:paddingRight="10dp"
+            android:textSize="14dp"/>
+
+        <TextView
+            android:id="@+id/tv_get_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/blue_corner_btn"
+            android:paddingBottom="8dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="8dp"
+            android:text="获取验证码"
+            android:textColor="@color/white"/>
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tv_commit"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/blue_corner_btn"
+        android:gravity="center"
+        android:text="提交信息"
+        android:textColor="@color/white"/>
+
+
+</LinearLayout>

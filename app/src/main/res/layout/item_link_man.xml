@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_link_man"
+        style="@style/MainRelativityStyle">
+
+        <TextView
+            style="@style/CommonTextStyle"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="联系人" />
+
+
+        <TextView
+            android:id="@+id/tv_link_man"
+            style="@style/CommonTextStyle"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:drawableRight="@mipmap/gray_right" />
+
+        <TextView
+            style="@style/CommonLineStyle"
+            android:layout_alignParentBottom="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_link_phone"
+        style="@style/MainRelativityStyle">
+
+        <TextView
+            style="@style/CommonTextStyle"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="联系方式" />
+
+
+        <TextView
+            style="@style/CommonLineStyle"
+            android:layout_alignParentBottom="true" />
+
+        <TextView
+            android:id="@+id/tv_link_phone"
+            style="@style/CommonTextStyle"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:drawableRight="@mipmap/gray_right"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_link_address"
+        style="@style/MainRelativityStyle">
+
+    <TextView
+        android:id="@+id/tv_left"
+        style="@style/CommonTextStyle"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:text="联系地址" />
+
+
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/tv_left"
+        android:id="@+id/tv_link_address"
+        style="@style/CommonTextStyle"
+        android:layout_alignParentRight="true"
+        android:gravity="right"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:drawableRight="@mipmap/gray_right" />
+
+    <TextView
+        style="@style/CommonLineStyle"
+        android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+
+
+</LinearLayout>

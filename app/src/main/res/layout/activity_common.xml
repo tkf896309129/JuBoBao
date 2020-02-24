@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/tool_bar_style"></include>
+
+    <!--评价信息-->
+    <include layout="@layout/item_common_layout"></include>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/et_common_detail"
+            style="@style/CommonTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/et_blank_bg"
+            android:gravity="top"
+            android:hint="请对该订单进行评价"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp" />
+
+
+        <TextView
+            style="@style/CommonLineStyle"
+            android:layout_above="@+id/tv_commit_common" />
+
+        <TextView
+            android:id="@+id/tv_commit_common"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="提交评论"
+            android:textColor="@color/main_tab_blue" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

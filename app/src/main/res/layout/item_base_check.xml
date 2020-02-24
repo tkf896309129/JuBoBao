@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+
+    <!--用款明细填写-->
+    <com.example.huoshangkou.jubowan.view.MyLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fadingEdge="none"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:paddingTop="10dp"
+        android:scrollbars="none">
+
+        <EditText
+            android:id="@+id/et_remark"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@drawable/et_blank_bg"
+            android:gravity="top"
+            android:hint="说明"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/address_black_key"
+            android:textSize="@dimen/address_key_size"/>
+
+    </com.example.huoshangkou.jubowan.view.MyLinearLayout>
+
+    <TextView style="@style/CommonLineStyle"/>
+
+    <RelativeLayout style="@style/MainRelativityStyle">
+
+        <TextView style="@style/CommonLineStyle"/>
+
+        <TextView
+            style="@style/MyApplyLeftTextStyle"
+            android:text="图片"/>
+
+        <ImageView
+            android:id="@+id/iv_apply_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/picture"/>
+    </RelativeLayout>
+
+
+    <com.example.huoshangkou.jubowan.view.ScrollGridView
+        android:id="@+id/grid_view_apply"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:numColumns="3"></com.example.huoshangkou.jubowan.view.ScrollGridView>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_apply_check"
+        style="@style/MainRelativityStyle"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            style="@style/MyApplyLeftTextStyle"
+            android:text="选择审批人(必选)"/>
+
+        <TextView
+            style="@style/CommonLineStyle"
+            android:layout_alignParentBottom="true"/>
+
+        <TextView
+            android:id="@+id/tv_apply_check"
+            style="@style/MyApplyRightTextStyle"
+            android:layout_marginRight="20dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:src="@mipmap/gray_right"/>
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyc_check_man"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"></android.support.v7.widget.RecyclerView>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/tv_csr"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:text="添加抄送人"
+            android:textSize="14dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:src="@mipmap/gray_right"/>
+    </RelativeLayout>
+
+
+    <TextView
+        style="@style/CommonLineStyle"/>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyc_check"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"></android.support.v7.widget.RecyclerView>
+
+</LinearLayout>

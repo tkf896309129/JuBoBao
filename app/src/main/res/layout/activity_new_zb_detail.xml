@@ -1,0 +1,792 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+    <include layout="@layout/tool_bar_style"></include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="基本信息"
+                android:textColor="@color/address_black_key"
+                android:textSize="16dp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                style="@style/MainRelativityStyle"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="项目名称："
+                    android:textColor="@color/address_black_key"/>
+
+                <TextView
+                    android:id="@+id/tv_pro_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/et_blank_bg"
+                    android:gravity="center_vertical|right"
+                    android:paddingRight="10dp"
+                    android:textSize="14dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/MainRelativityStyle"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="项目规模："
+                    android:textColor="@color/address_black_key"/>
+
+                <TextView
+                    android:id="@+id/tv_pro_spec"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/et_blank_bg"
+                    android:gravity="center_vertical|right"
+                    android:paddingRight="10dp"
+                    android:textSize="14dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/MainRelativityStyle"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="项目所在地："
+                    android:textColor="@color/address_black_key"/>
+
+                <TextView
+                    android:id="@+id/tv_pro_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/et_blank_bg"
+                    android:gravity="center_vertical|right"
+                    android:paddingRight="10dp"
+                    android:textSize="14dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/MainRelativityStyle"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="工期要求(天)："
+                    android:textColor="@color/address_black_key"/>
+
+                <TextView
+                    android:id="@+id/tv_pro_days"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/et_blank_bg"
+                    android:gravity="center_vertical|right"
+                    android:paddingRight="10dp"
+                    android:textSize="14dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/MainRelativityStyle"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="型材要求："
+                    android:textColor="@color/address_black_key"/>
+
+                <TextView
+                    android:id="@+id/tv_cx_yq"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/et_blank_bg"
+                    android:gravity="center_vertical|right"
+                    android:paddingRight="10dp"
+                    android:textSize="14dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_bao_req"
+                style="@style/MainRelativityStyle"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="报价要求："
+                    android:textColor="@color/address_black_key"/>
+
+                <TextView
+                    android:id="@+id/tv_price_yq"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/et_blank_bg"
+                    android:gravity="center_vertical|right"
+                    android:paddingRight="10dp"
+                    android:textSize="14dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/MainRelativityStyle"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="联系人："
+                    android:textColor="@color/address_black_key"/>
+
+                <TextView
+                    android:id="@+id/tv_link_man"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/et_blank_bg"
+                    android:gravity="center_vertical|right"
+                    android:paddingRight="10dp"
+                    android:textSize="14dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/MainRelativityStyle"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="联系方式："
+                    android:textColor="@color/address_black_key"/>
+
+                <TextView
+                    android:id="@+id/tv_link_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/et_blank_bg"
+                    android:gravity="center_vertical|right"
+                    android:paddingRight="10dp"
+                    android:textSize="14dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/MainRelativityStyle"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="样品寄送地址："
+                    android:textColor="@color/address_black_key"/>
+
+                <TextView
+                    android:id="@+id/tv_link_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/et_blank_bg"
+                    android:gravity="center_vertical|right"
+                    android:paddingRight="10dp"
+                    android:textSize="14dp"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_door_window"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="门窗要求"
+                    android:textColor="@color/address_black_key"
+                    android:textSize="16dp"/>
+
+                <LinearLayout
+                    style="@style/MainRelativityStyle"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="品牌："
+                        android:textColor="@color/address_black_key"/>
+
+                    <TextView
+                        android:id="@+id/tv_brand"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/et_blank_bg"
+                        android:gravity="center_vertical|right"
+                        android:paddingRight="10dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/MainRelativityStyle"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="颜色："
+                        android:textColor="@color/address_black_key"/>
+
+                    <TextView
+                        android:id="@+id/tv_color"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/et_blank_bg"
+                        android:gravity="center_vertical|right"
+                        android:paddingRight="10dp"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    style="@style/MainRelativityStyle"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="辅料五金："
+                        android:textColor="@color/address_black_key"/>
+
+                    <TextView
+                        android:id="@+id/tv_five_gold"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/et_blank_bg"
+                        android:gravity="center_vertical|right"
+                        android:paddingRight="10dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/MainRelativityStyle"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="工艺要求："
+                        android:textColor="@color/address_black_key"/>
+
+                    <TextView
+                        android:id="@+id/tv_gy_yq"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/et_blank_bg"
+                        android:gravity="center_vertical|right"
+                        android:paddingRight="10dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/MainRelativityStyle"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="玻璃尺寸厚度："
+                        android:textColor="@color/address_black_key"/>
+
+                    <TextView
+                        android:id="@+id/tv_glass_thick"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/et_blank_bg"
+                        android:gravity="center_vertical|right"
+                        android:paddingRight="10dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/MainRelativityStyle"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="其他要求："
+                        android:textColor="@color/address_black_key"/>
+
+                    <TextView
+                        android:id="@+id/tv_other_requir"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/et_blank_bg"
+                        android:gravity="center_vertical|right"
+                        android:paddingRight="10dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/MainRelativityStyle"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="完工时间："
+                        android:textColor="@color/address_black_key"/>
+
+                    <TextView
+                        android:id="@+id/tv_finish_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/et_blank_bg"
+                        android:gravity="center_vertical|right"
+                        android:paddingRight="10dp"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_gf_zb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="玻璃参数"
+                    android:textColor="@color/address_black_key"
+                    android:textSize="16dp"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    style="@style/MainRelativityStyle"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="电池组件种类："
+                        android:textColor="@color/address_black_key"/>
+
+                    <TextView
+                        android:id="@+id/tv_dczjlx"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/et_blank_bg"
+                        android:gravity="center_vertical|right"
+                        android:paddingRight="10dp"
+                        android:textSize="14dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/MainRelativityStyle"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="发电转化率："
+                        android:textColor="@color/address_black_key"/>
+
+                    <TextView
+                        android:id="@+id/tv_fd_zhl"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/et_blank_bg"
+                        android:gravity="center_vertical|right"
+                        android:paddingRight="10dp"
+                        android:textSize="14dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/MainRelativityStyle"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="关键技术指标描述："
+                        android:textColor="@color/address_black_key"/>
+
+                    <TextView
+                        android:id="@+id/tv_js_intro"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/et_blank_bg"
+                        android:gravity="center_vertical|right"
+                        android:paddingRight="10dp"
+                        android:textSize="14dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_system_door_zb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="玻璃参数"
+                    android:textColor="@color/address_black_key"
+                    android:textSize="16dp"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    style="@style/MainRelativityStyle"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="颜色："
+                        android:textColor="@color/address_black_key"/>
+
+                    <TextView
+                        android:id="@+id/tv_door_color"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/et_blank_bg"
+                        android:gravity="center_vertical|right"
+                        android:paddingRight="10dp"
+                        android:textSize="14dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/MainRelativityStyle"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="透光率："
+                        android:textColor="@color/address_black_key"/>
+
+                    <TextView
+                        android:id="@+id/tv_tou_guan"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/et_blank_bg"
+                        android:gravity="center_vertical|right"
+                        android:paddingRight="10dp"
+                        android:textSize="14dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/MainRelativityStyle"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="K值："
+                        android:textColor="@color/address_black_key"/>
+
+                    <TextView
+                        android:id="@+id/tv_k_value"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/et_blank_bg"
+                        android:gravity="center_vertical|right"
+                        android:paddingRight="10dp"
+                        android:textSize="14dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/MainRelativityStyle"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="遮阳系数："
+                        android:textColor="@color/address_black_key"/>
+
+                    <TextView
+                        android:id="@+id/tv_zy_xs"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/et_blank_bg"
+                        android:gravity="center_vertical|right"
+                        android:paddingRight="10dp"
+                        android:textSize="14dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/MainRelativityStyle"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="室内反射率："
+                        android:textColor="@color/address_black_key"/>
+
+                    <TextView
+                        android:id="@+id/tv_fan_indoor"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/et_blank_bg"
+                        android:gravity="center_vertical|right"
+                        android:paddingRight="10dp"
+                        android:textSize="14dp"/>
+                </LinearLayout>  <LinearLayout
+                    style="@style/MainRelativityStyle"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="室外反射率："
+                        android:textColor="@color/address_black_key"/>
+
+                    <TextView
+                        android:id="@+id/tv_fan_outdoor"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/et_blank_bg"
+                        android:gravity="center_vertical|right"
+                        android:paddingRight="10dp"
+                        android:textSize="14dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_system_xc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="型材及密封子系统类别"
+                    android:textColor="@color/address_black_key"
+                    android:textSize="16dp"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    style="@style/MainRelativityStyle"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="型材种类："
+                        android:textColor="@color/address_black_key"/>
+
+                    <TextView
+                        android:id="@+id/tv_xczl"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/et_blank_bg"
+                        android:gravity="center_vertical|right"
+                        android:paddingRight="10dp"
+                        android:textSize="14dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/MainRelativityStyle"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="密封子系统："
+                        android:textColor="@color/address_black_key"/>
+
+                    <TextView
+                        android:id="@+id/tv_mf_system"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/et_blank_bg"
+                        android:gravity="center_vertical|right"
+                        android:paddingRight="10dp"
+                        android:textSize="14dp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_yuan_fu"
+                style="@style/MainRelativityStyle"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="产品名称："
+                    android:textColor="@color/address_black_key"/>
+
+                <TextView
+                    android:id="@+id/tv_yuan_fu"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/et_blank_bg"
+                    android:gravity="center_vertical|right"
+                    android:paddingRight="10dp"
+                    android:textSize="14dp"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_jg_gy"
+                style="@style/MainRelativityStyle"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="加工工艺："
+                    android:textColor="@color/address_black_key"/>
+
+                <TextView
+                    android:id="@+id/tv_jg_gy"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/et_blank_bg"
+                    android:gravity="center_vertical|right"
+                    android:paddingRight="10dp"
+                    android:textSize="14dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_zb_price"
+                style="@style/MainRelativityStyle"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="招标竞价："
+                    android:textColor="@color/address_black_key"/>
+
+                <TextView
+                    android:id="@+id/tv_zb_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/et_blank_bg"
+                    android:gravity="center_vertical|right"
+                    android:paddingRight="10dp"
+                    android:textSize="14dp"/>
+            </LinearLayout>
+
+            <com.example.huoshangkou.jubowan.view.ScrollGridView
+                android:id="@+id/grid_view_apply"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:numColumns="3"></com.example.huoshangkou.jubowan.view.ScrollGridView>
+            <TextView
+                android:id="@+id/tv_next"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/main_tab_blue"
+                android:gravity="center"
+                android:text="下一步"
+                android:textColor="@color/white"
+                android:visibility="gone"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

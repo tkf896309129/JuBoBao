@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+    <include layout="@layout/tool_bar_style"></include>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/white_corner"
+        android:paddingBottom="50dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        android:text="温馨提示：线上支付成功后请刷新订单详情页面，查看支付结果！\n
+1. 如您使用网上在线支付，需提前到银行办理网上支付功能，详情可联系相关银行咨询。\n
+2. 为了您的资金安全，请您在支付前在银行完成手机绑定，身份认证及支付密码设置。\n
+3. 当您通过网上在线支付完后，系统会提示支付成功或失败。如系统没有提示，您可以登入网上银行或银行服务热线等方式查询是否扣款成功。\n
+4. 您在支付过程中遇到任何问题，都可立即致电聚玻网服务热线,400-6020-128咨询，聚玻网将第一时间为您解决。"
+        android:textColor="@color/address_black_key"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_marginLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_marginRight="20dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/rl_3"
+            android:background="@drawable/bottom_white_corner">
+
+            <EditText
+                android:id="@+id/et_code"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="number"
+                android:layout_toLeftOf="@+id/tv_send_code"
+                android:background="@drawable/et_blank_bg"
+                android:hint="请输入验证码"
+                android:paddingLeft="15dp"
+                android:textSize="14dp"/>
+
+            <TextView
+                android:id="@+id/tv_send_code"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/blue_corner_btn"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="获取验证码"
+                android:textColor="@color/white"
+                android:textSize="14dp"/>
+
+        </RelativeLayout>
+
+        <CheckBox
+            android:id="@+id/cb_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:button="@null"
+            android:drawableLeft="@drawable/blue_gou_check"
+            android:text=" 我已阅读并确认上方重要提示"/>
+
+        <TextView
+            android:id="@+id/tv_pay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/blue_corner_btn"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/cb_confirm"
+            android:paddingTop="10dp"
+            android:text="确认支付并签章"
+            android:textColor="@color/white"/>
+
+    </RelativeLayout>
+</LinearLayout>

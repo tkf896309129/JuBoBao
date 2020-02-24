@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/MainRelativityStyle">
+
+
+    <TextView
+        android:id="@+id/tv_approve_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:text="业务员认证" />
+
+
+    <ImageView style="@style/RightArrowStyle" />
+
+    <TextView
+        style="@style/CommonLineStyle"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

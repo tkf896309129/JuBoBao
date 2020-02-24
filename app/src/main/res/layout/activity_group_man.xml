@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+    <include layout="@layout/tool_bar_style"></include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.example.huoshangkou.jubowan.view.ScrollListView
+                android:id="@+id/lv_check_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></com.example.huoshangkou.jubowan.view.ScrollListView>
+
+            <com.example.huoshangkou.jubowan.view.ScrollListView
+                android:id="@+id/lv_check_man"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></com.example.huoshangkou.jubowan.view.ScrollListView>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

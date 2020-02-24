@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/main_tab_blue"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+
+        <LinearLayout
+            android:id="@+id/ll_back"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/back" />
+        </LinearLayout>
+
+
+        <EditText
+            android:id="@+id/et_search_zb"
+            style="@style/CommonTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:imeOptions="actionDone"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_toLeftOf="@+id/tv_right"
+            android:layout_toRightOf="@+id/ll_back"
+            android:background="@drawable/white_corner"
+            android:hint="请输入搜索关键字"
+            android:paddingLeft="10dp"
+            android:singleLine="true" />
+
+
+        <TextView
+            android:id="@+id/tv_right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <LinearLayout
+        style="@style/MainRelativityStyle"
+        android:orientation="horizontal">
+
+        <!--选择专区-->
+        <LinearLayout
+            android:id="@+id/ll_select_tie"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_select_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableRight="@mipmap/ft_sanjiao_icon"
+                android:gravity="center"
+                android:text="项目类型 "
+                android:textColor="@color/address_black_key"
+                android:textSize="@dimen/address_edit_size" />
+        </LinearLayout>
+
+        <!--分割线-->
+        <TextView
+            style="@style/VerticalLineStyle"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp" />
+
+        <!--普通帖-->
+        <LinearLayout
+            android:id="@+id/ll_standard"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_standard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableRight="@mipmap/ft_sanjiao_icon"
+                android:gravity="center"
+                android:text="项目规模 "
+                android:textColor="@color/address_black_key"
+                android:textSize="@dimen/address_edit_size" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <TextView style="@style/CommonLineStyle" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/refresh_list_view"></include>
+
+        <ImageView
+            android:id="@+id/iv_put_zb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="50dp"
+            android:layout_marginRight="20dp"
+            android:src="@mipmap/fazhaobiao_btn" />
+    </RelativeLayout>
+
+
+</LinearLayout>

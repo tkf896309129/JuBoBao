@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/tool_bar_style"></include>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="厂家名称" />
+
+        <EditText
+            android:id="@+id/et_pro_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/et_blank_bg"
+            android:gravity="right|center_vertical"
+            android:lines="1"
+            android:textSize="@dimen/address_key_size" />
+
+    </LinearLayout>
+
+    <TextView style="@style/CommonLineStyle" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="售后服务人员" />
+
+        <EditText
+            android:id="@+id/et_service_man"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/et_blank_bg"
+            android:gravity="right|center_vertical"
+            android:lines="1"
+            android:textSize="@dimen/address_key_size" />
+
+    </LinearLayout>
+
+    <TextView style="@style/CommonLineStyle" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="维修项目" />
+
+        <EditText
+            android:id="@+id/et_repair_pro"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/et_blank_bg"
+            android:gravity="right|center_vertical"
+            android:lines="1"
+            android:textSize="@dimen/address_key_size" />
+    </LinearLayout>
+
+    <TextView style="@style/CommonLineStyle" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="采购时间" />
+
+        <TextView
+            android:id="@+id/tv_buy_time"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/et_blank_bg"
+            android:gravity="right|center_vertical"
+            android:lines="1" />
+    </LinearLayout>
+
+    <TextView style="@style/CommonLineStyle" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="设备品牌型号" />
+
+        <EditText
+            android:id="@+id/et_tool_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/et_blank_bg"
+            android:gravity="right|center_vertical"
+            android:lines="1"
+            android:textSize="@dimen/address_key_size" />
+
+    </LinearLayout>
+
+    <TextView style="@style/CommonLineStyle" />
+
+    <TextView
+        style="@style/CommonLineStyle"
+        android:layout_marginTop="10dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="出发时间" />
+
+        <TextView
+            android:id="@+id/tv_start_time"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/et_blank_bg"
+            android:gravity="right|center_vertical"
+            android:lines="1" />
+
+    </LinearLayout>
+
+    <TextView style="@style/CommonLineStyle" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="离开时间" />
+
+        <TextView
+            android:id="@+id/tv_leave_time"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/et_blank_bg"
+            android:gravity="right|center_vertical"
+            android:lines="1" />
+
+    </LinearLayout>
+
+    <TextView style="@style/CommonLineStyle" />
+</LinearLayout>

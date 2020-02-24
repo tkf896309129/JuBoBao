@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+
+    <RelativeLayout
+        style="@style/MainRelativityStyle"
+        android:layout_height="30dp">
+
+        <LinearLayout
+            android:id="@+id/ll_car_check"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/iv_car_check"
+                android:layout_width="@dimen/car_check_size"
+                android:layout_height="@dimen/car_check_size"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:src="@mipmap/gouxuany_icon_off" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_group_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/ll_car_check"
+            android:text="原片购物车  (254)"
+            android:textColor="@color/address_black_key"
+            android:textSize="@dimen/address_key_size" />
+
+        <TextView
+            android:id="@+id/tv_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/tv_close"
+            android:gravity="center"
+            android:text="删除"
+            android:textColor="@color/red" />
+
+        <TextView
+            android:id="@+id/tv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="13dp"
+            android:gravity="center"
+            android:text="收起" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

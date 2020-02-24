@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_receive_tie"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/common_back_blue"
+        android:padding="6dp" />
+
+
+</LinearLayout>

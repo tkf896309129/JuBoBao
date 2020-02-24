@@ -1,0 +1,1113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.example.huoshangkou.jubowan">
+
+    <!--友盟相关结束-->
+    <!--相机相关 开始-->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <!--相机相关结束-->
+    <!--拨打电话相关权限-->
+    <uses-permission android:name="android.permission.CALL_PHONE"></uses-permission>
+    <!--用于进行网络定位-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
+    <!--用于访问GPS定位-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
+    <!--用于获取运营商信息，用于支持提供运营商信息相关的接口-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+    <!--用于访问wifi网络信息，wifi信息会用于进行网络定位-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
+    <!--用于获取wifi的获取权限，wifi信息会用来进行网络定位-->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"></uses-permission>
+    <!--用于访问网络，网络定位需要上网-->
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <!--用于读取手机当前的状态-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
+    <!--用于写入缓存数据到扩展存储卡-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+    <!--用于申请调用A-GPS模块-->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"></uses-permission>
+    <!--用于申请获取蓝牙信息进行室内定位-->
+    <uses-permission android:name="android.permission.BLUETOOTH"></uses-permission>
+    <!--//程序在手机屏幕关闭后后台进程仍然运行-->
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"></uses-permission>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <!--//华为推送 权限-->
+    <!--<uses-permission android:name="com.huawei.android.launcher.permission.WRITE_SETTINGS"></uses-permission>-->
+    <!-- Required -->
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW"/>
+
+    <application
+        android:name=".base.BaseApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/new_icon"
+        android:label="@string/app_name"
+        android:resizeableActivity="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppMainTheme">
+        <activity
+            android:name=".activity.GuideActivity"
+            android:screenOrientation="locked"
+            android:theme="@style/AppTheme.NoActionBarWithBackGround">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.umeng.qq.tencent.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data android:scheme="tencent100424468"/>
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="ratio_float"/>
+        <!--魅族push应用定义消息receiver声明 -->
+        <receiver android:name=".service.MeizuTestReceiver">
+            <intent-filter>
+                <!-- 接收push消息 -->
+                <action android:name="com.meizu.flyme.push.intent.MESSAGE"/>
+                <!-- 接收register消息 -->
+                <action android:name="com.meizu.flyme.push.intent.REGISTER.FEEDBACK"/>
+                <!-- 接收unregister消息-->
+                <action android:name="com.meizu.flyme.push.intent.UNREGISTER.FEEDBACK"/>
+                <!-- 兼容低版本Flyme3推送服务配置 -->
+                <action android:name="com.meizu.c2dm.intent.REGISTRATION"/>
+                <action android:name="com.meizu.c2dm.intent.RECEIVE"/>
+
+                <category android:name="${applicationId}"></category>
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".activity.ToPayOrderActivity"
+            android:screenOrientation="locked"></activity>
+        <activity
+            android:name=".alipay.H5PayDemoActivity"
+            android:screenOrientation="locked"></activity>
+        <activity
+            android:name=".activity.LoanIntroDetailActivity"
+            android:screenOrientation="locked"></activity>
+        <activity
+            android:name=".activity.LoanAdviceActivity"
+            android:screenOrientation="locked"></activity>
+        <activity
+            android:name=".activity.RedpacketDetailActivity"
+            android:screenOrientation="locked"></activity>
+        <activity
+            android:name=".activity.MessageListActivity"
+            android:screenOrientation="locked"></activity>
+        <activity
+            android:name=".activity.RecentlyTradeActivity"
+            android:screenOrientation="locked"></activity>
+        <activity
+            android:name=".activity.AddDataActivity"
+            android:screenOrientation="locked"></activity>
+        <activity
+            android:name=".activity.VisitorResetActivity"
+            android:screenOrientation="locked"></activity>
+        <activity
+            android:name=".activity.FengKongActivity"
+            android:screenOrientation="locked"></activity>
+        <activity
+            android:name=".activity.BaoRequirActivity"
+            android:screenOrientation="locked"></activity>
+        <activity
+            android:name=".activity.FengKongPicActivity"
+            android:screenOrientation="locked"></activity>
+        <activity
+            android:name=".activity.AllMemberActivity"
+            android:screenOrientation="locked"></activity>
+        <activity
+            android:name=".activity.WriteOrderIdActivity"
+            android:screenOrientation="locked"></activity>
+        <activity
+            android:name=".activity.PjOrderActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <activity
+            android:name=".activity.YwMoneyActivity"
+            android:screenOrientation="locked"></activity>
+        <activity
+            android:name=".activity.JuServiceActivity"
+            android:screenOrientation="locked"></activity>
+        <activity
+            android:name=".activity.DianCheckDetailActivity"
+            android:screenOrientation="locked"></activity>
+        <activity
+            android:name=".activity.PadPaymentActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <activity
+            android:name=".activity.MipushTestActivity"
+            android:exported="true"
+            android:launchMode="singleTask"/>
+        <activity
+            android:name="com.umeng.qq.tencent.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+
+        <activity
+            android:name=".activity.PjShopCarActivity"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+
+        <!--下单成功-->
+        <activity
+            android:name=".activity.AfterCommitOrderActivity"
+            android:screenOrientation="locked"></activity>
+
+        <activity
+            android:name=".activity.WalletDetailActivity"
+            android:screenOrientation="locked"></activity>
+
+        <activity
+            android:name=".activity.LoanRemarkActivity"
+            android:screenOrientation="locked"></activity>
+
+        <activity
+            android:name=".activity.MyWalletActivity"
+            android:screenOrientation="locked"></activity>
+
+        <activity
+            android:name=".activity.WalletListActivity"
+            android:screenOrientation="locked"></activity>
+
+        <activity
+            android:name=".activity.WalletTiXianActivity"
+            android:screenOrientation="locked"></activity>
+
+        <activity
+            android:name=".activity.SyYuanActivity"
+            android:screenOrientation="locked"></activity>
+
+        <!--主界面-->
+        <activity
+            android:name=".activity.MainActivity"
+            android:exported="true"
+            android:screenOrientation="locked"></activity>
+
+        <!--登录界面-->
+        <activity
+            android:name=".activity.LoginActivity"
+            android:theme="@style/AppVerticalTheme"
+            android:screenOrientation="locked"></activity>
+
+        <!--<activity_bind_blank-->
+        <!--android:name="com.umeng.socialize.editorpage.ShareActivity"-->
+        <!--android:theme="@style/Theme.UMDefault"-->
+        <!--android:excludeFromRecents="true"-->
+        <!--/>-->
+        <activity
+            android:name=".activity.ToolKindActivity"
+            android:screenOrientation="locked"></activity>
+
+        <activity
+            android:name=".activity.WeiTuoShuActivity"
+            android:screenOrientation="locked"></activity>
+        <activity
+            android:name=".activity.EditDriverActivity"
+            android:screenOrientation="locked"></activity>
+
+        <activity
+            android:name=".activity.DriverAddActivity"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+
+        <activity
+            android:name=".activity.PersonBusinessApprove"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+
+        <activity
+            android:name=".activity.MyRepairActivity"
+            android:screenOrientation="locked"></activity>
+
+        <activity
+            android:name=".activity.WriteListActivity"
+            android:screenOrientation="locked"></activity>
+
+        <activity
+            android:name=".activity.BaseMessageActivity"
+            android:screenOrientation="locked"></activity>
+
+        <activity
+            android:name=".activity.QiJiaMoneyActivity"
+            android:screenOrientation="locked"></activity>
+
+        <activity
+            android:name=".activity.RepairDetailListActivity"
+            android:screenOrientation="locked"></activity>
+
+        <activity
+            android:name=".activity.CheckServerListActivity"
+            android:screenOrientation="locked"></activity>
+
+        <activity
+            android:name=".activity.WriteListDetailActivity"
+            android:screenOrientation="locked"></activity>
+
+        <activity
+            android:name=".activity.AllPriceActivity"
+            android:screenOrientation="locked"></activity>
+
+        <activity
+            android:name=".activity.ToolDescActivity"
+            android:screenOrientation="locked"></activity>
+
+        <activity
+            android:name=".activity.ToolDetailDescActivity"
+            android:screenOrientation="locked"></activity>
+
+        <activity
+            android:name=".activity.FaceActivity"
+            android:screenOrientation="locked"></activity>
+
+        <activity
+            android:name=".activity.AllSignRecordActivity"
+            android:screenOrientation="locked"></activity>
+
+        <activity
+            android:name=".activity.OrderSearchActivity"
+            android:screenOrientation="locked"></activity>
+
+        <activity
+            android:name=".activity.BorrowMoneyActivity"
+            android:screenOrientation="locked"></activity>
+
+        <activity
+            android:name=".activity.LoanApplyActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+
+        <activity
+            android:name=".activity.LoanDetailActivity"
+            android:screenOrientation="locked"></activity>
+
+        <activity
+            android:name=".activity.LoanIntroActivity"
+            android:screenOrientation="locked"></activity>
+
+        <activity
+            android:name=".activity.LoanApplyNextActivity"
+            android:screenOrientation="locked"></activity>
+
+        <activity
+            android:name=".activity.LoanIouActivity"
+            android:screenOrientation="locked"></activity>
+
+        <activity
+            android:name=".activity.VideoActivity"
+            android:screenOrientation="locked"></activity>
+
+        <activity
+            android:name=".activity.ApproveCheckActivity"
+            android:screenOrientation="locked"></activity>
+
+        <activity
+            android:name=".activity.ApproveCheckListActivity"
+            android:screenOrientation="locked"></activity>
+
+        <!--下单成功界面-->
+        <activity
+            android:name=".activity.AfterPayActivity"
+            android:screenOrientation="locked"></activity>
+
+        <activity
+            android:name=".activity.SearchToolsActivity"
+            android:screenOrientation="locked"></activity>
+
+        <activity
+            android:name=".activity.ToolSuggestActivity"
+            android:screenOrientation="locked"></activity>
+
+        <activity
+            android:name=".activity.ToolDetailsActivity"
+            android:screenOrientation="locked"></activity>
+
+        <activity
+            android:name=".activity.MyMoneyActivity"
+            android:screenOrientation="locked"></activity>
+
+        <activity
+            android:name=".activity.TiXianDetailActivity"
+            android:screenOrientation="locked"></activity>
+
+        <activity
+            android:name=".activity.YjMoneyActivity"
+            android:screenOrientation="locked"></activity>
+
+        <activity
+            android:name=".activity.HotTieActivity"
+            android:screenOrientation="locked"></activity>
+
+        <!--微信分享界面-->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+
+        <!--线下付款-->
+        <activity android:name=".activity.PayUnderLineActivity"></activity>
+
+        <!--图片展示界面-->
+        <activity
+            android:name=".activity.ImageShowActivity"
+            android:screenOrientation="locked"></activity>
+
+        <!--带有侧滑的订单界面-->
+
+        <!--下载服务-->
+        <service
+            android:name=".service.DownloadApkService"
+            android:screenOrientation="locked"></service>
+
+        <!--忘记密码界面-->
+        <activity
+            android:name=".activity.ChangePswActivity"
+            android:screenOrientation="locked"></activity>
+
+        <!--意见反馈界面-->
+        <activity
+            android:name=".activity.SuggestBackActivity"
+            android:screenOrientation="locked"></activity>
+
+        <activity
+            android:name=".activity.SbGzSbActivity"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+
+        <activity
+            android:name=".activity.BuyToolActivity"
+            android:screenOrientation="locked"></activity>
+
+        <activity
+            android:name=".activity.RepairActivity"
+            android:screenOrientation="locked"></activity>
+
+
+        <!--订单详情界面-->
+        <activity
+            android:name=".activity.OrderDetailsActivity"
+            android:screenOrientation="locked"></activity>
+
+
+        <!--关于聚玻宝-->
+        <activity
+            android:name=".activity.AboutUsActivity"
+            android:screenOrientation="locked"></activity>
+
+        <!--设置界面-->
+        <activity
+            android:name=".activity.SettingActivity"
+            android:screenOrientation="locked"></activity>
+
+        <!--注册界面-->
+        <activity
+            android:name=".activity.RegeditActivity"
+            android:screenOrientation="locked"></activity>
+
+        <!--找回密码-->
+        <activity
+            android:name=".activity.FindPswActivity"
+            android:screenOrientation="locked"></activity>
+
+        <!--地址编辑-->
+        <activity
+            android:name=".activity.AddressEditActivity"
+            android:screenOrientation="locked"></activity>
+
+        <!--我的论坛界面-->
+        <activity
+            android:name=".activity.MyTieActivity"
+            android:screenOrientation="locked"></activity>
+
+
+        <!--发表帖子-->
+        <activity
+            android:name=".activity.PostTieActivity"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+
+        <!--地址管理界面-->
+        <activity
+            android:name=".activity.AddressListActivity"
+            android:screenOrientation="locked"></activity>
+
+        <!--我的审批界面-->
+        <activity
+            android:name=".activity.CheckApplyActivity"
+            android:screenOrientation="locked"></activity>
+
+        <!--请假界面-->
+        <activity
+            android:name=".activity.HolidayActivity"
+            android:screenOrientation="locked"></activity>
+
+        <!--出差界面-->
+        <activity
+            android:name=".activity.OutWorkActivity"
+            android:screenOrientation="locked"></activity>
+
+        <!--审批人界面-->
+        <activity
+            android:name=".activity.ChoosCheckManActivity"
+            android:screenOrientation="locked"></activity>
+        <!--买原片界面-->
+        <activity
+            android:name=".activity.BuyYuanActivity"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <!--提交订单界面-->
+        <activity
+            android:name=".activity.OrderCommitActivity"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <!--购物车界面-->
+        <activity
+            android:name=".activity.ShopCarActivity"
+            android:screenOrientation="locked"></activity>
+        <!--添加银行卡界面-->
+        <activity
+            android:name=".activity.AddBankCardActivity"
+            android:screenOrientation="locked"></activity>
+        <!--验证银行卡界面-->
+        <activity
+            android:name=".activity.CheckBankActivity"
+            android:screenOrientation="locked"></activity>
+        <!--论坛详情界面-->
+        <activity
+            android:name=".activity.TieDetailsActivity"
+            android:screenOrientation="locked"></activity>
+        <!--搜索论坛界面-->
+        <activity
+            android:name=".activity.SearchTieActivity"
+            android:screenOrientation="locked"></activity>
+        <!--绑定手机号界面-->
+        <activity
+            android:name=".activity.BindPhoneActivity"
+            android:screenOrientation="locked"></activity>
+        <!--维修维保详情-->
+        <activity
+            android:name=".activity.RepairDetailActivity"
+            android:screenOrientation="locked"></activity>
+        <!--维修预付款界面-->
+        <activity
+            android:name=".activity.RepairPriceActivity"
+            android:screenOrientation="locked"></activity>
+        <!--故障申请界面-->
+        <activity
+            android:name=".activity.RepairRepliyActivity"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <!--实名认证界面-->
+        <activity
+            android:name=".activity.YwyApproveActivity"
+            android:screenOrientation="locked"></activity>
+        <!--维修认证界面-->
+        <activity
+            android:name=".activity.RepairApproveActivity"
+            android:screenOrientation="locked"></activity>
+        <!--加工厂认证界面-->
+        <activity
+            android:name=".activity.BuyApproveActivity"
+            android:screenOrientation="locked"></activity>
+        <!--认证选择界面-->
+        <activity
+            android:name=".activity.ApproveSelectActivity"
+            android:screenOrientation="locked"></activity>
+        <!--下单界面-->
+        <activity
+            android:name=".activity.ShopOrderCommitActivity"
+            android:screenOrientation="locked"></activity>
+        <!--用款明细-->
+        <activity
+            android:name=".activity.MoneyUserActivity"
+            android:screenOrientation="locked"></activity>
+        <!--我的审批-->
+        <activity
+            android:name=".activity.MineApproveActivity"
+            android:screenOrientation="locked"></activity>
+        <!--审批详情-->
+        <activity
+            android:name=".activity.ApproveDetailActivity"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <!--企业贷款界面-->
+        <activity
+            android:name=".activity.CompanyMoneyActivity"
+            android:screenOrientation="locked"></activity>
+        <!--添加银行信息-->
+        <activity
+            android:name=".activity.ApproveAddBankActivity"
+            android:screenOrientation="locked"></activity>
+        <!--银行信息-->
+        <activity
+            android:name=".activity.ApproveBankActivity"
+            android:screenOrientation="locked"></activity>
+        <!--同意界面-->
+        <activity
+            android:name=".activity.ApproveAgreeActivity"
+            android:screenOrientation="locked"></activity>
+        <!--同意详情界面-->
+        <activity
+            android:name=".activity.ApproveAgreeDetailActivity"
+            android:screenOrientation="locked"></activity>
+        <!--支付订单界面-->
+        <activity
+            android:name=".activity.PayOrderActivity"
+            android:screenOrientation="locked"></activity>
+        <!--故障描述-->
+        <activity
+            android:name=".activity.ProblemIntroActivity"
+            android:screenOrientation="locked"></activity>
+        <!--故障详情-->
+        <activity
+            android:name=".activity.ChooseTypeActivity"
+            android:screenOrientation="locked"></activity>
+        <!--考勤界面-->
+        <activity
+            android:name=".activity.CheckWorkActivity"
+            android:screenOrientation="locked"></activity>
+        <!--地址微调-->
+        <activity
+            android:name=".activity.ChangePositionActivity"
+            android:screenOrientation="locked"></activity>
+        <!--考勤详情-->
+        <activity
+            android:name=".activity.SignDetailsActivity"
+            android:screenOrientation="locked"></activity>
+        <!--考勤地图界面-->
+        <activity
+            android:name=".activity.SignMapActivity"
+            android:screenOrientation="locked"></activity>
+        <!--签到界面-->
+        <activity
+            android:name=".activity.SignActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <!--计算器界面-->
+        <activity
+            android:name=".activity.CalculatorActivity"
+            android:screenOrientation="locked"></activity>
+        <!--我的招标界面-->
+        <activity
+            android:name=".activity.MineZbActivity"
+            android:screenOrientation="locked"></activity>
+        <activity android:name=".activity.MyAllOrderAcitivty"></activity>
+        <!--更多招标-->
+        <activity
+            android:name=".activity.MoreZbActivity"
+            android:screenOrientation="locked"></activity>
+        <!--发表帖子-->
+        <activity
+            android:name=".activity.PostZbActivity"
+            android:screenOrientation="locked"></activity>
+        <!--积分历史-->
+        <activity
+            android:name=".activity.ScoreHistoryActivity"
+            android:screenOrientation="locked"></activity>
+        <!--论坛活跃度-->
+        <activity
+            android:name=".activity.TieActiveActivity"
+            android:screenOrientation="locked"></activity>
+        <!--我的收藏-->
+        <activity
+            android:name=".activity.MineReceiveTieActivity"
+            android:screenOrientation="locked"></activity>
+        <!--我的回帖-->
+        <activity
+            android:name=".activity.MineBackTieActivity"
+            android:screenOrientation="locked"></activity>
+        <!--论坛管理-->
+        <activity
+            android:name=".activity.TieManagerActivity"
+            android:screenOrientation="locked"></activity>
+        <!--补签界面-->
+        <activity
+            android:name=".activity.AddSignActivity"
+            android:screenOrientation="locked"></activity>
+        <!--补签记录界面-->
+        <activity
+            android:name=".activity.AddSignRecordActivity"
+            android:screenOrientation="locked"></activity>
+        <!--审批补签-->
+        <activity
+            android:name=".activity.CheckSignActivity"
+            android:screenOrientation="locked"></activity>
+        <!--补签详情-->
+        <activity
+            android:name=".activity.AddSignDetailActivity"
+            android:screenOrientation="locked"></activity>
+        <!--招标详情-->
+        <activity
+            android:name=".activity.ZbDetailActivity"
+            android:screenOrientation="locked"></activity>
+        <activity
+            android:name=".activity.RepairOrderActivity"
+            android:screenOrientation="locked"></activity>
+        <!--系统消息-->
+        <activity
+            android:name=".activity.MessageActivity"
+            android:screenOrientation="locked"></activity>
+        <!--我的点赞-->
+        <activity
+            android:name=".activity.MineZanActivity"
+            android:screenOrientation="locked"></activity>
+        <!--订单通知-->
+        <activity
+            android:name=".activity.OrderNotifyActivity"
+            android:screenOrientation="locked"></activity>
+        <!--签到人员列表界面-->
+        <activity
+            android:name=".activity.SignManActivity"
+            android:screenOrientation="locked"></activity>
+        <activity
+            android:name=".activity.AddSignManActivity"
+            android:screenOrientation="locked"></activity>
+        <!--我的维修订单-->
+        <activity
+            android:name=".activity.MyRepairOrderActivity"
+            android:screenOrientation="locked"></activity>
+        <!--积分充值-->
+        <activity
+            android:name=".activity.AddRepairScoreActivity"
+            android:screenOrientation="locked"></activity>
+        <activity
+            android:name=".activity.InCompanyMoneyDetailActivity"
+            android:screenOrientation="locked"></activity>
+        <!--积分提现-->
+        <activity
+            android:name=".activity.GetRepairMoneyActivity"
+            android:screenOrientation="locked"></activity>
+        <activity
+            android:name=".activity.MyStudyActivity"
+            android:screenOrientation="locked"></activity>
+        <activity
+            android:name=".activity.StudyChooseActivity"
+            android:screenOrientation="locked"></activity>
+        <activity
+            android:name=".activity.EditApproveActivity"
+            android:screenOrientation="locked"></activity>
+        <activity
+            android:name=".activity.BorrowBankActivity"
+            android:screenOrientation="locked"></activity>
+        <!--引导页-->
+        <activity
+            android:name=".activity.SplashActivity"
+            android:screenOrientation="locked"></activity>
+        <!--评价界面-->
+        <activity
+            android:name=".activity.CommonActivity"
+            android:screenOrientation="locked"></activity>
+        <activity
+            android:name=".activity.SingleOrderCommitActivity"
+            android:screenOrientation="locked"></activity>
+        <activity
+            android:name=".activity.ZbNewActivity"
+            android:screenOrientation="locked"></activity>
+        <activity
+            android:name=".activity.ZbPriceActivity"
+            android:screenOrientation="locked"></activity>
+        <activity
+            android:name=".activity.DoorWindowActivity"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <activity
+            android:name=".activity.GfZbActivity"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <activity
+            android:name=".activity.LibraryListActivity"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <activity
+            android:name=".activity.CountryApplyActivity"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <activity
+            android:name=".activity.GonYiChooseActivity"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <activity
+            android:name=".activity.NewZbDetailActivity"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <activity
+            android:name=".activity.ZbSearchActivity"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <activity
+            android:name=".activity.YuanFuSearchActivity"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <activity
+            android:name="com.umeng.socialize.editorpage.ShareActivity"
+            android:excludeFromRecents="true"
+            android:theme="@style/Theme.UMDefault"/>
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden"></activity>
+        <activity
+            android:name=".activity.WebActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="stateHidden|adjustResize"></activity>
+        <activity android:name=".activity.JuBoNewActivity"></activity>
+        <activity
+            android:name=".activity.PjDetailsActivity"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <activity
+            android:name=".activity.BuyPjActivity"
+            android:screenOrientation="locked"></activity>
+        <activity
+            android:name=".activity.PjDetailListActivity"
+            android:screenOrientation="locked"></activity>
+        <activity
+            android:name=".activity.YwChooseActivity"
+            android:screenOrientation="locked"></activity>
+        <activity
+            android:name=".activity.JuBoBtActivity"
+            android:screenOrientation="locked"></activity>
+        <activity
+            android:name=".activity.UpWorkPicActivity"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <activity
+            android:name=".activity.SearchBankActivity"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <activity
+            android:name=".activity.BindBlankActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <activity
+            android:name=".activity.JuBoBtEdActivity"
+            android:screenOrientation="locked"></activity>
+        <activity
+            android:name=".activity.UseRecordActivity"
+            android:screenOrientation="locked"></activity>
+        <activity
+            android:name=".activity.CompanyInfoInputActivity"
+            android:screenOrientation="locked"></activity>
+        <activity
+            android:name=".activity.BtLoanDetailActivity"
+            android:screenOrientation="locked"></activity>
+        <activity
+            android:name=".activity.BtRecordBackActivity"
+            android:screenOrientation="locked"></activity>
+        <activity
+            android:name=".activity.TrustRecordActivity"
+            android:screenOrientation="locked"></activity>
+        <activity
+            android:name=".activity.BackMoneyActivity"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustResize"></activity>
+        <activity
+            android:name=".activity.AreaActivity"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustResize"></activity>
+        <activity
+            android:name=".activity.BtPayActivity"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <activity
+            android:name=".activity.CouponActivity"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <activity
+            android:name=".activity.BtYhjActivity"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <activity
+            android:name=".activity.AddGroupActivity"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <activity
+            android:name=".activity.InCompanyMoneyActivity"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <activity
+            android:name=".activity.GroupManActivity"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <activity
+            android:name=".activity.KfMemberActivity"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <activity
+            android:name=".activity.YwMoneyNewActivity"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <activity
+            android:name=".activity.BtCheckDetailActivity"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <activity
+            android:name=".activity.VoiceOrderActivity"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <activity
+            android:name=".activity.BtDetailCheckActivity"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <activity
+            android:name=".activity.DkCustomerActivity"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <activity
+            android:name=".activity.OperateActivity"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <activity
+            android:name=".activity.YwNewDetailActivity"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <activity
+            android:name=".activity.YuanBigActivity"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <activity
+            android:name=".activity.ProjectGlassActivity"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <activity
+            android:name=".activity.FuBigActivity"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <activity
+            android:name=".activity.JuSchoolActivity"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <activity
+            android:name=".activity.SchoolIntroActivity"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <activity
+            android:name=".activity.DianFuCheckActivity"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <activity
+            android:name=".activity.DianFuFinishActivity"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <activity
+            android:name=".activity.SchoolLinkUsActivity"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <activity
+            android:name=".activity.CountryCheckActivity"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <activity
+            android:name=".activity.LibraryActivity"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <activity
+            android:name=".activity.CheckSettingActivity"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <activity
+            android:name=".activity.ChildGroupActivity"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <activity
+            android:name=".activity.RecordVoiceActivity"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <activity
+            android:name=".activity.CustomerProportionActivity"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <activity
+            android:name=".activity.CustomerManagerActivity"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <activity
+            android:name=".activity.InternationalePhoneActivity"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <activity
+            android:name=".activity.MonthBtMoneyActivity"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <activity
+            android:name=".activity.CustomerMessageActivity"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <activity
+            android:name=".activity.MonthBtRecordActivity"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <activity
+            android:name=".activity.AddCustomerActivity"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <activity
+            android:name=".activity.CustomerDetailsActivity"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <activity
+            android:name=".activity.CustomerVisitorRecordActivity"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <activity
+            android:name=".activity.CustomerTradeRecordActivity"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <activity
+            android:name=".activity.VisitorRegisterActivity"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <activity
+            android:name=".activity.MonthSaleDetailActivity"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <activity
+            android:name=".activity.DianFuNewActivity"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <activity
+            android:name=".activity.MonthRegitActivity"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <activity
+            android:name=".activity.BtMonthDetailActivity"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <activity
+            android:name=".activity.SearchTimeKeyActivity"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <activity
+            android:name=".activity.DianPayConfirmActivity"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <activity
+            android:name=".activity.BaseCheckActivity"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <activity
+            android:name=".activity.BaseCheckDetailActivity"
+            android:screenOrientation="locked"
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"/>
+        <!-- 活体图像采集界面 -->
+        <activity
+            android:name=".activity.FaceLivenessExpActivity"
+            android:hardwareAccelerated="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme_NoTitle"/>
+        <!-- 人脸跟踪采集界面 -->
+        <meta-data
+            android:name="com.huawei.hms.client.appid"
+            android:value="appid=10509700"/>
+        <meta-data
+            android:name="UMENG_MESSAGE_SECRET"
+            android:value="30c70839515049e00698f1780bf6df75"></meta-data>
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="Wandoujia"/>
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="56da701be0f55a53cb0014fb"></meta-data>
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="oYI08pxWqywUqPft6fzqQUnIOoQs2UtP"/>
+        <!--<service-->
+        <!--android:name="com.baidu.location.f"-->
+        <!--android:enabled="true"-->
+        <!--android:process=":remote">-->
+        <!--</service>-->
+        <!--<service android:name="com.amap.api.location.APSService"></service>-->
+        <!-- 请填写实际的类名，下面仅是示例代码-->
+        <service
+            android:name=".service.MyPushIntentService"
+            android:enabled="true"
+            android:process=":keep">
+            <intent-filter android:priority="1000">
+                <!--<action android:name="com.xianzhi.androidkeepalive"/>-->
+                <action android:name="com.example.huoshangkou.jubowan"/>
+            </intent-filter>
+        </service>
+        <!--百度地图-->
+        <!--<meta-data-->
+        <!--android:name="com.baidu.lbsapi.API_KEY"-->
+        <!--android:value="Dh9AO3l3ulf43uyOYu26H4MCG0YUaXqM" />-->
+        <!--环信相关-->
+        <!-- 设置环信应用的AppKey -->
+        <meta-data
+            android:name="EASEMOB_APPKEY"
+            android:value="1157170517115297#jubobao"/>
+        <!-- 声明SDK所需的receiver -->
+        <receiver android:name="com.hyphenate.chat.EMMonitorReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+            <!-- 可选filter -->
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.USER_PRESENT"/>
+            </intent-filter>
+        </receiver>
+        <!-- 声明SDK所需的service SDK核心功能-->
+        <service
+            android:name="com.hyphenate.chat.EMChatService"
+            android:exported="true"/>
+        <service
+            android:name="com.hyphenate.chat.EMJobService"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE"/>
+
+        <receiver android:name=".service.ForceExitReceiver">
+            <intent-filter>
+                <action android:name="com.example.broadcast.FORCE_EXIT"/>
+            </intent-filter>
+        </receiver>
+        <!--百度语音服务-->
+        <service
+            android:name="com.baidu.speech.VoiceRecognitionService"
+            android:exported="false"/><!-- ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"/>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.example.huoshangkou.jubowan.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/my_english_file"/>
+        </provider>
+    </application>
+</manifest>

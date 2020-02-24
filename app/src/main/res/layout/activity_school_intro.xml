@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="240dp">
+
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/shen_ka_wang"/>
+
+        <TextView
+            android:id="@+id/tv_line"
+            android:layout_width="70dp"
+            android:layout_height="1dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="100dp"/>
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_line"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:text="全球领先的建筑原材料供应链服务平台"
+            android:textColor="@color/white"
+            android:textSize="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_name"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="20dp"
+            android:text="Global Leading Construction Raw Materials Supply Chain Service Platform"
+            android:textColor="@color/white"/>
+
+        <LinearLayout
+            android:id="@+id/ll_back"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/iocns_jbxy_fh"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="180dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"></LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="学院介绍"
+            android:textColor="@color/address_black_key"
+            android:textSize="18dp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="4dp"
+            android:background="@color/white"
+            android:padding="10dp"
+            android:text="在产业信息化深度融合的今天，浙江火山口网络科技有限公司作为全球领先的建筑原材料供应链服务平台，为助力玻璃产业的转型升级，实现高质量发展，特建设聚玻学院。"
+            android:textColor="@color/address_black_key"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/school_yellow"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="愿      景：做全球玻璃产业链资源整合的引领者"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="4dp"
+            android:background="@color/green_school"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="愿      景：做全球玻璃产业链资源整合的引领者"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="4dp"
+            android:background="@color/curp_school"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="愿      景：做全球玻璃产业链资源整合的引领者"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/blue_school"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="愿      景：做全球玻璃产业链资源整合的引领者"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

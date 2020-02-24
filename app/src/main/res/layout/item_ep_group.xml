@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mcxtzhang.swipemenulib.SwipeMenuLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                            android:id="@+id/swip_menu"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_group"
+            style="@style/MainRelativityStyle">
+
+            <TextView
+                android:id="@+id/tv_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:text="张晓明"
+                android:textColor="@color/black"
+                android:textSize="@dimen/address_key_size"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tv_man_nums"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="4dp"
+                android:layout_toLeftOf="@+id/img_right"/>
+
+            <ImageView
+                android:id="@+id/img_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:src="@mipmap/gray_right"/>
+        </RelativeLayout>
+
+        <TextView style="@style/CommonLineStyle"/>
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv_change"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:background="@color/main_tab_blue"
+        android:gravity="center"
+        android:text="修改"
+        android:textColor="@color/white"/>
+</com.mcxtzhang.swipemenulib.SwipeMenuLayout>

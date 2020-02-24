@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/main_tab_blue"></LinearLayout>
+
+    <!--标题栏-->
+    <LinearLayout
+        style="@style/MainRelativityStyle"
+        android:background="@color/main_tab_blue"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_my_luntan"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/wodeluntan_icon"/>
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_search_tie"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/search_edit_height"
+            android:layout_marginRight="50dp"
+            android:background="@drawable/white_corner"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="请输入搜索关键字"
+            android:textSize="14dp"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--分类-->
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab_forum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/ll_choose_select"
+            app:tabIndicatorColor="@color/white"
+            app:tabIndicatorHeight="0dp"
+            app:tabSelectedTextColor="@color/main_tab_blue"
+            app:tabTextAppearance="@style/TabLayoutTextStyle"
+            app:tabTextColor="@color/address_black_key"></android.support.design.widget.TabLayout>
+
+        <!--分割线-->
+        <TextView
+            style="@style/VerticalLineStyle"
+            android:layout_alignBottom="@+id/tab_forum"
+            android:layout_toLeftOf="@+id/ll_choose_select"/>
+
+
+        <!--菜单-->
+        <LinearLayout
+            android:id="@+id/ll_choose_select"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tab_forum"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/tab_forum"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/shaixuan_icon"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <!--分割线-->
+    <TextView style="@style/CommonLineStyle"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--论坛界面-->
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp_forum"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></android.support.v4.view.ViewPager>
+
+        <!--漂浮点-->
+        <ImageView
+            android:id="@+id/iv_post_tie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="30dp"
+            android:layout_marginRight="20dp"
+            android:src="@mipmap/fabiao_btn"/>
+    </RelativeLayout>
+
+</LinearLayout>

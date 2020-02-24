@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/white_corner"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/iv_zb_new"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/shen_ka_wang"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="6dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="剩余"
+                android:textColor="@color/white"
+                android:textSize="14dp"/>
+
+            <TextView
+                android:id="@+id/tv_days"
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:background="@mipmap/icon_xmzb_rq"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:text="49"
+                android:textColor="@color/white"
+                android:textSize="14dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="天"
+                android:textColor="@color/white"
+                android:textSize="14dp"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_alerady_zb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/tv_zb_time"
+            android:layout_marginLeft="4dp"
+            android:text="已招标"
+            android:textColor="@color/main_tab_blue"
+            android:textSize="12dp"/>
+
+        <TextView
+            android:id="@+id/tv_zb_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/tv_pro_name"
+            android:layout_marginTop="9dp"
+            android:text="2019/04/08"
+            android:textSize="12dp"/>
+
+        <TextView
+            android:id="@+id/tv_zb_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_zb_new"
+            android:layout_marginTop="4dp"
+            android:singleLine="true"
+            android:text="玻璃幕墙项目"
+            android:textColor="@color/address_black_key"
+            android:textSize="16dp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tv_pro_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_area"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/zb_alpha_blue"
+            android:paddingBottom="1dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="1dp"
+            android:singleLine="true"
+            android:text="玻璃幕墙项目"
+            android:textColor="@color/main_tab_blue"
+            android:textSize="12dp"/>
+
+
+        <TextView
+            android:id="@+id/tv_area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_zb_name"
+            android:layout_marginTop="4dp"
+            android:text="5500.00㎡-5888.00㎡"
+            android:textSize="12dp"/>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray_bg"
+        android:padding="10dp"
+        android:text="基本信息"/>
+
+    <LinearLayout
+        style="@style/MainRelativityStyle"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/CommonTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:text="项目名称"/>
+
+        <EditText
+            android:id="@+id/et_pro_name"
+            style="@style/CommonTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/et_blank_bg"
+            android:gravity="right|center_vertical"/>
+
+    </LinearLayout>
+
+    <TextView style="@style/CommonLineStyle"/>
+
+    <LinearLayout
+        style="@style/MainRelativityStyle"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/CommonTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:text="工程类型"/>
+
+        <!--<TextView-->
+        <!--style="@style/CommonTextStyle"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_marginRight="10dp"-->
+        <!--android:drawableRight="@mipmap/gray_right"-->
+        <!--android:gravity="right|center_vertical"-->
+        <!--android:text="幕墙项目  " />-->
+
+        <RadioGroup
+            android:id="@+id/rg_pro_type"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:gravity="right|center_vertical"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_wall_pro"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:button="@null"
+                android:drawableLeft="@drawable/repair_rb_check"
+                android:gravity="center"
+                android:text="幕墙项目"
+                android:textColor="@color/address_black_key"/>
+
+            <RadioButton
+                android:id="@+id/rb_door_pro"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="4dp"
+                android:button="@null"
+                android:drawableLeft="@drawable/repair_rb_check"
+                android:gravity="center"
+                android:text="门窗项目"
+                android:textColor="@color/address_black_key"/>
+
+            <RadioButton
+                android:id="@+id/rb_other_pro"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="4dp"
+                android:button="@null"
+                android:drawableLeft="@drawable/repair_rb_check"
+                android:gravity="center"
+                android:text="其他"
+                android:textColor="@color/address_black_key"/>
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <TextView style="@style/CommonLineStyle"/>
+
+    <LinearLayout
+        android:id="@+id/ll_pro_standard"
+        style="@style/MainRelativityStyle"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/CommonTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:text="项目规模"/>
+
+        <TextView
+            android:id="@+id/tv_pro_standard"
+            style="@style/CommonTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:drawableRight="@mipmap/gray_right"
+            android:gravity="right|center_vertical"/>
+
+    </LinearLayout>
+
+    <TextView style="@style/CommonLineStyle"/>
+
+    <LinearLayout
+        android:id="@+id/ll_pro_address"
+        style="@style/MainRelativityStyle"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/CommonTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:text="项目所在地"/>
+
+        <TextView
+            android:id="@+id/tv_pro_address"
+            style="@style/CommonTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:drawableRight="@mipmap/gray_right"
+            android:gravity="right|center_vertical"/>
+
+    </LinearLayout>
+
+    <TextView style="@style/CommonLineStyle"/>
+
+    <LinearLayout
+        style="@style/MainRelativityStyle"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/CommonTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:text="工期要求(天)"/>
+
+        <EditText
+            android:id="@+id/et_pro_days"
+            style="@style/CommonTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/et_blank_bg"
+            android:gravity="right|center_vertical"
+            android:inputType="numberDecimal"/>
+
+    </LinearLayout>
+
+    <TextView style="@style/CommonLineStyle"/>
+
+    <LinearLayout
+        style="@style/MainRelativityStyle"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/CommonTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:text="报价要求"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical|right"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/cb_need_price"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:button="@null"
+                android:checked="true"
+                android:clickable="false"
+                android:drawableLeft="@drawable/repair_rb_check"
+                android:gravity="center"
+                android:text="需报价"
+                android:textColor="@color/address_black_key"/>
+
+            <CheckBox
+                android:id="@+id/cb_need_pro"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="4dp"
+                android:button="@null"
+                android:drawableLeft="@drawable/repair_rb_check"
+                android:gravity="center"
+                android:text="需送样品"
+                android:textColor="@color/address_black_key"/>
+
+            <CheckBox
+                android:id="@+id/cb_need_anli"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="4dp"
+                android:button="@null"
+                android:drawableLeft="@drawable/repair_rb_check"
+                android:gravity="center"
+                android:text="需提供案例"
+                android:textColor="@color/address_black_key"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView style="@style/CommonLineStyle"/>
+
+    <include layout="@layout/item_link_man"></include>
+
+</LinearLayout>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">聚玻宝</string>
+
+    <!--首页底部文字-->
+    <string name="business_shop">首页</string>
+    <string name="lun_tan">论坛</string>
+    <string name="repair">维修维保</string>
+    <string name="order">订单</string>
+    <string name="mine">我的</string>
+
+
+    <!--再按一次退出聚玻宝-->
+    <string name="exit_again">再按一次退出聚玻宝</string>
+    <string name="cancel">取消</string>
+    <string name="open_gallery">打开相册</string>
+    <string name="open_camera">打开相机</string>
+    <string name="choose_type">选择上传方式</string>
+
+    <string name="up_image_fail">上传失败</string>
+    <string name="business_home">首页</string>
+    <string name="empty_phone">电话号码不能为空</string>
+    <string name="input_ywy_phone">请输入业务员手机号</string>
+    <string name="commit_order_now">立即下单</string>
+    <string name="input_bank_no">请输入银行卡号</string>
+    <string name="next">下一步</string>
+    <string name="DownApkBegain">开始下载</string>
+    <string name="DownloadDesc">找玻璃，就上聚玻宝</string>
+    <string name="DownloadTitle">聚玻宝下载</string>
+
+
+    <string name="my_kq_value">我的考勤</string>
+    <string name="my_check">我的审批</string>
+    <string name="my_lun_tan">我的论坛</string>
+    <string name="my_wallet">我的钱包</string>
+    <string name="customer_manager">客户管理</string>
+    <string name="my_dai_kuan">聚玻服务</string>
+    <string name="my_zb">我的招标</string>
+    <string name="my_address_manager">地址管理</string>
+    <string name="my_repair">我的维修</string>
+    <string name="my_person_setting">个人设置</string>
+    <string name="my_about_jb">关于聚玻宝</string>
+    <string name="my_study">我的学习</string>
+    <string name="my_link_list">通讯录</string>
+    <string name="exit_account">退出此账号</string>
+    <string name="is_exit_account">是否退出当前账号</string>
+    <string name="change_psw">修改密码</string>
+    <string name="is_change_psw">是否修改密码</string>
+    <string name="suggest_back">意见反馈</string>
+    <string name="is_commit_suggest">是否提交意见反馈</string>
+    <string name="more">更多 </string>
+    <string name="link_us">联系我们</string>
+    <string name="about_us">关于我们</string>
+    <string name="message_push">消息推送</string>
+    <string name="forget_psw">忘记密码</string>
+    <string name="new_regedit">新用户注册</string>
+    <string name="phone_num">手机号</string>
+    <string name="psw">密码</string>
+    <string name="input_phone_num">请输入手机号</string>
+    <string name="input_psw">请输入密码</string>
+    <string name="input_code">请输入验证码</string>
+    <string name="find_psw">找回密码</string>
+    <string name="buy_fu">买辅材</string>
+    <string name="buy_yuan">买原片</string>
+    <string name="all_sort">综合</string>
+    <string name="sale_sort">销售</string>
+    <string name="price_sort">价格</string>
+    <string name="choose_city">选择城市</string>
+    <string name="delete_success">删除成功</string>
+    <string name="is_delete_address">是否删除地址</string>
+    <string name="is_moren_address">是否设置成默认地址</string>
+    <string name="set_success">设置成功</string>
+    <string name="input_link_man">请输入收货人信息</string>
+    <string name="input_link_tel">请输入联系方式</string>
+    <string name="input_province">请输入所在地区</string>
+    <string name="input_detail_address">请输入详细地址</string>
+    <string name="is_newest">已经是最新版本</string>
+    <string name="need_update">有新版本需要更新</string>
+    <string name="link_kefu">联系客服</string>
+    <string name="StringLoading">数据加载中</string>
+
+
+
+    <string name="cancel_btn">取消</string>
+    <string name="sure_btn">确定</string>
+
+
+    <string name="factory_approve">加工厂认证</string>
+    <string name="build_approve">建筑商认证</string>
+    <string name="machine_approve">机械配件从认证</string>
+    <string name="repair_approve">维修工程师认证</string>
+    <string name="work_approve">业务员认证</string>
+    <string name="approve_message">提交成功，我们将尽快为您审核</string>
+    <string name="build_business">建筑商</string>
+    <string name="work_factory">加工厂</string>
+    <string name="loading_message">数据加载中</string>
+
+
+    <string name="checking">审核中</string>
+    <string name="has_checking">已认证</string>
+    <string name="un_checking">未认证</string>
+    <string name="up_image">图片正在上传...</string>
+    <string name="is_commit_approve">是否提交审核</string>
+    <string name="start_time">开始时间</string>
+    <string name="end_time">结束时间</string>
+    <string name="add_to_car">正在加入购物车</string>
+    <string name="add_shop_car">正在加入购物车</string>
+    <string name="add_success">添加成功</string>
+    <string name="add_fail">添加失败</string>
+    <string name="close">收起</string>
+    <string name="open">展开</string>
+    <string name="is_delete_order">是否删除该订单</string>
+    <string name="delete_shop_success">删除成功</string>
+    <string name="delete_shop_fail">删除失败</string>
+    <string name="is_commit_apply">是否提交申请</string>
+    <string name="save_sign_name">是否保存签名</string>
+    <string name="search_kind">品类</string>
+    <string name="search_color">颜色</string>
+    <string name="search_brand">品牌</string>
+    <string name="search_low">膜系</string>
+    <string name="search_level">级别</string>
+    <string name="search_thick">厚度</string>
+    <string name="search_standard">规格</string>
+    <string name="commit_success">提交成功</string>
+    <string name="commit_fail">提交失败</string>
+    <string name="company_name">公司名称：</string>
+    <string name="bank_account">银行账号：</string>
+    <string name="bank_name">银行名称：</string>
+    <string name="setting">设置</string>
+
+    <string name="notifyTitle">提示</string>
+    <string name="notifyMsg">当前应用缺少必要权限。\n\n请点击\"设置\"-\"权限\"-打开所需权限。</string>
+    <string name="gpsNotifyMsg">当前应用需要打开定位功能。\n\n请点击\"设置\"-\"定位服务\"-打开定位功能。</string>
+    <string name="record">录像</string>
+    <string name="pose_3d">3D模型</string>
+    <string name="debug">调试信息</string>
+    <string name="roi">区域选择</string>
+    <string name="attributes">人脸属性</string>
+    <string name="front">前置摄像头</string>
+    <string name="back">后置摄像头</string>
+    <string name="min_face">最小人脸</string>
+    <string name="fps">显示帧率</string>
+    <string name="interval">检测间隔</string>
+    <string name="landmarks">关键点个数</string>
+    <string name="resolution">相机分辨率</string>
+    <string name="one_face_trackig">单脸跟踪</string>
+    <string name="trackig_mode">跟踪模式</string>
+    <string name="detect_face">检测人脸</string>
+    <string name="fast">Fast</string>
+    <string name="robust">Robust</string>
+    <string name="normal">Normal</string>
+    <string name="select">去选择</string>
+    <string name="title">人脸识别演示</string>
+    <string name="auth_progress">正在联网授权中...</string>
+    <string name="auth_fail">联网授权失败！请检查网络或找服务商</string>
+    <string name="auth_again">重新联网授权</string>
+    <string name="key_secret">请填写API_KEY和API_SECRET</string>
+    <string name="detector">本检测器没有此项功能</string>
+    <string name="complete">确认</string>
+    <string name="min_value">最小值为</string>
+    <string name="max_value">最大值为</string>
+    <string name="number">请输入数字</string>
+    <string name="no_record">该分辨率不能录制视频</string>
+    <string name="camera_error">打开相机失败</string>
+    <string name="one_face_trackig_true">YES</string>
+
+    <string name="splash_text">Face Recognition</string>
+    <string name="main_item_face_register">人脸注册</string>
+    <string name="main_item_face_recognition">人脸识别 1v1</string>
+    <string name="main_item_face_recognition_n">人脸识别 1vN</string>
+    <string name="main_item_face_recognition_id">人脸识别 公安验证</string>
+    <string name="main_item_face_live">活体检测</string>
+    <string name="main_item_face_detect">人脸图像采集</string>
+    <string name="main_item_face_lite">人脸图像验证</string>
+    <string name="main_item_face_bank_cards">银行卡</string>
+    <string name="main_item_face_id_cards">身份证</string>
+    <string name="main_item_face_delete">删除功能</string>
+    <string name="play">play</string>
+    <string name="stop_playback">stop playback</string>
+    <string name="stop">stop</string>
+    <string name="stop_recording">stop recording</string>
+    <string name="zero">0</string>
+
+    <string-array name="trackig_mode_array">
+        <item>Normal</item>
+        <item>Robust</item>
+        <item>Fast</item>
+    </string-array>
+
+</resources>

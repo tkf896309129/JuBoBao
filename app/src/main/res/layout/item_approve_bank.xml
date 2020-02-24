@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+              android:id="@+id/ll_lick"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="14dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:id="@+id/tv_rzdw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="公司名称：" />
+
+        <TextView
+            android:id="@+id/tv_company_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="14dp"
+            android:text="" />
+
+    </LinearLayout>
+
+    <TextView
+        style="@style/CommonLineStyle"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="14dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开户银行：" />
+
+        <TextView
+            android:id="@+id/tv_bank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="14dp"
+            android:text="" />
+
+    </LinearLayout>
+
+    <TextView
+        style="@style/CommonLineStyle"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="14dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="银行账号：" />
+
+        <TextView
+            android:id="@+id/tv_bank_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="14dp"
+            android:inputType="phone" />
+
+    </LinearLayout>
+
+
+    <TextView
+        style="@style/CommonLineStyle"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp" />
+
+
+    <RelativeLayout
+        android:id="@+id/rl_edit"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/iv_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="14dp"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@+id/tv_delete_address"
+            android:drawableLeft="@mipmap/dz_bianji_icon"
+            android:gravity="center"
+            android:text=" 编辑"
+            android:textColor="@color/address_black_key"
+            android:textSize="@dimen/address_edit_size" />
+
+        <TextView
+            android:id="@+id/iv_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="14dp"
+            android:drawableLeft="@mipmap/dz_shanchu_icon"
+            android:gravity="center"
+            android:text=" 删除"
+            android:textColor="@color/address_black_key"
+            android:textSize="@dimen/address_edit_size" />
+
+    </RelativeLayout>
+
+    <!--<TextView-->
+    <!--style="@style/CommonLineStyle"-->
+    <!--/>-->
+
+</LinearLayout>

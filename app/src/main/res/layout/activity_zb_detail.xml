@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/tool_bar_style"></include>
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/tv_get_zb">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/gray_bg"
+                    android:padding="10dp"
+                    android:text="基本信息" />
+
+                <com.example.huoshangkou.jubowan.view.ScrollListView
+                    android:id="@+id/lv_zb_base"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></com.example.huoshangkou.jubowan.view.ScrollListView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/gray_bg"
+                    android:padding="10dp"
+                    android:text="详细信息" />
+
+                <com.example.huoshangkou.jubowan.view.ScrollListView
+                    android:id="@+id/lv_zb_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></com.example.huoshangkou.jubowan.view.ScrollListView>
+
+                <com.example.huoshangkou.jubowan.view.ScrollGridView
+                    android:id="@+id/grid_zb_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:numColumns="3"></com.example.huoshangkou.jubowan.view.ScrollGridView>
+            </LinearLayout>
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/tv_get_zb"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/main_tab_blue"
+            android:gravity="center"
+            android:text="立即抢标"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</LinearLayout>

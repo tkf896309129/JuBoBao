@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray_bg"
+        android:padding="10dp"
+        android:text="玻璃参数" />
+
+    <LinearLayout
+        android:id="@+id/rl_brand_choose"
+        style="@style/MainRelativityStyle"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/CommonTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:text="品牌选择" />
+
+        <TextView
+            android:id="@+id/tv_brand_choose"
+            style="@style/CommonTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:drawableRight="@mipmap/gray_right"
+            android:gravity="right|center_vertical" />
+    </LinearLayout>
+
+    <TextView style="@style/CommonLineStyle" />
+
+    <LinearLayout
+        android:id="@+id/ll_low_choose"
+        style="@style/MainRelativityStyle"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/CommonTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:text="膜系选择" />
+
+        <TextView
+            android:id="@+id/tv_low_name"
+            style="@style/CommonTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:drawableRight="@mipmap/gray_right"
+            android:gravity="right|center_vertical" />
+    </LinearLayout>
+
+    <TextView style="@style/CommonLineStyle" />
+
+    <LinearLayout
+        android:id="@+id/ll_color_choose"
+        style="@style/MainRelativityStyle"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/CommonTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:text="墙体颜色" />
+
+        <TextView
+            android:id="@+id/tv_floor_color"
+            style="@style/CommonTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:drawableRight="@mipmap/gray_right"
+            android:gravity="right|center_vertical" />
+    </LinearLayout>
+
+
+    <TextView style="@style/CommonLineStyle" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
+
+        <ImageView
+            android:id="@+id/iv_zb_color"
+            android:layout_width="0dp"
+            android:layout_height="180dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:src="@mipmap/default_img" />
+
+        <ImageView
+            android:id="@+id/iv_floor_color"
+            android:layout_width="0dp"
+            android:layout_height="180dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:src="@mipmap/default_img" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/alpha_blue"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:text="颜色" />
+
+            <TextView
+                android:id="@+id/tv_low_color"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:text="透光率" />
+
+            <TextView
+                android:id="@+id/tv_low_tgl"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:text="内反射" />
+
+            <TextView
+                android:id="@+id/tv_low_in"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:text="外反射" />
+
+            <TextView
+                android:id="@+id/tv_low_out"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:text="k值" />
+
+            <TextView
+                android:id="@+id/tv_low_k"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:lines="1"
+                android:text="遮阳系数" />
+
+            <TextView
+                android:id="@+id/tv_low_zy"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        style="@style/CommonLineStyle"
+        android:layout_marginTop="20dp" />
+
+</LinearLayout>

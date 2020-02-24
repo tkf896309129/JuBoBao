@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <!--整体评价-->
+    <LinearLayout
+        android:id="@+id/ll_all"
+        style="@style/MainRelativityStyle"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="2dp"
+            android:text="整体评价:"
+            android:textSize="@dimen/address_key_size" />
+
+        <include
+            android:id="@+id/ll_all_common"
+            layout="@layout/item_common_star"></include>
+    </LinearLayout>
+
+    <!--服务态度-->
+    <LinearLayout
+        android:id="@+id/ll_service"
+        style="@style/MainRelativityStyle"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="2dp"
+            android:text="服务态度:"
+            android:textSize="@dimen/address_key_size" />
+
+        <include
+            android:id="@+id/ll_service_attitude"
+            layout="@layout/item_common_star"></include>
+    </LinearLayout>
+
+
+    <!--物流速度-->
+    <LinearLayout
+        android:id="@+id/ll_trans"
+        style="@style/MainRelativityStyle"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="2dp"
+            android:text="物流速度:"
+            android:textSize="@dimen/address_key_size" />
+
+        <include
+            android:id="@+id/ll_common_trans"
+            layout="@layout/item_common_star"></include>
+    </LinearLayout>
+
+
+</LinearLayout>

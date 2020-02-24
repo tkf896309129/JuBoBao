@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_bg"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        style="@style/MainRelativityStyle"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:text="元/吨" />
+
+
+        <EditText
+            android:id="@+id/et_price"
+            style="@style/CommonTextStyle"
+            android:maxLength="6"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="120dp"
+            android:background="@drawable/et_blank_bg"
+            android:gravity="left|center_vertical"
+            android:hint="请输入价格"
+            android:inputType="numberDecimal" />
+    </RelativeLayout>
+
+    <TextView style="@style/CommonLineStyle" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="面积值"
+        android:textColor="@color/main_tab_blue" />
+
+    <TextView style="@style/CommonLineStyle" />
+
+    <GridView
+        android:id="@+id/grid_weight_area"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:numColumns="2"></GridView>
+
+</LinearLayout>

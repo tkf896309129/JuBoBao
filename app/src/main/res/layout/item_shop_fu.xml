@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="10dp"
+    android:id="@+id/ll_fu"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        style="@style/MainRelativityStyle"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/shop_order_image"
+            android:layout_height="@dimen/shop_order_image"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/sy_myp_icon" />
+
+        <TextView
+            android:id="@+id/tv_fu_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="辅材订单   (2)"
+            android:textColor="@color/address_black_key" />
+
+    </LinearLayout>
+
+    <TextView style="@style/CommonLineStyle" />
+
+
+    <com.example.huoshangkou.jubowan.view.ScrollListView
+        android:id="@+id/lv_shop_fu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></com.example.huoshangkou.jubowan.view.ScrollListView>
+
+
+    <!--配送方式-->
+    <RelativeLayout style="@style/MainRelativityStyle">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="配送方式"
+            android:textColor="@color/address_black_key"
+            android:textSize="@dimen/address_key_size" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="快递"
+            android:layout_marginRight="10dp"/>
+
+
+        <TextView
+            style="@style/CommonLineStyle"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+
+
+    <!--合计金额-->
+    <RelativeLayout
+        style="@style/MainRelativityStyle">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="合计金额"
+            android:textColor="@color/address_black_key"
+            android:textSize="@dimen/address_key_size" />
+
+
+        <!--合计金额数-->
+        <TextView
+            android:id="@+id/tv_fu_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:text="￥285000000.00  (运费待平台确认)" />
+
+        <TextView
+            style="@style/CommonLineStyle"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:background="@drawable/white_corner"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_man_list"
+            style="@style/CommonTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="成员列表" />
+
+        <TextView style="@style/CommonLineStyle" />
+
+        <TextView
+            android:id="@+id/tv_visitor"
+            style="@style/CommonTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="拜访对象" />
+
+        <TextView style="@style/CommonLineStyle" />
+
+        <TextView
+            android:id="@+id/tv_delete_man"
+            style="@style/CommonTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="删除成员" />
+    </LinearLayout>
+
+
+</LinearLayout>

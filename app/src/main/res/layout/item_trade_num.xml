@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <com.bigkoo.convenientbanner.ConvenientBanner
+        android:id="@+id/cb_banner"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"></com.bigkoo.convenientbanner.ConvenientBanner>
+
+    <com.example.huoshangkou.jubowan.view.ScrollGridView
+        android:id="@+id/grid_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="5"></com.example.huoshangkou.jubowan.view.ScrollGridView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/white"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_news"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:paddingLeft="10dp">
+
+        <ImageView
+            android:id="@+id/iv_jb_news"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/jb_news"/>
+
+        <TextView
+            android:id="@+id/tv_line"
+            android:layout_width="0.5dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/iv_jb_news"
+            android:background="@color/gray_bg"/>
+
+        <TextView
+            android:id="@+id/tv_news_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/iv_jb_news"
+            android:singleLine="true"
+            android:textColor="@color/address_black_key"/>
+
+
+    </RelativeLayout>
+
+    <TextView style="@style/CommonLineStyle"/>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_big_fu"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_dpzm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:background="@mipmap/icon_sy_dpzm"
+            android:gravity="center"
+            android:textSize="14dp"
+            android:text="大牌专卖"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/tv_dp_des"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/tv_dpzm"
+            android:textSize="14dp"
+            android:text="知名厂家 品质卓越"/>
+
+        <TextView
+            android:id="@+id/tv_more_dpzm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"/>
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/img_yp_glass"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginRight="6dp"
+                android:layout_weight="1"
+                android:scaleType="fitXY"/>
+
+            <TextView
+                android:id="@+id/tv_yuan_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/img_yp_glass"
+                android:layout_alignLeft="@+id/img_yp_glass"
+                android:layout_margin="10dp"
+                android:text="原片玻璃"
+                android:textSize="14dp"
+                android:textColor="@color/white"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_marginLeft="6dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="4dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/img_fl"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"/>
+
+                <TextView
+                    android:id="@+id/tv_fu_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/img_fl"
+                    android:layout_alignLeft="@+id/img_fl"
+                    android:layout_margin="10dp"
+                    android:textSize="14dp"
+                    android:text="辅材辅料"
+                    android:textColor="@color/white"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="4dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/img_project_glass"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"/>
+
+                <TextView
+                    android:id="@+id/tv_project_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/img_project_glass"
+                    android:layout_alignLeft="@+id/img_project_glass"
+                    android:layout_margin="10dp"
+                    android:text="工程玻璃"
+                    android:textSize="14dp"
+                    android:textColor="@color/white"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

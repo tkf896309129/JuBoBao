@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_more"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_xmzb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:background="@mipmap/icon_sy_xmzb"
+            android:gravity="center"
+            android:textSize="14dp"
+            android:text="项目招标"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/tv_zb_des"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:textSize="14dp"
+            android:layout_toRightOf="@+id/tv_xmzb"
+            android:text="找项目 需求更完美"/>
+
+        <TextView
+            android:id="@+id/tv_more_dpzm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textSize="14dp"
+            android:layout_marginRight="10dp"
+            android:drawableRight="@mipmap/gray_right"
+            android:text="更多  "/>
+    </RelativeLayout>
+
+    <!--基本的数据样式-->
+    <com.example.huoshangkou.jubowan.view.ScrollGridView
+        android:id="@+id/lv_type_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingRight="4dp"
+        android:paddingLeft="4dp"
+        android:divider="@null"
+        android:background="@color/white"
+        android:dividerHeight="0dp"
+        android:numColumns="2"
+        android:paddingBottom="20dp"></com.example.huoshangkou.jubowan.view.ScrollGridView>
+
+</LinearLayout>

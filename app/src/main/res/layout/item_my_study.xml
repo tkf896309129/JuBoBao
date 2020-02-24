@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/white_corner"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:singleLine="true"
+            android:layout_marginRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:textSize="16dp"
+            android:textColor="@color/address_black_key"
+            android:paddingLeft="10dp"
+            android:text="关于放假通知"/>
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            style="@style/CommonLineStyle"/>
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_img"
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="10dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/default_img"/>
+
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:maxLines="3"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@+id/iv_img"
+                android:text="关于国庆放假通知关于国庆关于国庆放假通知关于国庆放假通知关于国庆放假通知关于国庆放假通知关于国庆放假通知放假通知关于国庆放假通知关于国庆放假通知关于国庆放假通知"/>
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="right"
+            android:paddingRight="10dp"
+            android:text="2019.11.4"/>
+
+    </LinearLayout>
+
+</LinearLayout>

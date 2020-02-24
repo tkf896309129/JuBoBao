@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
+
+        <ImageView
+            android:id="@+id/iv_search_tool"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@mipmap/default_img" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_alignBottom="@+id/iv_search_tool"
+            android:layout_alignTop="@+id/iv_search_tool"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/iv_search_tool"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_type"
+                style="@style/CommonTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:text="类别：玻璃异行磨边机" />
+
+            <TextView
+                android:id="@+id/tv_product"
+                style="@style/CommonTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="厂家：中山市荻花制造有限公司" />
+
+            <TextView
+                android:id="@+id/tv_address"
+                style="@style/CommonTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="地址：浙江 杭州" />
+
+            <TextView
+                android:id="@+id/tv_price"
+                style="@style/CommonTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="bottom"
+                android:singleLine="true"
+                android:text="参考价：￥2500.0元" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <TextView style="@style/CommonLineStyle" />
+
+</LinearLayout>

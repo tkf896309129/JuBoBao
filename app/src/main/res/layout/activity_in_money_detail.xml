@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+    <include layout="@layout/tool_bar_style"></include>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/rl_apply_agree">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_ck_company"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:text="出款账户"
+                        android:textColor="@color/address_black_key"/>
+
+                    <TextView
+                        android:id="@+id/tv_ck_account"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="120dp"
+                        android:layout_marginRight="10dp"
+                        android:gravity="right"
+                        android:textColor="@color/address_black_key"/>
+                </RelativeLayout>
+
+                <TextView
+                    style="@style/CommonLineStyle"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:text="出款金额"
+                        android:textColor="@color/address_black_key"/>
+
+                    <TextView
+                        android:id="@+id/tv_dk_money"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="120dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/et_blank_bg"
+                        android:gravity="right|center_vertical"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/address_black_key"/>
+                </RelativeLayout>
+
+                <TextView
+                    style="@style/CommonLineStyle"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_kx_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:text="款项类型"
+                        android:textColor="@color/address_black_key"/>
+
+
+                    <TextView
+                        android:id="@+id/tv_ck_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="120dp"
+                        android:layout_marginRight="10dp"
+                        android:gravity="right"
+                        android:textColor="@color/address_black_key"/>
+                </RelativeLayout>
+
+                <TextView
+                    style="@style/CommonLineStyle"/>
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_in_company"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:text="入款户"
+                        android:textColor="@color/address_black_key"/>
+
+                    <TextView
+                        android:id="@+id/tv_rk_account"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="120dp"
+                        android:layout_marginRight="10dp"
+                        android:gravity="right"
+                        android:textColor="@color/address_black_key"/>
+                </RelativeLayout>
+
+                <TextView
+                    style="@style/CommonLineStyle"/>
+
+                <TextView
+                    style="@style/CommonTextStyle"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="图片"/>
+
+                <com.example.huoshangkou.jubowan.view.ScrollGridView
+                    android:id="@+id/grid_view_apply"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:numColumns="3"></com.example.huoshangkou.jubowan.view.ScrollGridView>
+
+                <LinearLayout
+                    style="@style/MainRelativityStyle"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="15dp"
+                    android:paddingTop="15dp">
+                    
+                    <TextView
+                        style="@style/CommonTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:text="备注："/>
+
+                    <TextView
+                        android:id="@+id/et_remark"
+                        style="@style/CommonTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/et_blank_bg"
+                        android:paddingLeft="10dp"/>
+
+                </LinearLayout>
+
+                <TextView style="@style/CommonLineStyle"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        style="@style/CommonTextStyle"
+                        android:layout_centerVertical="true"
+                        android:padding="10dp"
+                        android:text="审核结果"/>
+
+                    <TextView
+                        android:id="@+id/tv_change_check"
+                        style="@style/CommonTextStyle"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:padding="10dp"
+                        android:text="改派"
+                        android:textColor="@color/main_tab_blue"
+                        android:visibility="gone"/>
+                </RelativeLayout>
+
+
+                <TextView style="@style/CommonLineStyle"/>
+
+                <com.example.huoshangkou.jubowan.view.ScrollListView
+                    android:id="@+id/lv_check_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></com.example.huoshangkou.jubowan.view.ScrollListView>
+
+
+            </LinearLayout>
+        </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/rl_apply_agree"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true">
+
+            <TextView
+                style="@style/CommonLineStyle"
+                android:layout_above="@+id/ll_apply_agree"
+                android:background="@color/person_gray"/>
+
+            <LinearLayout
+                android:id="@+id/ll_apply_agree"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_apply_agree"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="同意"
+                    android:textColor="@color/main_tab_blue"
+                    android:textSize="16dp"/>
+
+                <TextView
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:background="@color/person_gray"/>
+
+                <TextView
+                    android:id="@+id/tv_apply_disagree"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="不同意"
+                    android:textColor="@color/main_tab_blue"
+                    android:textSize="16dp"/>
+
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

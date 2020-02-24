@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.example.huoshangkou.jubowan.view.ScrollListView
+        android:id="@+id/lv_mine_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></com.example.huoshangkou.jubowan.view.ScrollListView>
+
+
+    <RelativeLayout
+        style="@style/MainRelativityStyle"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_back_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="回复主贴：玻璃清洗机常见故障" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="2016-11-21 14:22:05" />
+    </RelativeLayout>
+
+</LinearLayout>

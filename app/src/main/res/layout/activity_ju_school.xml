@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="204dp">
+
+        <ImageView
+            android:id="@+id/iv_school_pic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"/>
+
+        <LinearLayout
+            android:id="@+id/ll_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="43dp"
+            android:layout_marginLeft="16dp"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/iocns_jbxy_fh"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_line"
+            android:layout_width="70dp"
+            android:layout_height="1dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="97dp"
+            android:background="@color/white"/>
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_line"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="6dp"
+            android:text="全球领先的建筑原材料供应链服务平台"
+            android:textColor="@color/white"
+            android:textSize="20dp"/>
+
+        <TextView
+            android:id="@+id/tv_eng"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_name"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="20dp"
+            android:text="Global Leading Construction Raw Materials Supply Chain Service Platform"
+            android:textColor="@color/gray_alpha_bg"/>
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/lv_ju_school"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></ListView>
+
+    <RelativeLayout
+        android:id="@+id/rl_school_intro"
+        style="@style/MainRelativityStyle"
+        android:background="@color/white"
+        android:gravity="center_vertical">
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:drawableLeft="@mipmap/icons_jbxy_xyj"
+            android:text="  学院介绍"
+            android:textColor="@color/address_black_key"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:src="@mipmap/gray_right"/>
+    </RelativeLayout>
+
+    <TextView
+        style="@style/CommonLineStyle"/>
+
+    <RelativeLayout
+        style="@style/MainRelativityStyle"
+        android:background="@color/white"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:drawableLeft="@mipmap/icons_jbxy_zsjh"
+            android:text="  招生计划"
+            android:textColor="@color/address_black_key"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:src="@mipmap/gray_right"/>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        style="@style/MainRelativityStyle"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:drawableLeft="@mipmap/icons_jbxy_xyfc"
+            android:text="  学院风采"
+            android:textColor="@color/address_black_key"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:src="@mipmap/gray_right"/>
+    </RelativeLayout>
+
+    <TextView
+        style="@style/CommonLineStyle"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_library"
+        style="@style/MainRelativityStyle"
+        android:background="@color/white"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:drawableLeft="@mipmap/icons_jbxy_sztsg"
+            android:text="  数字图书馆"
+            android:textColor="@color/address_black_key"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:src="@mipmap/gray_right"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_link_us"
+        style="@style/MainRelativityStyle"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:drawableLeft="@mipmap/icons_jbxy_lxwm"
+            android:text="  联系我们"
+            android:textColor="@color/address_black_key"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:src="@mipmap/gray_right"/>
+    </RelativeLayout>
+</LinearLayout>

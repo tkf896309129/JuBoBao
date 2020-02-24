@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/tool_bar_style"></include>
+
+    <com.example.huoshangkou.jubowan.view.ReboundScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.example.huoshangkou.jubowan.view.ScrollListView
+            android:id="@+id/lv_approve_type"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></com.example.huoshangkou.jubowan.view.ScrollListView>
+
+    </com.example.huoshangkou.jubowan.view.ReboundScrollView>
+
+
+
+
+</LinearLayout>

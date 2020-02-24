@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:paddingRight="5dp"
+        android:paddingLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_tool_desc"
+            android:layout_width="match_parent"
+            android:scaleType="fitXY"
+            android:layout_height="120dp"
+            android:padding="1dp"
+            android:background="@drawable/gray_stroke_bg"
+            android:src="@mipmap/default_img" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_tool_desc"
+            android:layout_marginTop="10dp"
+            android:singleLine="true"
+            android:text="聚氨酯O型带"
+            android:textColor="@color/address_black_key" />
+
+        <TextView
+            android:id="@+id/tv_by"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_name"
+            android:layout_marginTop="4dp"
+            android:text="包邮" />
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_name"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="4dp"
+            android:text="￥22.22"
+            android:textColor="@color/main_tab_blue" />
+    </RelativeLayout>
+
+</LinearLayout>

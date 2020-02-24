@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mcxtzhang.swipemenulib.SwipeMenuLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                            android:id="@+id/swim_menu"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/CommonLineStyle"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_check_man"
+            style="@style/MainRelativityStyle"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="4dp">
+
+            <ImageView
+                android:id="@+id/iv_check_head"
+                android:layout_width="41dp"
+                android:layout_height="41dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:id="@+id/tv_child"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="4dp"
+                android:layout_toRightOf="@+id/iv_check_head"
+                android:text="张晓明"
+                android:textColor="@color/black"
+                android:textSize="@dimen/address_key_size"/>
+
+            <ImageView
+                android:id="@+id/iv_manage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/tv_child"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="2dp"
+                android:layout_toRightOf="@+id/tv_child"
+                android:src="@mipmap/icon_manage"/>
+
+            <TextView
+                android:id="@+id/tv_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_child"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="2dp"
+                android:layout_toRightOf="@+id/iv_check_head"
+                android:text="asldjladkjas"
+                android:textSize="@dimen/address_key_size"/>
+
+            <ImageView
+                android:id="@+id/img_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:src="@mipmap/gouxuan_icon"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tv_phone"
+                android:layout_below="@+id/tv_phone"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_work"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="4dp"
+                    android:background="@drawable/green_setting"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    android:text="上班"
+                    android:textColor="@color/green_setting"
+                    android:textSize="12dp"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/tv_zhi_ban"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="4dp"
+                    android:background="@drawable/setting_red"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    android:text="值班"
+                    android:textColor="#ff0000"
+                    android:textSize="12dp"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/tv_rest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="4dp"
+                    android:background="@drawable/setting_rest"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    android:text="休息"
+                    android:textColor="@color/purpse"
+                    android:textSize="12dp"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/tv_after_woke"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="4dp"
+                    android:background="@drawable/after_woke"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    android:text="下班"
+                    android:textColor="@color/woke_over"
+                    android:textSize="12dp"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/tv_miss_woke"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="4dp"
+                    android:background="@drawable/miss_woke"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    android:text="旷工"
+                    android:textColor="@color/miss_woke"
+                    android:textSize="12dp"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/tv_still_woke"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="4dp"
+                    android:background="@drawable/still_woke"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    android:text="值班"
+                    android:textColor="@color/still_woke"
+                    android:textSize="12dp"
+                    android:visibility="gone"/>
+
+
+                <TextView
+                    android:id="@+id/tv_holiday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="4dp"
+                    android:background="@drawable/setting_red"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    android:text="请假"
+                    android:textColor="@color/alpha_red"
+                    android:textSize="12dp"
+                    android:visibility="gone"/>
+
+
+                <TextView
+                    android:id="@+id/tv_out_work"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="4dp"
+                    android:background="@drawable/setting_yellow"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    android:text="出差"
+                    android:textColor="@color/yellow_setting"
+                    android:textSize="12dp"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/tv_fly"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="4dp"
+                    android:background="@drawable/blue_setting"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    android:text="飞行中"
+                    android:textColor="@color/main_tab_blue"
+                    android:textSize="12dp"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/tv_meting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="4dp"
+                    android:background="@drawable/blue_setting"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    android:text="会议中"
+                    android:textColor="@color/main_tab_blue"
+                    android:textSize="12dp"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tv_role_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/tv_name"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="4dp"
+                android:text="运营销售"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:id="@+id/iv_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/tv_phone"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="4dp"
+                android:src="@mipmap/phone"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/gray"
+            android:gravity="center"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp"
+            android:text="编辑"
+            android:textColor="@color/white"/>
+
+        <!--<TextView-->
+        <!--android:id="@+id/tv_set_manage"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:background="@color/deep_blue"-->
+        <!--android:gravity="center"-->
+        <!--android:paddingLeft="4dp"-->
+        <!--android:paddingRight="4dp"-->
+        <!--android:text="设为管理员"-->
+        <!--android:textColor="@color/white"/>-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/tv_back_record"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:background="@color/gray"-->
+        <!--android:gravity="center"-->
+        <!--android:paddingLeft="4dp"-->
+        <!--android:paddingRight="4dp"-->
+        <!--android:text="回访记录"-->
+        <!--android:textColor="@color/white"/>-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/tv_put_child_group"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:background="@color/green"-->
+        <!--android:gravity="center"-->
+        <!--android:paddingLeft="14dp"-->
+        <!--android:paddingRight="14dp"-->
+        <!--android:text="分配子部门"-->
+        <!--android:textColor="@color/white"/>-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/tv_member_list"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:background="@color/main_tab_blue"-->
+        <!--android:gravity="center"-->
+        <!--android:paddingLeft="4dp"-->
+        <!--android:paddingRight="4dp"-->
+        <!--android:text="成员列表"-->
+        <!--android:textColor="@color/white"/>-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/tv_delete"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:background="@color/red"-->
+        <!--android:gravity="center"-->
+        <!--android:paddingLeft="14dp"-->
+        <!--android:paddingRight="14dp"-->
+        <!--android:text="删除"-->
+        <!--android:textColor="@color/white"/>-->
+
+    </LinearLayout>
+
+</com.mcxtzhang.swipemenulib.SwipeMenuLayout>

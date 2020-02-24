@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+    <include layout="@layout/tool_bar_iamge"></include>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/iv_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/score_bg"/>
+
+        <ImageView
+            android:id="@+id/iv_score_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/iv_bg"
+            android:layout_marginRight="14dp"
+            android:layout_marginTop="8dp"
+            android:rotation="45"
+            android:src="@mipmap/score_jb"/>
+
+        <TextView
+            android:id="@+id/tv_score_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/iv_score_bg"
+            android:layout_alignRight="@+id/iv_score_bg"
+            android:layout_marginTop="48dp"
+            android:gravity="center"
+            android:paddingRight="14dp"
+            android:rotation="43"
+            android:textColor="#E80010"/>
+
+    </RelativeLayout>
+
+    <!--<com.example.huoshangkou.jubowan.view.JuBoScoreView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:id="@+id/scroe_view"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_marginTop="20dp"/>-->
+
+    <GridView
+        android:id="@+id/grid_choose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:numColumns="2"></GridView>
+
+</LinearLayout>

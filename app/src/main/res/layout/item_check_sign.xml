@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <RelativeLayout style="@style/MainRelativityStyle">
+
+        <ImageView
+            android:id="@+id/iv_head_pic_check"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/touxiang_icon" />
+
+        <TextView
+            android:id="@+id/tv_name_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/iv_head_pic_check" />
+
+
+        <TextView
+            android:id="@+id/tv_time_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp" />
+
+    </RelativeLayout>
+
+    <TextView style="@style/CommonLineStyle" />
+
+    <RelativeLayout
+        style="@style/MainRelativityStyle"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:id="@+id/tv_sign_time_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp" />
+
+
+        <TextView
+            android:id="@+id/tv_remark_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_sign_time_check"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp" />
+    </RelativeLayout>
+
+    <TextView style="@style/CommonLineStyle" />
+
+    <LinearLayout
+        android:id="@+id/rl_sign_check"
+        style="@style/MainRelativityStyle"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_agree_check"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="补签通过"
+            android:textColor="@color/main_tab_blue" />
+
+        <TextView style="@style/VerticalLineStyle" />
+
+        <TextView
+            android:id="@+id/tv_dis_agree_check"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="不予通过"
+            android:textColor="@color/address_black_key" />
+    </LinearLayout>
+
+    <TextView
+        style="@style/CommonLineStyle"
+        android:layout_marginBottom="10dp" />
+</LinearLayout>

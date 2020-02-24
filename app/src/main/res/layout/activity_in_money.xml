@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
+
+    <include layout="@layout/tool_bar_style"></include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="出款"
+                android:textColor="@color/address_black_key"
+                android:textSize="16dp"/>
+
+            <RelativeLayout
+                android:id="@+id/rl_ck_company"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="出款账户"
+                    android:textColor="@color/address_black_key"/>
+
+                <TextView
+                    android:id="@+id/tv_ck_account"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="120dp"
+                    android:layout_marginRight="10dp"
+                    android:drawableRight="@mipmap/gray_right"
+                    android:gravity="right"
+                    android:textColor="@color/address_black_key"/>
+            </RelativeLayout>
+
+            <TextView
+                style="@style/CommonLineStyle"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="出款金额"
+                    android:textColor="@color/address_black_key"/>
+
+                <EditText
+                    android:id="@+id/et_dk_money"
+                    android:layout_width="match_parent"
+                    android:textSize="14dp"
+                    android:gravity="right|center_vertical"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="120dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/et_blank_bg"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/address_black_key"/>
+            </RelativeLayout>
+
+            <TextView
+                style="@style/CommonLineStyle"/>
+
+            <RelativeLayout
+                android:id="@+id/rl_kx_type"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="款项类型"
+                    android:textColor="@color/address_black_key"/>
+
+
+                <TextView
+                    android:id="@+id/tv_ck_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="120dp"
+                    android:layout_marginRight="10dp"
+                    android:drawableRight="@mipmap/gray_right"
+                    android:gravity="right"
+                    android:textColor="@color/address_black_key"/>
+            </RelativeLayout>
+
+            <TextView
+                style="@style/CommonLineStyle"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="入款"
+                android:textColor="@color/address_black_key"
+                android:textSize="16dp"/>
+
+
+            <RelativeLayout
+                android:id="@+id/rl_in_company"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingBottom="15dp"
+                android:paddingTop="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="入款账户"
+                    android:textColor="@color/address_black_key"/>
+
+                <TextView
+                    android:id="@+id/tv_rk_account"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="120dp"
+                    android:layout_marginRight="10dp"
+                    android:drawableRight="@mipmap/gray_right"
+                    android:gravity="right"
+                    android:textColor="@color/address_black_key"/>
+            </RelativeLayout>
+
+            <TextView
+                style="@style/CommonLineStyle"/>
+
+
+            <RelativeLayout style="@style/MainRelativityStyle">
+
+                <TextView
+                    style="@style/MyApplyLeftTextStyle"
+                    android:text="图片"/>
+
+                <ImageView
+                    android:id="@+id/iv_apply_camera"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@mipmap/picture"/>
+            </RelativeLayout>
+
+            <com.example.huoshangkou.jubowan.view.ScrollGridView
+                android:id="@+id/grid_view_apply"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:numColumns="3"></com.example.huoshangkou.jubowan.view.ScrollGridView>
+
+            <LinearLayout
+                style="@style/MainRelativityStyle"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/CommonTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="备注："/>
+
+                <EditText
+                    android:id="@+id/et_remark"
+                    style="@style/CommonTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/et_blank_bg"
+                    android:gravity="center_vertical"
+                    android:hint="请填写"
+                    android:paddingLeft="10dp"/>
+
+            </LinearLayout>
+
+            <TextView style="@style/CommonLineStyle"/>
+
+            <LinearLayout
+                android:id="@+id/ll_check"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_apply_check"
+                    style="@style/MainRelativityStyle"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        style="@style/MyApplyLeftTextStyle"
+                        android:text="选择审批人(必选)"/>
+
+                    <TextView
+                        style="@style/CommonLineStyle"
+                        android:layout_alignParentBottom="true"/>
+
+                    <TextView
+                        android:id="@+id/tv_apply_check"
+                        style="@style/MyApplyRightTextStyle"
+                        android:layout_marginRight="20dp"/>
+                </RelativeLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyc_check_man"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"></android.support.v7.widget.RecyclerView>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_csr"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:background="@color/white"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="15dp"
+                        android:text="添加抄送人"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:src="@mipmap/gray_right"/>
+                </RelativeLayout>
+
+
+                <TextView
+                    style="@style/CommonLineStyle"/>
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyc_check"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"></android.support.v7.widget.RecyclerView>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
