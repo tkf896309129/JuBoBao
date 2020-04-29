@@ -1,0 +1,19 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.baidu.aip.asrwakeup3.core" xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <application>
+        <!--百度语音-->
+        <meta-data
+            android:name="com.baidu.speech.APP_ID"
+            android:value="17006445"/>
+        <meta-data
+            android:name="com.baidu.speech.API_KEY"
+            android:value="TYqQeziRTaHq6KwoaXcHiGdF"/>
+        <meta-data
+            android:name="com.baidu.speech.SECRET_KEY"
+            android:value="GSIusfY9QGmf6Fi0qy8tGGXiLwzUQkjb"/>
+    </application>
+</manifest>
