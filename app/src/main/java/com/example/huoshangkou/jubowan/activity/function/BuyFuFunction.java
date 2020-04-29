@@ -3,6 +3,7 @@ package com.example.huoshangkou.jubowan.activity.function;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v4.widget.DrawerLayout;
 import android.view.View;
 import android.widget.AdapterView;
@@ -50,9 +51,16 @@ import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnLoadMoreListener;
 import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
+import com.zhy.http.okhttp.OkHttpUtils;
+import com.zhy.http.okhttp.callback.Callback;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+
+import okhttp3.Call;
+import okhttp3.Response;
 
 /**
  * 作者：唐先生
@@ -94,6 +102,7 @@ public class BuyFuFunction {
     private SmartRefreshLayout mXRefresh;
     private Context mContext;
     private BuyFuAdapter mBuyFuAdapter;
+    private List<OrderTypeBean> mTypeDetailList;
 
     TextView mTvCarNum;
 
@@ -119,14 +128,15 @@ public class BuyFuFunction {
         mContext = context;
         mBuyFuList = buyFuList;
         mBuyFuAdapter = buyFuAdapter;
-        mXRefresh= xRefresh;
+        mXRefresh = xRefresh;
+        mTypeDetailList =typeDetailList;
         //重置数据
         fuReset(detailAdapter);
         lvRefresh.setAdapter(buyFuAdapter);
         //隐藏输入框
         llSearch.setVisibility(View.GONE);
 
-        brandName = keyWord;
+        brandName = StringUtils.getNoNullStr(keyWord);
         getFuData(buyFuList, buyFuAdapter, null);
 
         setChooseData(typeList, typeAdapter, lvType, typeDetailList, detailAdapter, lvDetail);
@@ -233,14 +243,15 @@ public class BuyFuFunction {
 
     //获取辅料数据
     public void getFuData(final List<BuyFuListBean> buyFuList, final BuyFuAdapter buyFuAdapter, final SmartRefreshLayout xRefresh) {
-        OkhttpUtil.getInstance().setUnCacheDataNoDialog(mContext, UrlConstant.getInstance().URL + PostConstant.getInstance().GET_FU_DATA
+        OkhttpUtil.getInstance().setUnCacheDataNoDialog(mContext, UrlConstant.getInstance().URL + PostConstant.getInstance().GET_PRODUCT_DATA
                 + FieldConstant.getInstance().USER_ID + "="
                 + PersonConstant.getInstance().getUserId() + "&"
                 + FieldConstant.getInstance().CLASS_NAME + "=" + EncodeUtils.getInstance().getEncodeString(className) + "&"
                 + FieldConstant.getInstance().BRAND_NAME + "=" + EncodeUtils.getInstance().getEncodeString(brandName) + "&"
                 + FieldConstant.getInstance().STANDARD_FU + "=" + EncodeUtils.getInstance().getEncodeString(standardName) + "&"
+                + FieldConstant.getInstance().PRODUCT_TYPE_DEC + "=1"  + "&"
                 + FieldConstant.getInstance().SORT + "=" + mSort + "&"
-                + FieldConstant.getInstance().PAGE_SIZE + "=" + page, new OkhttpCallBack() {
+                + FieldConstant.getInstance().PAGE_INDEX + "=" + page, new OkhttpCallBack() {
             @Override
             public void onSuccess(String json) {
                 BuyFuBean buyFuBean = JSON.parseObject(json, BuyFuBean.class);
@@ -398,6 +409,8 @@ public class BuyFuFunction {
         }
     }
 
+
+
     private void getSwitch(String type, int i, String value) {
         switch (type) {
             case "className":
@@ -425,7 +438,7 @@ public class BuyFuFunction {
     //获取类别
     private void getClassType(final List<OrderTypeBean> typeDetailList, final OrderTypeDetailAdapter detailAdapter) {
         typeDetailList.clear();
-        OkhttpUtil.getInstance().setUnCacheData(mContext, mContext.getString(R.string.loading_message), UrlConstant.getInstance().URL + PostConstant.getInstance().GET_FU_CLASS
+        OkhttpUtil.getInstance().setUnCacheDataNoDialog(mContext, UrlConstant.getInstance().URL + PostConstant.getInstance().GET_FU_CLASS
                 + PersonConstant.getInstance().getUserId(), new OkhttpCallBack() {
             @Override
             public void onSuccess(String json) {
@@ -461,7 +474,7 @@ public class BuyFuFunction {
     //获取品牌
     private void getBrand(final List<OrderTypeBean> typeDetailList, final OrderTypeDetailAdapter detailAdapter) {
         typeDetailList.clear();
-        OkhttpUtil.getInstance().setUnCacheData(mContext, mContext.getString(R.string.loading_message), UrlConstant.getInstance().URL + PostConstant.getInstance().GET_FU_BRAND
+        OkhttpUtil.getInstance().setUnCacheDataNoDialog(mContext,  UrlConstant.getInstance().URL + PostConstant.getInstance().GET_FU_BRAND
                 + PersonConstant.getInstance().getUserId() + "&"
                 + FieldConstant.getInstance().CLASS_NAME + "=" + EncodeUtils.getInstance().getEncodeString(className), new OkhttpCallBack() {
             @Override
@@ -495,7 +508,7 @@ public class BuyFuFunction {
     //获取规格
     private void getStandard(final List<OrderTypeBean> typeDetailList, final OrderTypeDetailAdapter detailAdapter) {
         typeDetailList.clear();
-        OkhttpUtil.getInstance().setUnCacheData(mContext, mContext.getString(R.string.loading_message), UrlConstant.getInstance().URL + PostConstant.getInstance().GET_FU_STANDARD
+        OkhttpUtil.getInstance().setUnCacheDataNoDialog(mContext,  UrlConstant.getInstance().URL + PostConstant.getInstance().GET_FU_STANDARD
                 + PersonConstant.getInstance().getUserId() + "&"
                 + FieldConstant.getInstance().CLASS_NAME + "=" + EncodeUtils.getInstance().getEncodeString(className), new OkhttpCallBack() {
             @Override
@@ -551,6 +564,10 @@ public class BuyFuFunction {
         classPosition = -1;
         brandPosition = -1;
         standardPosition = -1;
+        int num = mTypeDetailList.size();
+        for (int i = 0; i < num; i++) {
+            mTypeDetailList.get(i).setCheck(false);
+        }
         detailAdapter.setItemClickPosition(-1);
         detailAdapter.notifyDataSetChanged();
 
@@ -565,4 +582,7 @@ public class BuyFuFunction {
         buyFuList.clear();
         getFuData(buyFuList, buyFuAdapter, null);
     }
+
+
+
 }

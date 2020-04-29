@@ -266,7 +266,7 @@ public class RepairPriceActivity extends BaseActivity {
 
 
     private void getEditDialog(String title, final TextView textView, final String unit, final OnRepairPriceCallBack callBack) {
-        EditDialogUtils.getInstance().showEditTextDialog("num", getContext(), tvTitle, title, new OnAddWorkCallBack() {
+        EditDialogUtils.getInstance().showEditTextDialog("num", getContext(), title, new OnAddWorkCallBack() {
             @Override
             public void addWorkExp(String content) {
                 textView.setText(content + unit);

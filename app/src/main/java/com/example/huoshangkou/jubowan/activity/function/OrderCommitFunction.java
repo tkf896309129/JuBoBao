@@ -34,11 +34,30 @@ public class OrderCommitFunction {
     }
 
     //下单
-    public void commitOrder(Context context, String ypId, String flId, String proNum, String isPtWl, String addressId, String ywyPhone, final StringCallBack successCallBack) {
+    public void commitOrder(Context context, String ypId, String orderType, String proNum, String isPtWl, String addressId, String ywyPhone, final StringCallBack successCallBack) {
+//        OkhttpUtil.getInstance().setUnCacheData(context, context.getString(R.string.loading_message), UrlConstant.getInstance().URL
+//                + PostConstant.getInstance().SUBMIT_PRO + FieldConstant.getInstance().USER_ID + "=" + PersonConstant.getInstance().getUserId() + "&"
+//                + FieldConstant.getInstance().YP_ID + "=" + ypId + "&"
+//                + FieldConstant.getInstance().FL_ID + "=" + flId + "&"
+//                + FieldConstant.getInstance().YL_ID + "=" + ylId + "&"
+//                + FieldConstant.getInstance().BUY_COUNT + "=" + proNum + "&"
+//                + FieldConstant.getInstance().IS_PT_WL + "=" + isPtWl + "&"
+//                + FieldConstant.getInstance().ADDR_ID + "=" + addressId + "&"
+//                + FieldConstant.getInstance().TO_YWY_TEL + "=" + ywyPhone, new OkhttpCallBack() {
+//            @Override
+//            public void onSuccess(String json) {
+//                successCallBack.onSuccess(json);
+//            }
+//
+//            @Override
+//            public void onFail() {
+//                successCallBack.onFail();
+//            }
+//        });
         OkhttpUtil.getInstance().setUnCacheData(context, context.getString(R.string.loading_message), UrlConstant.getInstance().URL
-                + PostConstant.getInstance().SUBMIT_PRO + FieldConstant.getInstance().USER_ID + "=" + PersonConstant.getInstance().getUserId() + "&"
-                + FieldConstant.getInstance().YP_ID + "=" + ypId + "&"
-                + FieldConstant.getInstance().FL_ID + "=" + flId + "&"
+                + PostConstant.getInstance().RE_SUBMIT_PRO + FieldConstant.getInstance().USER_ID + "=" + PersonConstant.getInstance().getUserId() + "&"
+                + FieldConstant.getInstance().ID + "=" + ypId + "&"
+                + FieldConstant.getInstance().PRODUCT_TYPE + "=" + orderType + "&"
                 + FieldConstant.getInstance().BUY_COUNT + "=" + proNum + "&"
                 + FieldConstant.getInstance().IS_PT_WL + "=" + isPtWl + "&"
                 + FieldConstant.getInstance().ADDR_ID + "=" + addressId + "&"

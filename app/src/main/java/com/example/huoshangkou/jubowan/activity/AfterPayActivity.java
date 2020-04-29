@@ -29,8 +29,7 @@ import butterknife.OnClick;
  */
 
 public class AfterPayActivity extends BaseActivity {
-    private String ypOrder = "";
-    private String flOrder = "";
+    private String orderId = "";
     private String time = "";
 
     List<AfterOrderBean> afterList;
@@ -56,8 +55,7 @@ public class AfterPayActivity extends BaseActivity {
     public void initData() {
         ActivityUtils.getInstance().addActivity(this, ActivityUtils.getInstance().orderList);
         afterList = new ArrayList<>();
-        ypOrder = getIntent().getStringExtra(IntentUtils.getInstance().YP_ORDER);
-        flOrder = getIntent().getStringExtra(IntentUtils.getInstance().FL_ORDER);
+        orderId = getIntent().getStringExtra(IntentUtils.getInstance().ORDER_ID);
         time = getIntent().getStringExtra(IntentUtils.getInstance().TIME);
 
         tvTitle.setText("下单成功");
@@ -71,18 +69,10 @@ public class AfterPayActivity extends BaseActivity {
     }
 
     private void getData() {
-        if (StringUtils.isNoEmpty(ypOrder)) {
+        if (StringUtils.isNoEmpty(orderId)) {
             AfterOrderBean afterOrderBean = new AfterOrderBean();
-            afterOrderBean.setLeft("原片订单号：");
-            afterOrderBean.setRight(ypOrder);
-
-            afterList.add(afterOrderBean);
-        }
-
-        if (StringUtils.isNoEmpty(flOrder)) {
-            AfterOrderBean afterOrderBean = new AfterOrderBean();
-            afterOrderBean.setLeft("辅料订单号：");
-            afterOrderBean.setRight(flOrder);
+            afterOrderBean.setLeft("下单编号：");
+            afterOrderBean.setRight(orderId);
 
             afterList.add(afterOrderBean);
         }

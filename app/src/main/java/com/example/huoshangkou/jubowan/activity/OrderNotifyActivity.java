@@ -1,5 +1,7 @@
 package com.example.huoshangkou.jubowan.activity;
 
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.LinearLayout;
@@ -26,6 +28,10 @@ import com.example.huoshangkou.jubowan.utils.IntentUtils;
 import com.example.huoshangkou.jubowan.utils.OkhttpCallBack;
 import com.example.huoshangkou.jubowan.utils.OkhttpUtil;
 import com.example.huoshangkou.jubowan.utils.SignManUtils;
+import com.scwang.smartrefresh.layout.SmartRefreshLayout;
+import com.scwang.smartrefresh.layout.api.RefreshLayout;
+import com.scwang.smartrefresh.layout.listener.OnLoadMoreListener;
+import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -50,7 +56,7 @@ public class OrderNotifyActivity extends BaseActivity {
     @Bind(R.id.lv_refresh)
     ListView lvRefresh;
     @Bind(R.id.x_refresh)
-    XRefreshView xRefresh;
+    SmartRefreshLayout xRefresh;
     @Bind(R.id.ll_no_data)
     LinearLayout llNoData;
 
@@ -106,31 +112,22 @@ public class OrderNotifyActivity extends BaseActivity {
 
         getOrderNotify();
 
-        xRefresh.setPullLoadEnable(true);
-        xRefresh.setXRefreshViewListener(new XRefreshView.XRefreshViewListener() {
+        xRefresh.setOnLoadMoreListener(new OnLoadMoreListener() {
             @Override
-            public void onRefresh() {
+            public void onLoadMore(@NonNull RefreshLayout refreshLayout) {
+                page++;
+                getOrderNotify();
+            }
+        });
+        xRefresh.setOnRefreshListener(new OnRefreshListener() {
+            @Override
+            public void onRefresh(@NonNull RefreshLayout refreshLayout) {
                 page = 1;
                 notifyList.clear();
                 getOrderNotify();
             }
-
-            @Override
-            public void onLoadMore(boolean isSilence) {
-                page++;
-                getOrderNotify();
-            }
-
-            @Override
-            public void onRelease(float direction) {
-
-            }
-
-            @Override
-            public void onHeaderMove(double headerMovePercent, int offsetY) {
-
-            }
         });
+
 
         //删除通知
         notifyAdapter.setDeleteCallBack(new OnDeleteCallBack() {
@@ -172,16 +169,16 @@ public class OrderNotifyActivity extends BaseActivity {
                 notifyList.addAll(typeBean.getReList());
                 notifyAdapter.notifyDataSetChanged();
                 if (xRefresh != null) {
-                    xRefresh.stopRefresh();
-                    xRefresh.stopLoadMore();
+                    xRefresh.finishLoadMore();
+                    xRefresh.finishRefresh();
                 }
             }
 
             @Override
             public void onFail() {
                 if (xRefresh != null) {
-                    xRefresh.stopRefresh();
-                    xRefresh.stopLoadMore();
+                    xRefresh.finishLoadMore();
+                    xRefresh.finishRefresh();
                 }
             }
         });

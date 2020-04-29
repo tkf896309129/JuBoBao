@@ -237,7 +237,6 @@ public class BaseCheckActivity extends BaseActivity implements View.OnClickListe
                         TimeDialogUtils.getInstance().getTime(getContext(), new OnTimeCallBack() {
                             @Override
                             public void getYearTime(String year) {
-                                list.get(position).setContent(year);
                                 //请假出差时长处理
                                 if (list.get(position).getType() == 3 || list.get(position).getType() == 4) {
                                     //请假时长处理
@@ -247,7 +246,7 @@ public class BaseCheckActivity extends BaseActivity implements View.OnClickListe
                                             long timeCaculate1 = DateUtils.getInstance().getTimeCaculate(startTime, endTime);
                                             if (timeCaculate1 < 0 || (timeCaculate1 == 0 && startTimes.equals("下午") && endTimes.equals("上午"))) {
                                                 getErrorDialog();
-                                                startTime = "";
+//                                                startTime = "";
                                                 return;
                                             }
                                             list.get(position).setContent(startTime);
@@ -257,7 +256,7 @@ public class BaseCheckActivity extends BaseActivity implements View.OnClickListe
                                             long timeCaculate2 = DateUtils.getInstance().getTimeCaculate(startTime, endTime);
                                             if (timeCaculate2 < 0 || (timeCaculate2 == 0 && startTimes.equals("下午") && endTimes.equals("上午"))) {
                                                 getErrorDialog();
-                                                endTime = "";
+//                                                endTime = "";
                                                 return;
                                             }
                                             list.get(position).setContent(endTime);
@@ -340,10 +339,20 @@ public class BaseCheckActivity extends BaseActivity implements View.OnClickListe
                         break;
                     case "账户":
                         accountPosition = position;
-                        Intent intentCkAccount = new Intent(getContext(), DkCustomerActivity.class);
-                        intentCkAccount.putExtra(IntentUtils.getInstance().TYPE, list.get(position).getAccountKey());
-                        intentCkAccount.putExtra(IntentUtils.getInstance().VALUE, list.get(position).getHintType());
-                        startActivityForResult(intentCkAccount, BANK_ACCOUNT);
+                        switch (list.get(position).getHintType()){
+                            case "收款公司":
+                                Intent intentSkCompany = new Intent(getContext(), DkCustomerActivity.class);
+                                intentSkCompany.putExtra(IntentUtils.getInstance().TYPE, IntentUtils.getInstance().SK_COMPANY);
+                                intentSkCompany.putExtra(IntentUtils.getInstance().VALUE, list.get(position).getHintType());
+                                startActivityForResult(intentSkCompany, BANK_ACCOUNT);
+                                break;
+                            default:
+                                Intent intentCkAccount = new Intent(getContext(), DkCustomerActivity.class);
+                                intentCkAccount.putExtra(IntentUtils.getInstance().TYPE, list.get(position).getAccountKey());
+                                intentCkAccount.putExtra(IntentUtils.getInstance().VALUE, list.get(position).getHintType());
+                                startActivityForResult(intentCkAccount, BANK_ACCOUNT);
+                                break;
+                        }
                         break;
                     case "类型":
                         customerList.clear();
@@ -365,7 +374,7 @@ public class BaseCheckActivity extends BaseActivity implements View.OnClickListe
                             case "平台贷款性质":
                                 customerList.addAll(listPinTai);
                                 break;
-                            case "供应商信息":
+                            case "供应商性质":
                             case "贸易商性质":
                                 customerList.addAll(listGysXz);
                                 break;
@@ -383,7 +392,6 @@ public class BaseCheckActivity extends BaseActivity implements View.OnClickListe
                                 customerList.addAll(listOtherType);
                                 break;
                         }
-
                         DialogUtils.getInstance().getBaseDialog(getContext(), customerList, new StringPositionCallBack() {
                             @Override
                             public void onStringPosition(String str, int positionType) {
@@ -789,13 +797,17 @@ public class BaseCheckActivity extends BaseActivity implements View.OnClickListe
             @Override
             public void onSuccess(String str) {
                 LogUtils.e(key + "  " + str);
-                KeyValueBean valueBean = JSON.parseObject(str, KeyValueBean.class);
-                if (valueBean == null || valueBean.getD() == null) {
-                    return;
-                }
-                List<KeyValueBean.DBean.ReObjBean> reObj = valueBean.getD().getReObj();
-                for (int i = 0; i < reObj.size(); i++) {
-                    list.add(reObj.get(i).getName());
+                try {
+                    KeyValueBean valueBean = JSON.parseObject(str, KeyValueBean.class);
+                    if (valueBean == null || valueBean.getD() == null) {
+                        return;
+                    }
+                    List<KeyValueBean.DBean.ReObjBean> reObj = valueBean.getD().getReObj();
+                    for (int i = 0; i < reObj.size(); i++) {
+                        list.add(reObj.get(i).getName());
+                    }
+                }catch (Exception e){
+
                 }
             }
 
@@ -956,5 +968,4 @@ public class BaseCheckActivity extends BaseActivity implements View.OnClickListe
             imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
         }
     }
-
 }

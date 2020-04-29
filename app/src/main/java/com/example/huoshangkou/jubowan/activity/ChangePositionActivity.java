@@ -291,8 +291,8 @@ public class ChangePositionActivity extends AppCompatActivity implements OnGetPo
                 positionBean.setLon(pois.get(j).getLocation().longitude);
                 positionBeenList.add(positionBean);
             }
-            changePositionAdapter.setItemClickPosition(0);
-            setUnCheck(0);
+//            changePositionAdapter.setItemClickPosition(0);
+//            setUnCheck(0);
             changePositionAdapter.notifyDataSetChanged();
         }
     }

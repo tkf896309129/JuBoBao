@@ -1,5 +1,7 @@
 package com.example.huoshangkou.jubowan.activity;
 
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.LinearLayout;
@@ -20,6 +22,10 @@ import com.example.huoshangkou.jubowan.constant.UrlConstant;
 import com.example.huoshangkou.jubowan.utils.IntentUtils;
 import com.example.huoshangkou.jubowan.utils.OkhttpCallBack;
 import com.example.huoshangkou.jubowan.utils.OkhttpUtil;
+import com.scwang.smartrefresh.layout.SmartRefreshLayout;
+import com.scwang.smartrefresh.layout.api.RefreshLayout;
+import com.scwang.smartrefresh.layout.listener.OnLoadMoreListener;
+import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -41,7 +47,7 @@ public class WalletListActivity extends BaseActivity {
     @Bind(R.id.lv_refresh)
     ListView lvRefresh;
     @Bind(R.id.x_refresh)
-    XRefreshView xRefresh;
+    SmartRefreshLayout xRefresh;
     @Bind(R.id.ll_no_data)
     LinearLayout llNoData;
 
@@ -80,29 +86,21 @@ public class WalletListActivity extends BaseActivity {
             }
         });
 
-        xRefresh.setXRefreshViewListener(new XRefreshView.XRefreshViewListener() {
+        xRefresh.setOnRefreshListener(new OnRefreshListener() {
             @Override
-            public void onRefresh() {
+            public void onRefresh(@NonNull RefreshLayout refreshLayout) {
                 list.clear();
-                xRefresh.stopRefresh();
                 getWalletList();
             }
-
+        });
+        xRefresh.setOnLoadMoreListener(new OnLoadMoreListener() {
             @Override
-            public void onLoadMore(boolean isSilence) {
-
-            }
-
-            @Override
-            public void onRelease(float direction) {
-
-            }
-
-            @Override
-            public void onHeaderMove(double headerMovePercent, int offsetY) {
+            public void onLoadMore(@NonNull RefreshLayout refreshLayout) {
 
             }
         });
+
+
 
         getWalletList();
     }
@@ -126,6 +124,10 @@ public class WalletListActivity extends BaseActivity {
                 WalletBean walletBean = JSON.parseObject(json, WalletBean.class);
                 list.addAll(walletBean.getReList());
                 listAdapter.notifyDataSetChanged();
+                if(xRefresh!=null){
+                    xRefresh.finishRefresh();
+                    xRefresh.finishLoadMore();
+                }
             }
 
             @Override

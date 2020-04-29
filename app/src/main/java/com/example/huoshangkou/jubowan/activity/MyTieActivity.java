@@ -37,7 +37,6 @@ public class MyTieActivity extends BaseActivity {
     @Bind(R.id.rl_tie_manager)
     RelativeLayout rlTieManager;
 
-
     private String level = "";
     private String score = "";
     private String url = "";

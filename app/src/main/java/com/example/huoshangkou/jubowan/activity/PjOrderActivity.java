@@ -31,6 +31,7 @@ import com.example.huoshangkou.jubowan.constant.PostConstant;
 import com.example.huoshangkou.jubowan.constant.SharedKeyConstant;
 import com.example.huoshangkou.jubowan.constant.UrlConstant;
 import com.example.huoshangkou.jubowan.utils.ActivityUtils;
+import com.example.huoshangkou.jubowan.utils.AnimUtils;
 import com.example.huoshangkou.jubowan.utils.IntentUtils;
 import com.example.huoshangkou.jubowan.utils.OkhttpCallBack;
 import com.example.huoshangkou.jubowan.utils.OkhttpUtil;
@@ -142,10 +143,10 @@ public class PjOrderActivity extends BaseActivity {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if (llBack.getVisibility() == View.GONE) {
-                    animateOpen(llBack);
+                    AnimUtils.getInstance().getHeight(PjOrderActivity.this,150).animateOpen(llBack);
                     isNeedInvoince = true;
                 } else {
-                    animateClose(llBack);
+                    AnimUtils.getInstance().getHeight(PjOrderActivity.this,150).animateClose(llBack);
                     isNeedInvoince = false;
                 }
             }
@@ -201,7 +202,7 @@ public class PjOrderActivity extends BaseActivity {
             public void onSuccess(String json) {
                 AfterBean afterBean = JSON.parseObject(json, AfterBean.class);
                 if (afterBean.getSuccess() == 1) {
-                    IntentUtils.getInstance().toAfterOrder(getContext(), afterBean.getReObj().getYPOrderID(), afterBean.getReObj().getFlOrderID(), afterBean.getReObj().getCreateTime());
+                    IntentUtils.getInstance().toAfterOrder(getContext(), afterBean.getReObj().getOrderId(),  afterBean.getReObj().getCreateTime());
                     ToastUtils.getMineToast("下单成功");
                     SharedPreferencesUtils.getInstance().put(getContext(), SharedKeyConstant.getInstance().INIT_BUY, "yes");
                 }
@@ -235,37 +236,5 @@ public class PjOrderActivity extends BaseActivity {
         }
     }
 
-    private void animateOpen(View v) {
-        v.setVisibility(View.VISIBLE);
-        ValueAnimator animator = createDropAnimator(v, 0,
-                mHiddenViewMeasuredHeight);
-        animator.start();
-    }
 
-    private void animateClose(final View view) {
-        int origHeight = view.getHeight();
-        ValueAnimator animator = createDropAnimator(view, origHeight, 0);
-        animator.addListener(new AnimatorListenerAdapter() {
-            @Override
-            public void onAnimationEnd(Animator animation) {
-                view.setVisibility(View.GONE);
-            }
-
-        });
-        animator.start();
-    }
-
-    private ValueAnimator createDropAnimator(final View v, int start, int end) {
-        ValueAnimator animator = ValueAnimator.ofInt(start, end);
-        animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
-            @Override
-            public void onAnimationUpdate(ValueAnimator arg0) {
-                int value = (int) arg0.getAnimatedValue();
-                ViewGroup.LayoutParams layoutParams = v.getLayoutParams();
-                layoutParams.height = value;
-                v.setLayoutParams(layoutParams);
-            }
-        });
-        return animator;
-    }
 }

@@ -207,11 +207,13 @@ public class InCompanyMoneyActivity extends BaseActivity {
 //                startActivityForResult(intentBank, 6);
                 Intent intentSkAccount = new Intent(getContext(), DkCustomerActivity.class);
                 intentSkAccount.putExtra(IntentUtils.getInstance().TYPE, IntentUtils.getInstance().SK_ACCOUNT);
+                intentSkAccount.putExtra(IntentUtils.getInstance().VALUE, "收款账户");
                 startActivityForResult(intentSkAccount, 7);
                 break;
             case R.id.rl_ck_company:
                 Intent intentCkAccount = new Intent(getContext(), DkCustomerActivity.class);
                 intentCkAccount.putExtra(IntentUtils.getInstance().TYPE, IntentUtils.getInstance().CK_ACCOUNT);
+                intentCkAccount.putExtra(IntentUtils.getInstance().VALUE, "出款账户");
                 startActivityForResult(intentCkAccount, 8);
                 break;
             case R.id.tv_csr:

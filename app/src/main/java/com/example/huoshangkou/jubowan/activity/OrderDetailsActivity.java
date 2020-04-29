@@ -81,9 +81,9 @@ public class OrderDetailsActivity extends BaseActivity {
 
     @Bind(R.id.tv_delete)
     TextView tvDelete;
-    @Bind(R.id.tv_common_order)
+    @Bind(R.id.tv_common)
     TextView tvCommon;
-    @Bind(R.id.tv_pay_order)
+    @Bind(R.id.tv_pay)
     TextView tvPay;
     @Bind(R.id.tv_link_kf)
     TextView tvLinkKf;
@@ -104,14 +104,11 @@ public class OrderDetailsActivity extends BaseActivity {
     @Bind(R.id.tv_pay_list)
     TextView tvPayList;
 
-
     //是否申请委托书
     private String isWeiTuo = "";
     //评价订单
     private final int COMMON = 1;
-
     private int position = -1;
-
     private String id = "";
 
     private boolean isYp = false;
@@ -144,12 +141,13 @@ public class OrderDetailsActivity extends BaseActivity {
 
     //获取订单详情
     public void getOrderDetail(OrderListsBean reObj) {
-
         List<OrderListTypeBean> typeList = new ArrayList<>();
         if (reObj.getOrderListf() != null) {
             setType(OrderTypeConstant.getInstance().FL, reObj.getOrderListf());
             typeList.addAll(reObj.getOrderListf());
-            llLinkAddress.setVisibility(View.GONE);
+            if (reObj.getIsPtwl().equals("0")) {
+                llLinkAddress.setVisibility(View.GONE);
+            }
         }
         if (reObj.getOrderListw() != null) {
             isWx = true;
@@ -168,6 +166,16 @@ public class OrderDetailsActivity extends BaseActivity {
                 llLinkAddress.setVisibility(View.GONE);
             }
         }
+        if (reObj.getOrderListyl() != null) {
+            //和原片支付方式一样
+            isYp = true;
+            setType(OrderTypeConstant.getInstance().YL, reObj.getOrderListyl());
+            typeList.addAll(reObj.getOrderListyl());
+            if (reObj.getIsPtwl().equals("0")) {
+                llLinkAddress.setVisibility(View.GONE);
+            }
+        }
+
         isWeiTuo = reObj.getIsShengChengWeiTuoShu();
 
         if (StringUtils.isNoEmpty(reObj.getIsShengChengWeiTuoShu())) {
@@ -188,6 +196,7 @@ public class OrderDetailsActivity extends BaseActivity {
 
         tvOrderNum.setText(reObj.getOrderID());
         tvOrderTime.setText(reObj.getCreateTime());
+
 
 //        tvAllPrice.setText("￥" + reObj.getTotalPrice());
         String pricePro = "0.00";
@@ -239,6 +248,7 @@ public class OrderDetailsActivity extends BaseActivity {
         tvReceiveMan.setText(reObj.getLinkMan());
         tvLinkPhone.setText(reObj.getLinkTel());
         tvReceiveAddress.setText(reObj.getProvinces());
+
 
         if (StringUtils.isNoEmpty(reObj.getTotalPrice()) && StringUtils.isNoEmpty(reObj.getWlPrice())) {
 //            tvProPrice.setText("￥" + TwoPointUtils.getInstance().getTwoPoint(Double.parseDouble(reObj.getTotalPrice()) - Double.parseDouble(reObj.getWlPrice())));
@@ -479,11 +489,11 @@ public class OrderDetailsActivity extends BaseActivity {
         }
     }
 
-    @OnClick({R.id.tv_pay_order, R.id.tv_wei_tuo_shu, R.id.tv_delete, R.id.tv_common_order, R.id.ll_back, R.id.tv_link_kf, R.id.tv_confirm_receive})
+    @OnClick({R.id.tv_pay, R.id.tv_wei_tuo_shu, R.id.tv_delete, R.id.tv_common, R.id.ll_back, R.id.tv_link_kf, R.id.tv_confirm_receive})
     public void onClick(View view) {
         switch (view.getId()) {
             //评价
-            case R.id.tv_common_order:
+            case R.id.tv_common:
                 if (listsBean == null) {
                     ToastUtils.getMineToast("获取订单信息失败");
                     return;
@@ -524,7 +534,7 @@ public class OrderDetailsActivity extends BaseActivity {
                 });
                 break;
             //支付
-            case R.id.tv_pay_order:
+            case R.id.tv_pay:
                 if (listsBean == null) {
                     return;
                 }
@@ -572,7 +582,7 @@ public class OrderDetailsActivity extends BaseActivity {
                     if ((listsBean.getPayTpye() == 7 || listsBean.getPayTpye() == -7 || listsBean.getPayTpye() == 6 || listsBean.getPayTpye() == -6)) {
                         type = "btPay";
                     }
-                    IntentUtils.getInstance().toPayActivity(OrderDetailsActivity.this, price, listsBean.getOrderID(), listsBean,type);
+                    IntentUtils.getInstance().toPayActivity(OrderDetailsActivity.this, price, listsBean.getOrderID(), listsBean, type);
                 }
                 break;
             case R.id.ll_back:
@@ -586,22 +596,23 @@ public class OrderDetailsActivity extends BaseActivity {
                 CopyIosDialogUtils.getInstance().getIosDialog(getContext(), "是否确认收货", new CopyIosDialogUtils.iosDialogClick() {
                     @Override
                     public void confimBtn() {
-                        OkhttpUtil.getInstance().setUnCacheData(getContext(), getString(R.string.loading_message), UrlConstant.getInstance().URL
-                                + PostConstant.getInstance().CONFIRM_RECEPIT
-                                + FieldConstant.getInstance().USER_ID + "=" + PersonConstant.getInstance().getUserId() + "&"
-                                + FieldConstant.getInstance().ORDER_ID + "=" + id, new OkhttpCallBack() {
-                            @Override
-                            public void onSuccess(String json) {
-                                SharedPreferencesUtils.getInstance().put(getContext(), SharedKeyConstant.getInstance().IS_INIT_ORDER, "yes");
-                                ToastUtils.getMineToast("确认成功");
-                                OrderDetailsActivity.this.finish();
-                            }
+                        String url = UrlConstant.getInstance().CONFIRM_SIGN + id;
+                        IntentUtils.getInstance().toNextWebActivity(OrderDetailsActivity.this, url, "订单确认书", "订单确认书", "确认收货", id);
 
-                            @Override
-                            public void onFail() {
-                                ToastUtils.getMineToast("确认失败");
-                            }
-                        });
+//                        OkhttpUtil.getInstance().setUnCacheData(getContext(), getString(R.string.loading_message), UrlConstant.getInstance().URL
+//                                + PostConstant.getInstance().CONFIRM_RECEPIT
+//                                + FieldConstant.getInstance().USER_ID + "=" + PersonConstant.getInstance().getUserId() + "&"
+//                                + FieldConstant.getInstance().ORDER_ID + "=" + id, new OkhttpCallBack() {
+//                            @Override
+//                            public void onSuccess(String json) {
+//
+//                            }
+//
+//                            @Override
+//                            public void onFail() {
+//                                ToastUtils.getMineToast("确认失败");
+//                            }
+//                        });
                     }
 
                     @Override

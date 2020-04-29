@@ -37,7 +37,7 @@ import butterknife.OnClick;
  * 作者：唐先生
  * 包名：com.example.huoshangkou.jubowan.activity_bind_blank
  * 类名：SearchTieActivity
- * 描述：搜索论坛界面
+ * 描述：
  * 创建时间：2017-02-23  10:24
  */
 
@@ -91,7 +91,6 @@ public class SearchTieActivity extends BaseActivity implements TextView.OnEditor
             }
         });
 
-
         xRefresh.setXRefreshViewListener(new XRefreshView.XRefreshViewListener() {
             @Override
             public void onRefresh() {
@@ -113,9 +112,7 @@ public class SearchTieActivity extends BaseActivity implements TextView.OnEditor
 
             }
         });
-
     }
-
 
     //点击事件
     @OnClick({R.id.ll_back, R.id.tv_right})
@@ -140,7 +137,6 @@ public class SearchTieActivity extends BaseActivity implements TextView.OnEditor
 
     //搜索帖子
     public void searchTie(String keyWord) {
-
         OkhttpUtil.getInstance().setUnCacheData(getContext(), getString(R.string.loading_message), UrlConstant.getInstance().URL
                 + PostConstant.getInstance().SEARCH_TIE
                 + FieldConstant.getInstance().KEY_WORD + "=" + EncodeUtils.getInstance().getEncodeString(keyWord) + "&"
@@ -157,7 +153,6 @@ public class SearchTieActivity extends BaseActivity implements TextView.OnEditor
                 if (llNoData == null) {
                     return;
                 }
-
                 if (detailBeanList.size() == 0) {
                     llNoData.setVisibility(View.VISIBLE);
                 } else {

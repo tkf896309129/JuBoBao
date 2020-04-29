@@ -10,6 +10,7 @@ import com.andview.refreshview.XRefreshView;
 import com.example.huoshangkou.jubowan.R;
 import com.example.huoshangkou.jubowan.bean.ShopCarBean;
 import com.example.huoshangkou.jubowan.bean.ShopCarListBean;
+import com.example.huoshangkou.jubowan.bean.ShopCarListNewBean;
 import com.example.huoshangkou.jubowan.bean.ShopGroupBean;
 import com.example.huoshangkou.jubowan.constant.FieldConstant;
 import com.example.huoshangkou.jubowan.constant.PersonConstant;
@@ -19,6 +20,7 @@ import com.example.huoshangkou.jubowan.inter.OnShopCarCallBack;
 import com.example.huoshangkou.jubowan.utils.LogUtils;
 import com.example.huoshangkou.jubowan.utils.OkhttpCallBack;
 import com.example.huoshangkou.jubowan.utils.OkhttpUtil;
+import com.example.huoshangkou.jubowan.utils.TwoPointUtils;
 import com.example.huoshangkou.jubowan.view.AnimatedExpandableListView;
 
 import java.util.List;
@@ -45,19 +47,22 @@ public class ShopCarFunction {
     public final String YUAN = "0";
     //辅材
     public final String FU = "1";
+    //原料
+    public final String YUAN_LIAO = "2";
 
     //获取购物车数据
-    public void getShopCarData(final Context context, final OnShopCarCallBack carCallBack) {
-        getData(context, carCallBack);
+    public void getShopCarData(final Context context, String carType, final OnShopCarCallBack carCallBack) {
+        getData(context, carType, carCallBack);
     }
 
-    private void getData(Context context, final OnShopCarCallBack carCallBack) {
+    private void getData(Context context, String carType, final OnShopCarCallBack carCallBack) {
         OkhttpUtil.getInstance().setUnCacheData(context, context.getString(R.string.add_shop_car), UrlConstant.getInstance().URL
-                + PostConstant.getInstance().GET_SHOP_CAR
-                + FieldConstant.getInstance().USER_ID + "=" + PersonConstant.getInstance().getUserId(), new OkhttpCallBack() {
+                + PostConstant.getInstance().GET_CAR_LIST
+                + FieldConstant.getInstance().USER_ID + "=" + PersonConstant.getInstance().getUserId() + "&"
+                + FieldConstant.getInstance().CAR_TYPE + "=" + carType, new OkhttpCallBack() {
             @Override
             public void onSuccess(String json) {
-                ShopCarBean carBean = JSON.parseObject(json, ShopCarBean.class);
+                ShopCarListNewBean carBean = JSON.parseObject(json, ShopCarListNewBean.class);
                 carCallBack.onSuccess(carBean);
             }
 
@@ -71,24 +76,24 @@ public class ShopCarFunction {
 
     private double allPrice;
 
-    public String caculatePrice(List<List<ShopCarListBean>> list_child, TextView tvNum) {
+    public String caculatePrice(List<ShopCarListBean> list_child, TextView tvNum) {
         allPrice = 0;
         double count = 0;
         int num = list_child.size();
-        for (int i = 0; i < num; i++) {
-            List<ShopCarListBean> priceList = list_child.get(i);
-            int num2 = priceList.size();
+//        for (int i = 0; i < num; i++) {
+//            List<ShopCarListBean> priceList = list_child.get(i);
+            int num2 = list_child.size();
             for (int j = 0; j < num2; j++) {
-                if (priceList.get(j).isCheck()) {
-                    allPrice += Double.parseDouble(priceList.get(j).getPrice()) * Double.parseDouble(priceList.get(j).getToNum());
-                    count += Double.parseDouble(priceList.get(j).getToNum());
+                if (list_child.get(j).isCheck()) {
+                    allPrice += Double.parseDouble(list_child.get(j).getPrice()) * Double.parseDouble(list_child.get(j).getToNum());
+                    count += Double.parseDouble(list_child.get(j).getToNum());
                 }
-            }
+//            }
         }
 
         tvNum.setText("结算(" + count + ")");
 
-        return allPrice + "";
+        return TwoPointUtils.getInstance().getTwoPoint(allPrice) + "";
     }
 
     public String caculateSinglePrice(List<ShopCarListBean> list_child) {

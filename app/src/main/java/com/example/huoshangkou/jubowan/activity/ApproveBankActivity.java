@@ -2,6 +2,7 @@ package com.example.huoshangkou.jubowan.activity;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageView;
@@ -46,7 +47,7 @@ import butterknife.OnClick;
  * 作者：唐先生
  * 包名：com.example.huoshangkou.jubowan.activity_bind_blank
  * 类名：ApproveBankActivity
- * 描述：审批银行信息界面   20000 + 16000 + 60000 + 16000 ==
+ * 描述：审批银行信息界面
  * 创建时间：2017-03-21  11:38
  */
 

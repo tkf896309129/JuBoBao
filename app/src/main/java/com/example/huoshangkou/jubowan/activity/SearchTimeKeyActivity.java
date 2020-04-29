@@ -39,7 +39,10 @@ public class SearchTimeKeyActivity extends BaseActivity {
     LinearLayout llStartTime;
     @Bind(R.id.ll_end_time)
     LinearLayout llEndTime;
-
+    @Bind(R.id.ll_search_type)
+    LinearLayout llSearchType;
+    @Bind(R.id.tv_search_type)
+    TextView tvSearchType;
 
     private String startTime = "";
     private String endTime = "";
@@ -97,9 +100,7 @@ public class SearchTimeKeyActivity extends BaseActivity {
 
                     }
                 });
-
                 KeyBoardUtils.closeKeybord(etKeyWord, getContext());
-
                 break;
             case R.id.tv_end_time:
                 TimeDialogUtils.getInstance().getTime(getContext(), new StringCallBack() {

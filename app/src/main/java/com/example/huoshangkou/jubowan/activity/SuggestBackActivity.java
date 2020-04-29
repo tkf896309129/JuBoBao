@@ -11,16 +11,22 @@ import com.alibaba.fastjson.JSON;
 import com.example.huoshangkou.jubowan.R;
 import com.example.huoshangkou.jubowan.base.BaseActivity;
 import com.example.huoshangkou.jubowan.bean.SuccessBean;
+import com.example.huoshangkou.jubowan.bean.SuccessDBean;
 import com.example.huoshangkou.jubowan.constant.FieldConstant;
 import com.example.huoshangkou.jubowan.constant.PersonConstant;
 import com.example.huoshangkou.jubowan.constant.PostConstant;
 import com.example.huoshangkou.jubowan.constant.UrlConstant;
+import com.example.huoshangkou.jubowan.inter.StringCallBack;
 import com.example.huoshangkou.jubowan.utils.CopyIosDialogUtils;
 import com.example.huoshangkou.jubowan.utils.EncodeUtils;
+import com.example.huoshangkou.jubowan.utils.LogUtils;
 import com.example.huoshangkou.jubowan.utils.OkhttpCallBack;
 import com.example.huoshangkou.jubowan.utils.OkhttpUtil;
 import com.example.huoshangkou.jubowan.utils.StringUtils;
 import com.example.huoshangkou.jubowan.utils.ToastUtils;
+
+import java.util.HashMap;
+import java.util.Map;
 
 import butterknife.Bind;
 import butterknife.OnClick;
@@ -74,7 +80,6 @@ public class SuggestBackActivity extends BaseActivity {
 
             }
         });
-
     }
 
 
@@ -86,13 +91,11 @@ public class SuggestBackActivity extends BaseActivity {
                 this.finish();
                 break;
             case R.id.tv_confirm_suggest:
-
                 suggestStr = etSuggestBack.getText().toString().trim();
                 if (!StringUtils.isNoEmpty(suggestStr)) {
                     ToastUtils.getMineToast("请输入反馈意见");
                     return;
                 }
-
                 CopyIosDialogUtils.getInstance().getIosDialog(this, getString(R.string.is_commit_suggest), new CopyIosDialogUtils.iosDialogClick() {
                     @Override
                     public void confimBtn() {
@@ -111,17 +114,22 @@ public class SuggestBackActivity extends BaseActivity {
 
     //意见
     private void setSuggestBack(Context context, String typeId, String feedTxt) {
-        OkhttpUtil.getInstance().setUnCacheData(context, context.getString(R.string.loading_message), UrlConstant.getInstance().URL + PostConstant.getInstance().COMMIT_FEED +
-                FieldConstant.getInstance().USER_ID + "=" + PersonConstant.getInstance().getUserId() + "&" +
-                FieldConstant.getInstance().TYPE_ID + "=" + typeId + "&" +
-                FieldConstant.getInstance().FEED_TXT + "=" + EncodeUtils.getInstance().getEncodeString(feedTxt), new OkhttpCallBack() {
+
+        Map<String,String> map = new HashMap<>();
+        map.put("UserID",PersonConstant.getInstance().getUserId());
+        map.put("feedtxt",feedTxt);
+        String json = JSON.toJSONString(map);
+        OkhttpUtil.getInstance().basePostCall(this, json, UrlConstant.getInstance().WEB_URL + "/ServiceInterface/JuboBao/Feedback.asmx/CommitFeed", new StringCallBack() {
             @Override
-            public void onSuccess(String json) {
-                SuccessBean successBean = JSON.parseObject(json, SuccessBean.class);
-                if (successBean.getSuccess() == 1) {
+            public void onSuccess(String str) {
+                LogUtils.e(str);
+                SuccessDBean successBean = JSON.parseObject(str, SuccessDBean.class);
+                if (successBean.getD().getSuccess() == 1) {
                     ToastUtils.getMineToast("提交成功");
                     etSuggestBack.setText("");
                     SuggestBackActivity.this.finish();
+                }else {
+                    ToastUtils.getMineToast(successBean.getD().getErrMsg());
                 }
             }
 
@@ -130,6 +138,25 @@ public class SuggestBackActivity extends BaseActivity {
 
             }
         });
-    }
 
+//        OkhttpUtil.getInstance().setUnCacheData(context, context.getString(R.string.loading_message), UrlConstant.getInstance().URL + PostConstant.getInstance().COMMIT_FEED +
+//                FieldConstant.getInstance().USER_ID + "=" + PersonConstant.getInstance().getUserId() + "&" +
+//                FieldConstant.getInstance().TYPE_ID + "=" + typeId + "&" +
+//                FieldConstant.getInstance().FEED_TXT + "=" + EncodeUtils.getInstance().getEncodeString(feedTxt), new OkhttpCallBack() {
+//            @Override
+//            public void onSuccess(String json) {
+//                SuccessBean successBean = JSON.parseObject(json, SuccessBean.class);
+//                if (successBean.getSuccess() == 1) {
+//                    ToastUtils.getMineToast("提交成功");
+//                    etSuggestBack.setText("");
+//                    SuggestBackActivity.this.finish();
+//                }
+//            }
+//
+//            @Override
+//            public void onFail() {
+//
+//            }
+//        });
+    }
 }

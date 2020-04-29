@@ -47,7 +47,7 @@ public class StudyChooseActivity extends BaseActivity {
     public void initData() {
         list.add("通知制度区");
         list.add("技能学习区");
-        tvTitle.setText("制度通知");
+        tvTitle.setText("我的学习");
         chooseAdapter = new StudyChooseAdapter(this, list, R.layout.item_study_choose);
         lvStudyChoose.setAdapter(chooseAdapter);
         lvStudyChoose.setDividerHeight(0);

@@ -1,5 +1,6 @@
 package com.example.huoshangkou.jubowan.activity;
 
+import android.support.design.widget.CoordinatorLayout;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -32,7 +33,6 @@ import butterknife.OnClick;
  */
 
 public class AddressEditActivity extends HideBaseActivity {
-
     @Bind(R.id.tv_title)
     TextView tvTitle;
     @Bind(R.id.tv_area)
@@ -75,19 +75,16 @@ public class AddressEditActivity extends HideBaseActivity {
     @Override
     public void initData() {
         //设置标题
-
         addressListBean = (AddressListBean) getIntent().getSerializableExtra(IntentUtils.getInstance().BEAN_TYPE);
 
         //编辑地址传过来的值
         if (addressListBean != null) {
             tvTitle.setText("编辑地址");
-
             linkMan = addressListBean.getLinkMan();
             linkTel = addressListBean.getLinkTel();
             detailAddress = addressListBean.getDetailAddress();
             provinces = addressListBean.getProvinces();
             addressId = addressListBean.getAdressID() + "";
-
 
             etLinkTel.setText(linkTel);
             etDetailAddress.setText(detailAddress);

@@ -109,7 +109,7 @@ public class PjShopCarActivity extends BaseActivity {
             //改变数量添加
             @Override
             public void onClickPosition(final String type, final String id, final double toNum, final int groupPosition, final int childPosition) {
-                EditDialogUtils.getInstance().showEditTextDialog("num", PjShopCarActivity.this, tvTitle, "输入购买数量", new OnAddWorkCallBack() {
+                EditDialogUtils.getInstance().showEditTextDialog("num", PjShopCarActivity.this, "输入购买数量", new OnAddWorkCallBack() {
                     @Override
                     public void addWorkExp(final String content) {
                         addToCar(getContext(), id, content, groupPosition);

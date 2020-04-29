@@ -125,7 +125,7 @@ public class AddDataActivity extends BaseActivity {
     public void initData() {
         id = getIntent().getStringExtra(IntentUtils.getInstance().TYPE);
         tvTitle.setText("新建日程");
-        tvRight.setText("添加");
+        tvRight.setText("确定");
         getDateType();
         getDate();
     }

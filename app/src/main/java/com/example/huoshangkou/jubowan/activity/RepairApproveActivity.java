@@ -399,7 +399,7 @@ public class RepairApproveActivity extends BaseActivity {
                 if (isApproveFinish) {
                     return;
                 }
-                EditDialogUtils.getInstance().showEditTextDialog("text", RepairApproveActivity.this, tvAddress, "请输入工作单位", new OnAddWorkCallBack() {
+                EditDialogUtils.getInstance().showEditTextDialog("text", RepairApproveActivity.this, "请输入工作单位", new OnAddWorkCallBack() {
                     @Override
                     public void addWorkExp(String content) {
                         workBeanList.get(position).setWorkCompany(content);
@@ -415,7 +415,7 @@ public class RepairApproveActivity extends BaseActivity {
                 if (isApproveFinish) {
                     return;
                 }
-                EditDialogUtils.getInstance().showEditTextDialog("text", RepairApproveActivity.this, tvAddress, "请输入工作职位", new OnAddWorkCallBack() {
+                EditDialogUtils.getInstance().showEditTextDialog("text", RepairApproveActivity.this, "请输入工作职位", new OnAddWorkCallBack() {
                     @Override
                     public void addWorkExp(String content) {
                         workBeanList.get(position).setWorkType(content);

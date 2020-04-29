@@ -2,6 +2,7 @@ package com.example.huoshangkou.jubowan.activity;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.EditText;
@@ -23,6 +24,7 @@ import com.example.huoshangkou.jubowan.constant.SharedKeyConstant;
 import com.example.huoshangkou.jubowan.constant.UrlConstant;
 import com.example.huoshangkou.jubowan.inter.OnApproveBankCallBack;
 import com.example.huoshangkou.jubowan.inter.OnDeleteBankCallBack;
+import com.example.huoshangkou.jubowan.inter.OnPositionClick;
 import com.example.huoshangkou.jubowan.utils.CopyIosDialogUtils;
 import com.example.huoshangkou.jubowan.utils.EncodeUtils;
 import com.example.huoshangkou.jubowan.utils.IntentUtils;
@@ -116,15 +118,17 @@ public class SearchBankActivity extends BaseActivity {
             }
         });
 
-        lvRefresh.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        bankAdapter.setPositionClick(new OnPositionClick() {
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+            public void onPositionClick(int position) {
                 Intent intent = new Intent();
-                intent.putExtra("bean", bankList.get(i));
+                intent.putExtra("bean", bankList.get(position));
                 setResult(105, intent);
                 SearchBankActivity.this.finish();
             }
         });
+
+
 
 
         xRefreshView.setOnRefreshListener(new OnRefreshListener() {

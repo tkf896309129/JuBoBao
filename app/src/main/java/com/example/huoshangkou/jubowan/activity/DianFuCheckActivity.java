@@ -345,6 +345,7 @@ public class DianFuCheckActivity extends BaseActivity {
             case R.id.ll_sk_company:
                 Intent intentSkCompany = new Intent(getContext(), DkCustomerActivity.class);
                 intentSkCompany.putExtra(IntentUtils.getInstance().TYPE, IntentUtils.getInstance().SK_COMPANY);
+                intentSkCompany.putExtra(IntentUtils.getInstance().VALUE, "收款公司");
                 startActivityForResult(intentSkCompany, 11);
                 break;
             case R.id.rl_time:
@@ -364,6 +365,7 @@ public class DianFuCheckActivity extends BaseActivity {
             case R.id.ll_ck_account:
                 Intent intentCkAccount = new Intent(getContext(), DkCustomerActivity.class);
                 intentCkAccount.putExtra(IntentUtils.getInstance().TYPE, IntentUtils.getInstance().CK_ACCOUNT);
+                intentCkAccount.putExtra(IntentUtils.getInstance().VALUE, "出款账户");
                 startActivityForResult(intentCkAccount, 8);
                 break;
             case R.id.tv_commit:
@@ -417,7 +419,7 @@ public class DianFuCheckActivity extends BaseActivity {
                 PhotoUtils.getInstance().mutilLocalImageUp(imgList, DianFuCheckActivity.this, new StringCallBack() {
                     @Override
                     public void onSuccess(String str) {
-                        pics = str;
+                        pics += str;
                         checkDianDetail();
                     }
 
@@ -598,7 +600,7 @@ public class DianFuCheckActivity extends BaseActivity {
                 btCheckAdapter.notifyDataSetChanged();
                 operator= iousPayApproval.getOperator();
                 tvYyRy.setText(iousPayApproval.getOperator());
-
+                pics = checkBean.getD().getReObj().getPics();
                 etOtherRemark.setText(iousPayApproval.getRemark());
             }
 

@@ -59,7 +59,6 @@ public class VisitorResetActivity extends BaseActivity {
 
     private CompanyAdapter searchAdapter;
 
-
     //审批人员
     ArrayList<CompanyListBean> memberList;
 
