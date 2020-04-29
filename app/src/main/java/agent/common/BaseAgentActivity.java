@@ -19,6 +19,9 @@ public class BaseAgentActivity extends Activity {
         requestActivityTransparent();
     }
 
+
+
+
     /**
      * 启用透明的跳板Activity
      */
