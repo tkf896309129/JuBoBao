@@ -3,6 +3,7 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:fitsSystemWindows="true"
+              android:background="@color/gray_bg"
               android:orientation="vertical">
 
     <RelativeLayout
@@ -27,15 +28,18 @@
             android:id="@+id/et_search"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="公司名称"
             android:layout_marginBottom="10dp"
             android:layout_marginLeft="50dp"
             android:layout_marginRight="50dp"
             android:layout_marginTop="10dp"
-            android:background="@drawable/white_corner"
+            android:background="@drawable/white_black_bg"
             android:gravity="center_vertical"
+            android:hint="公司名称"
+            android:paddingLeft="10dp"
             android:maxLength="10"
             android:paddingRight="10dp"
+            android:textColor="@color/address_black_key"
+            android:textColorHint="@color/address_alpha_gray_black"
             android:textSize="14dp"/>
 
 
@@ -47,7 +51,7 @@
             android:layout_marginRight="10dp"
             android:gravity="center"
             android:text="搜索"
-            android:textColor="@color/white"/>
+            android:textColor="@color/white_all"/>
     </RelativeLayout>
 
     <com.scwang.smartrefresh.layout.SmartRefreshLayout

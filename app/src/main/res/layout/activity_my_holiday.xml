@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
+              android:background="@color/gray_bg"
               android:fitsSystemWindows="true"
               android:orientation="vertical">
 
@@ -29,7 +30,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="10dp"
                     android:text="请假类型"
-                    android:textColor="@color/black"
+                    android:textColor="@color/address_black_key"
                     android:textSize="@dimen/address_key_size"/>
 
 
@@ -41,6 +42,8 @@
                     android:layout_marginRight="5dp"
                     android:layout_toLeftOf="@+id/gray_right_0"
                     android:text="请选择"
+                    android:textColor="@color/address_alpha_black"
+                    android:textColorHint="@color/address_alpha_gray_black"
                     android:textSize="14dp"/>
 
                 <ImageView
@@ -62,7 +65,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="10dp"
                     android:text="开始日期"
-                    android:textColor="@color/black"
+                    android:textColor="@color/address_black_key"
                     android:textSize="@dimen/address_key_size"/>
 
 
@@ -74,6 +77,8 @@
                     android:layout_marginRight="5dp"
                     android:layout_toLeftOf="@+id/gray_right_1"
                     android:text="请选择"
+                    android:textColor="@color/address_alpha_black"
+                    android:textColorHint="@color/address_alpha_gray_black"
                     android:textSize="14dp"/>
 
                 <ImageView
@@ -97,7 +102,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="10dp"
                     android:text="时间段"
-                    android:textColor="@color/black"
+                    android:textColor="@color/address_black_key"
                     android:textSize="@dimen/address_key_size"/>
 
 
@@ -109,6 +114,8 @@
                     android:layout_marginRight="5dp"
                     android:layout_toLeftOf="@+id/gray_right_2"
                     android:text="请选择"
+                    android:textColor="@color/address_alpha_black"
+                    android:textColorHint="@color/address_alpha_gray_black"
                     android:textSize="14dp"/>
 
                 <ImageView
@@ -130,7 +137,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="10dp"
                     android:text="结束日期"
-                    android:textColor="@color/black"
+                    android:textColor="@color/address_black_key"
                     android:textSize="@dimen/address_key_size"/>
 
 
@@ -142,6 +149,8 @@
                     android:layout_marginRight="5dp"
                     android:layout_toLeftOf="@+id/gray_right_3"
                     android:text="请选择"
+                    android:textColor="@color/address_alpha_black"
+                    android:textColorHint="@color/address_alpha_gray_black"
                     android:textSize="14dp"/>
 
                 <ImageView
@@ -165,7 +174,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="10dp"
                     android:text="时间段"
-                    android:textColor="@color/black"
+                    android:textColor="@color/address_black_key"
                     android:textSize="@dimen/address_key_size"/>
 
 
@@ -177,6 +186,8 @@
                     android:layout_marginRight="5dp"
                     android:layout_toLeftOf="@+id/gray_right_4"
                     android:text="请选择"
+                    android:textColor="@color/address_alpha_black"
+                    android:textColorHint="@color/address_alpha_gray_black"
                     android:textSize="14dp"/>
 
                 <ImageView
@@ -198,7 +209,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="10dp"
                     android:text="请假时长"
-                    android:textColor="@color/black"
+                    android:textColor="@color/address_black_key"
                     android:textSize="@dimen/address_key_size"/>
 
                 <TextView
@@ -207,7 +218,8 @@
                     android:layout_height="match_parent"
                     android:layout_marginRight="20dp"
                     android:background="@drawable/et_blank_bg"
-                    android:gravity="center|right"/>
+                    android:gravity="center|right"
+                    android:textColor="@color/address_alpha_black"/>
 
             </LinearLayout>
 
@@ -227,6 +239,8 @@
                     android:paddingLeft="10dp"
                     android:paddingTop="5dp"
                     android:scrollbars="vertical"
+                    android:textColor="@color/address_alpha_black"
+                    android:textColorHint="@color/address_alpha_gray_black"
                     android:textSize="15dp"/>
 
             </com.example.huoshangkou.jubowan.view.MyLinearLayout>
@@ -238,7 +252,8 @@
 
                 <TextView
                     style="@style/MyApplyLeftTextStyle"
-                    android:text="图片"/>
+                    android:text="图片"
+                    android:textColor="@color/address_alpha_black"/>
 
                 <ImageView
                     android:id="@+id/iv_apply_camera"
@@ -266,7 +281,8 @@
 
                 <TextView
                     style="@style/MyApplyLeftTextStyle"
-                    android:text="选择审批人(必选)"/>
+                    android:text="选择审批人(必选)"
+                    android:textColor="@color/address_alpha_black"/>
 
                 <TextView
                     style="@style/CommonLineStyle"
@@ -304,7 +320,8 @@
                     android:layout_height="44dp"
                     android:background="@color/white"
                     android:gravity="center_vertical"
-                    android:text="添加抄送人"/>
+                    android:text="添加抄送人"
+                    android:textColor="@color/address_alpha_black"/>
 
                 <ImageView
                     android:layout_width="wrap_content"

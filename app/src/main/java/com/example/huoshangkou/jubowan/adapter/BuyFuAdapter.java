@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.example.huoshangkou.jubowan.R;
 import com.example.huoshangkou.jubowan.activity.LoginActivity;
+import com.example.huoshangkou.jubowan.activity.function.BuyFunction;
 import com.example.huoshangkou.jubowan.base.BaseAbstractAdapter;
 import com.example.huoshangkou.jubowan.base.ViewHolder;
 import com.example.huoshangkou.jubowan.bean.BuyBean;
@@ -23,6 +24,7 @@ import com.example.huoshangkou.jubowan.inter.onAnimItemClick;
 import com.example.huoshangkou.jubowan.utils.GlideUtils;
 import com.example.huoshangkou.jubowan.utils.IntentUtils;
 import com.example.huoshangkou.jubowan.utils.LoginUtils;
+import com.example.huoshangkou.jubowan.utils.StringUtils;
 import com.example.huoshangkou.jubowan.utils.ToastUtils;
 
 import java.util.List;
@@ -54,11 +56,14 @@ public class BuyFuAdapter extends BaseAbstractAdapter<BuyFuListBean> {
         TextView tvStandard = holder.getView(R.id.tv_standard);
         TextView tvPrice = holder.getView(R.id.tv_price);
         ImageView imgCar = holder.getView(R.id.iv_car);
+        TextView tvSaleNum = holder.getView(R.id.tv_sale_num);
+
 
         GlideUtils.getInstance().displayImage(bean.getPic(), context, imgPro);
         tvType.setText("类别：" + bean.getClassName());
         tvBrand.setText("品牌：" + bean.getBrandName());
         tvStandard.setText("规格：" + bean.getGuigeName());
+        tvSaleNum.setText("销量：" + bean.getSaleNum() + bean.getNameUnit());
 
         String price = "￥" + bean.getPrice() + "/" + bean.getNameUnit();
         int colorPosition = (price).indexOf(".");
@@ -66,7 +71,7 @@ public class BuyFuAdapter extends BaseAbstractAdapter<BuyFuListBean> {
 
         SpannableStringBuilder spannableString = new SpannableStringBuilder();
         spannableString.append(price);
-        spannableString.setSpan(new ForegroundColorSpan(context.getResources().getColor(R.color.main_tab_blue)), 1, linePosition, Spanned.SPAN_EXCLUSIVE_INCLUSIVE);
+        spannableString.setSpan(new ForegroundColorSpan(context.getResources().getColor(R.color.main_tab_blue_all)), 1, linePosition, Spanned.SPAN_EXCLUSIVE_INCLUSIVE);
 
         //字体大小
         AbsoluteSizeSpan sizeSpan = new AbsoluteSizeSpan(28);
@@ -75,24 +80,27 @@ public class BuyFuAdapter extends BaseAbstractAdapter<BuyFuListBean> {
         spannableString.setSpan(sizeSpan2, colorPosition, linePosition, Spanned.SPAN_EXCLUSIVE_INCLUSIVE);
 
         tvPrice.setText(spannableString);
-
-
         imgCar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 if (!LoginUtils.getInstance().isLogin(context)) {
                     IntentUtils.getInstance().toActivity(context, LoginActivity.class);
                     return;
                 }
-
                 int[] startLocation = new int[2];
                 imgPro.getLocationInWindow(startLocation);
                 Drawable drawable = imgPro.getDrawable();
-                carClickBack.onAddCarClick(bean.getID(),drawable, startLocation);
-
+                carClickBack.onAddCarClick(bean.getID(), drawable, startLocation);
             }
         });
+        TextView tvOrderDetail = holder.getView(R.id.tv_order_detail);
+        tvOrderDetail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                BuyFunction.getInstance().getOrderDetail(context,"1",bean.getID());
+            }
+        });
+
     }
 
     public void setCarClickBack(OnAddCarClickBack carClickBack) {

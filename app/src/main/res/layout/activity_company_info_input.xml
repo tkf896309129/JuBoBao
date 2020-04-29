@@ -3,6 +3,7 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:fitsSystemWindows="true"
+              android:background="@color/gray_bg"
               android:orientation="vertical">
 
     <include layout="@layout/tool_bar_style"></include>
@@ -52,6 +53,7 @@
             android:id="@+id/et_apply_man"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:textColor="@color/address_black_key"
             android:background="@drawable/et_blank_bg"
             android:textSize="14dp"
             android:gravity="right|center_vertical"
@@ -82,6 +84,7 @@
             android:layout_height="match_parent"
             android:background="@drawable/et_blank_bg"
             android:textSize="14dp"
+            android:textColor="@color/address_black_key"
             android:gravity="right|center_vertical"
             android:paddingRight="15dp"/>
 
@@ -108,6 +111,7 @@
             android:layout_width="match_parent"
             android:textSize="14dp"
             android:layout_height="match_parent"
+            android:textColor="@color/address_black_key"
             android:background="@drawable/et_blank_bg"
             android:gravity="right|center_vertical"
             android:paddingRight="15dp"/>
@@ -123,16 +127,6 @@
         android:layout_marginTop="10dp"
         android:background="@drawable/bottom_white_corner">
 
-        <EditText
-            android:id="@+id/et_code"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_toLeftOf="@+id/tv_send_code"
-            android:background="@drawable/et_blank_bg"
-            android:hint="请输入验证码"
-            android:paddingLeft="15dp"
-            android:textSize="14dp"/>
-
         <TextView
             android:id="@+id/tv_send_code"
             android:layout_width="wrap_content"
@@ -140,13 +134,28 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="15dp"
-            android:background="@drawable/blue_corner_btn"
+            android:background="@drawable/blue_all_corner"
             android:gravity="center"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:text="获取验证码"
-            android:textColor="@color/white"
+            android:textColor="@color/white_all"
             android:textSize="14dp"/>
+
+        <EditText
+            android:id="@+id/et_code"
+            android:layout_toLeftOf="@+id/tv_send_code"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/et_blank_bg"
+            android:textColor="@color/address_black_key"
+            android:textColorHint="@color/address_alpha_black"
+            android:hint="请输入验证码"
+            android:paddingLeft="15dp"
+            android:textSize="14dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
 
     </RelativeLayout>
     <CheckBox
@@ -167,7 +176,7 @@
         android:layout_marginLeft="18dp"
         android:layout_marginTop="10dp"
         android:text="《聚玻白条赊购服务协议》"
-        android:textColor="@color/main_tab_blue"/>
+        android:textColor="@color/main_tab_blue_all"/>
 
     <TextView
         android:id="@+id/tv_xy_two"
@@ -186,7 +195,7 @@
         android:layout_marginLeft="18dp"
         android:layout_marginTop="4dp"
         android:text="《聚玻白条服务费用计算规则》"
-        android:textColor="@color/main_tab_blue"/>
+        android:textColor="@color/main_tab_blue_all"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -201,7 +210,7 @@
             android:background="@drawable/blue_corner_btn"
             android:gravity="center"
             android:text="确认提交"
-            android:textColor="@color/white"/>
+            android:textColor="@color/white_all"/>
     </RelativeLayout>
 
 </LinearLayout>

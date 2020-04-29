@@ -25,6 +25,7 @@
                 android:background="@color/white"
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp"
+                android:textColor="@color/address_alpha_black"
                 android:paddingTop="10dp"
                 android:text="浙江火山口网络科技有限公司" />
 
@@ -37,6 +38,7 @@
                 android:paddingBottom="21dp"
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp"
+                android:textColor="@color/address_alpha_black"
                 android:paddingTop="2dp"
                 android:text="" />
 
@@ -56,12 +58,14 @@
 
                 <TextView
                     android:layout_width="wrap_content"
+                    android:textColor="@color/address_alpha_black"
                     android:layout_height="wrap_content"
                     android:text="提货地址：" />
 
                 <EditText
                     android:id="@+id/tv_put_address"
                     android:layout_width="match_parent"
+                    android:textColor="@color/address_alpha_black"
                     android:layout_height="match_parent"
                     android:background="@drawable/et_blank_bg"
                     android:textSize="14dp" />
@@ -80,11 +84,13 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/address_alpha_black"
                     android:text="到货地址：" />
 
                 <EditText
                     android:id="@+id/tv_get_address"
                     android:layout_width="match_parent"
+                    android:textColor="@color/address_alpha_black"
                     android:layout_height="match_parent"
                     android:background="@drawable/et_blank_bg"
                     android:textSize="14dp" />
@@ -103,11 +109,13 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/address_alpha_black"
                     android:text="订单编号：" />
 
                 <TextView
                     android:id="@+id/tv_order_num"
                     android:layout_width="match_parent"
+                    android:textColor="@color/address_alpha_black"
                     android:layout_height="match_parent"
                     android:background="@drawable/et_blank_bg"
                     android:gravity="center_vertical" />
@@ -127,6 +135,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/address_alpha_black"
                     android:text="提货详情如下：" />
 
 
@@ -138,6 +147,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:textColor="@color/address_alpha_black"
                 android:background="@color/white"
                 android:lineSpacingExtra="1dp"
                 android:paddingBottom="10dp"
@@ -151,6 +161,7 @@
                 android:id="@+id/tv_de_company"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/address_alpha_black"
                 android:background="@color/white"
                 android:gravity="right"
                 android:paddingRight="15dp" />
@@ -160,6 +171,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/white"
+                android:textColor="@color/address_alpha_black"
                 android:gravity="right"
                 android:paddingBottom="20dp"
                 android:paddingRight="15dp"

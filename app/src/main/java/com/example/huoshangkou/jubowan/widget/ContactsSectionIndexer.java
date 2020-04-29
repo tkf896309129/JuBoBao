@@ -7,6 +7,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.SectionIndexer;
 
+import com.example.huoshangkou.jubowan.bean.SelectManBean;
+
 public class ContactsSectionIndexer implements SectionIndexer {
 
     private static String OTHER = "";
@@ -24,7 +26,7 @@ public class ContactsSectionIndexer implements SectionIndexer {
     private int mCount; // this is the count for total number of contacts
 
     // Assumption: the contacts array has been sorted
-    public ContactsSectionIndexer(List<ContactItemInterface> contacts) {
+    public ContactsSectionIndexer(List<SelectManBean> contacts) {
         mCount = contacts.size();
         initPositions(contacts);
     }
@@ -62,7 +64,7 @@ public class ContactsSectionIndexer implements SectionIndexer {
     }
 
     // initialize the position index
-    public void initPositions(List<ContactItemInterface> contacts) {
+    public void initPositions(List<SelectManBean> contacts) {
 
         int sectionCount = mSections.length;
         mPositions = new int[sectionCount];

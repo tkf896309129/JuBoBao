@@ -10,7 +10,7 @@ import java.io.Serializable;
  * 创建时间：2017-03-03  09:56
  */
 
-public class BuyYaunListBean implements Serializable{
+public class BuyYaunListBean implements Serializable {
 
     private String BrandName;
     private String ClassName;
@@ -23,6 +23,33 @@ public class BuyYaunListBean implements Serializable{
     private int SaleCount;
     private double Weight;
     private String Xy;
+    private String Reserve;
+    private String NameUnit;
+    private String SaleNum;
+
+    public String getSaleNum() {
+        return SaleNum;
+    }
+
+    public void setSaleNum(String saleNum) {
+        SaleNum = saleNum;
+    }
+
+    public String getNameUnit() {
+        return NameUnit;
+    }
+
+    public void setNameUnit(String nameUnit) {
+        NameUnit = nameUnit;
+    }
+
+    public String getReserve() {
+        return Reserve;
+    }
+
+    public void setReserve(String reserve) {
+        Reserve = reserve;
+    }
 
     public String getBrandName() {
         return BrandName;

@@ -22,7 +22,6 @@ public class MessageBean {
         return image;
     }
 
-
     public String getMessageType() {
         return messageType;
     }

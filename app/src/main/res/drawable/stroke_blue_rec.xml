@@ -4,7 +4,7 @@
 
     <stroke
         android:width="0.5dp"
-        android:color="@color/main_tab_blue"></stroke>
+        android:color="@color/main_tab_blue_all"></stroke>
 
 
 </shape>

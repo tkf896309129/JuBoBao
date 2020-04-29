@@ -49,6 +49,9 @@ public class CityUtils {
         try {
             InputStream inputStream = context.getAssets().open("AllCity.txt");
             int size = inputStream.available();
+            if (size == 0) {
+                return;
+            }
             byte[] buffer = new byte[size];
             inputStream.read(buffer);
             inputStream.close();
@@ -81,12 +84,9 @@ public class CityUtils {
                             cityNameInterface.getCityName(choose);
                         }
                     });
-
-
             LogUtils.i(city);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-
 }

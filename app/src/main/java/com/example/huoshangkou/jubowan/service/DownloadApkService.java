@@ -17,14 +17,8 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Environment;
 import android.os.IBinder;
-import android.provider.Settings;
-import android.support.annotation.NonNull;
-import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.FileProvider;
-import android.support.v7.app.NotificationCompat;
-import android.util.Log;
 import android.webkit.MimeTypeMap;
-import android.widget.RemoteViews;
 
 import android.widget.Toast;
 
@@ -191,7 +185,6 @@ public class DownloadApkService extends Service {
 
             intent.setDataAndType(data, "application/vnd.android.package-archive");
             context.startActivity(intent);
-
         }
 
         private void installAPK(Uri apk, Context context) {
@@ -247,98 +240,5 @@ public class DownloadApkService extends Service {
     }
 
 
-    private NotificationManager nm;
-    private NotificationCompat.Builder builder;
-    private Notification nf;
-
-    public class MyDownloadAnsy extends AsyncTask<String, Integer, Integer> {
-        @Override
-        protected void onPreExecute() {
-            super.onPreExecute();
-            RemoteViews contentView = new RemoteViews(getPackageName(), R.layout.notification_layout);
-            contentView.setTextViewText(R.id.tv, "测试.apk");
-            contentView.setProgressBar(R.id.pb, 100, 0, false);
-            builder.setContent(contentView).setSmallIcon(R.mipmap.ic_launcher);
-            nf = builder.build();
-            nm.notify(0, nf);
-        }
-
-        @Override
-        protected Integer doInBackground(String... params) {
-            HttpURLConnection con = null;
-            InputStream is = null;
-            OutputStream os = null;
-            try {
-                URL url = new URL(params[0]);
-                con = (HttpURLConnection) url.openConnection();
-                con.setConnectTimeout(5 * 1000);  //设置超时时间
-                if (con.getResponseCode() == 200) { //判断是否连接成功
-                    int fileLength = con.getContentLength();
-                    is = con.getInputStream();    //获取输入
-                    os = new FileOutputStream("/sdcard/weixin.apk");
-                    byte[] buffer = new byte[1024 * 1024 * 10];
-                    long total = 0;
-                    int count;
-                    int pro1 = 0;
-                    int pro2 = 0;
-                    while ((count = is.read(buffer)) != -1) {
-                        total += count;
-                        if (fileLength > 0)
-                            pro1 = (int) (total * 100 / fileLength);  //传递进度（注意顺序）
-                        if (pro1 != pro2)
-                            publishProgress(pro2 = pro1);
-                        os.write(buffer, 0, count);
-                    }
-                }
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
-            } catch (IOException e) {
-                e.printStackTrace();
-            } finally {
-                try {
-                    if (is != null) {
-                        is.close();
-                    }
-                    if (os != null) {
-                        os.close();
-                    }
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-                if (con != null) {
-                    con.disconnect();
-                }
-            }
-            return 1;
-        }
-
-        @Override
-        protected void onPostExecute(Integer result) {
-            super.onPostExecute(result);
-
-            if (result == 1) {
-                Toast.makeText(DownloadApkService.this, "下载完成", Toast.LENGTH_SHORT).show();
-            }
-        }
-
-        @Override
-        protected void onProgressUpdate(Integer... values) {
-            Log.d("===", "" + values[0]);
-            super.onProgressUpdate(values);
-            RemoteViews contentView = nf.contentView;
-            contentView.setProgressBar(R.id.pb, 100, values[0], false);
-            nm.notify(0, nf);
-            if (values[0] == 100) {    //下载完成后点击安装
-                Intent it = new Intent(Intent.ACTION_VIEW);
-                it.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                it.setDataAndType(Uri.parse("file:///sdcard/weixin.apk"), "application/vnd.android.package-archive");
-                PendingIntent pendingIntent = PendingIntent.getActivity(getBaseContext(), 0, it, PendingIntent.FLAG_UPDATE_CURRENT);
-                contentView.setTextViewText(R.id.tv, "下载完成");
-                builder.setContent(contentView).setContentIntent(pendingIntent);
-                nf = builder.build();
-                nm.notify(0, nf);
-            }
-        }
-    }
 
 }

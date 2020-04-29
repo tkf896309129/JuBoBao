@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
+              android:background="@color/gray_bg"
               android:fitsSystemWindows="true"
               android:orientation="vertical">
     <!---->
@@ -18,18 +19,19 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="30dp"
-            android:text="请输入还款金额"/>
+            android:text="请输入还款金额"
+            android:textColor="@color/address_alpha_black"/>
 
         <EditText
             android:id="@+id/et_price"
-            android:inputType="numberDecimal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerInParent="true"
             android:background="@drawable/et_blank_bg"
+            android:inputType="numberDecimal"
             android:text="5000.00"
-            android:textColor="@color/main_tab_blue"
+            android:textColor="@color/main_tab_blue_all"
             android:textSize="28dp"/>
 
         <TextView
@@ -56,7 +58,8 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginLeft="15dp"
-            android:text="服务费"/>
+            android:text="服务费"
+            android:textColor="@color/address_alpha_black"/>
 
         <TextView
             android:id="@+id/tv_service_price"
@@ -65,7 +68,8 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="15dp"
-            android:text="257.00"/>
+            android:text="257.00"
+            android:textColor="@color/address_alpha_black"/>
     </RelativeLayout>
 
 
@@ -82,7 +86,8 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginLeft="15dp"
-            android:text="逾期费用"/>
+            android:text="逾期费用"
+            android:textColor="@color/address_alpha_black"/>
 
         <TextView
             android:id="@+id/tv_yq_price"
@@ -91,7 +96,8 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="15dp"
-            android:text="4734.00"/>
+            android:text="4734.00"
+            android:textColor="@color/address_alpha_black"/>
     </RelativeLayout>
 
     <RelativeLayout
@@ -105,7 +111,8 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginLeft="15dp"
-            android:text="共计还款"/>
+            android:text="共计还款"
+            android:textColor="@color/address_alpha_black"/>
 
         <TextView
             android:id="@+id/tv_back_bj"
@@ -114,7 +121,8 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="15dp"
-            android:text="4734.00"/>
+            android:text="4734.00"
+            android:textColor="@color/address_alpha_black"/>
     </RelativeLayout>
 
     <TextView
@@ -124,6 +132,7 @@
         android:layout_marginLeft="15dp"
         android:layout_marginTop="4dp"
         android:text="收款方"
+        android:textColor="@color/address_alpha_black"
         android:textSize="12dp"/>
 
     <RelativeLayout
@@ -136,19 +145,21 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginLeft="15dp"
-            android:text="收款账户"/>
+            android:text="收款账户"
+            android:textColor="@color/address_alpha_black"/>
 
 
         <EditText
-            android:background="@drawable/et_blank_bg"
-            android:textSize="14dp"
             android:id="@+id/tv_receive_account"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="15dp"
-            android:text="4734.00"/>
+            android:background="@drawable/et_blank_bg"
+            android:text="4734.00"
+            android:textColor="@color/address_black_key"
+            android:textSize="14dp"/>
     </RelativeLayout>
 
     <TextView
@@ -163,19 +174,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
+            android:textColor="@color/address_alpha_black"
             android:layout_marginLeft="15dp"
             android:text="收款账号"/>
 
         <EditText
-            android:background="@drawable/et_blank_bg"
-            android:textSize="14dp"
             android:id="@+id/tv_receive_account_num"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="15dp"
-            android:text="4734.00"/>
+            android:textColor="@color/address_black_key"
+            android:background="@drawable/et_blank_bg"
+            android:text="4734.00"
+            android:textSize="14dp"/>
     </RelativeLayout>
 
     <TextView
@@ -186,7 +199,7 @@
         android:background="@drawable/blue_corner_btn"
         android:gravity="center"
         android:text="提交"
-        android:textColor="@color/white"
+        android:textColor="@color/white_all"
         android:textSize="16dp"/>
 </LinearLayout>
 

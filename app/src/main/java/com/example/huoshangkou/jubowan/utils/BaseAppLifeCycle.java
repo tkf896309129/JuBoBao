@@ -34,7 +34,7 @@ public class BaseAppLifeCycle implements Application.ActivityLifecycleCallbacks 
     @Override
     public void onActivityResumed(Activity activity) {
         //app不管哪个界面可见，桌面红点即消失
-        ShortcutBadger.applyCount(activity,0);
+//        ShortcutBadger.applyCount(activity,0);
     }
 
     @Override

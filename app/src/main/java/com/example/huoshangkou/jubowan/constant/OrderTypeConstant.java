@@ -21,6 +21,7 @@ public class OrderTypeConstant {
 
     //原片
     public final String YP = "yp";
+    public final String YL = "yl";
     public final String FL = "fl";
     public final String WX = "wx";
     public final String PJ = "pj";
@@ -41,10 +42,11 @@ public class OrderTypeConstant {
     public final String DEC_CAR = "dec";
 
 
-    //addCarType 0 原片   1 辅材
+    //addCarType 0 原片   1 辅材  2原料
 
     public final String addYp = "0";
     public final String addFl = "1";
+    public final String addYl = "2";
 
 
 }

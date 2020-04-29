@@ -14,6 +14,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/address_alpha_black"
             android:layout_centerVertical="true"
             android:layout_marginLeft="20dp"
             android:text="吨数(T)" />
@@ -23,6 +24,9 @@
             style="@style/CommonTextStyle"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:hint="请输入重量"
+            android:textColor="@color/address_black_key"
+            android:textColorHint="@color/address_alpha_black"
             android:layout_marginLeft="120dp"
             android:background="@drawable/et_blank_bg"
             android:maxLength="6"
@@ -39,6 +43,7 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginLeft="20dp"
+            android:textColor="@color/address_alpha_black"
             android:text="公斤(KG)" />
 
 
@@ -61,6 +66,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
+            android:textColor="@color/address_alpha_black"
             android:layout_marginLeft="20dp"
             android:text="重量箱(箱数)" />
 
@@ -84,7 +90,7 @@
         android:background="@color/white"
         android:gravity="center"
         android:text="面积值"
-        android:textColor="@color/main_tab_blue" />
+        android:textColor="@color/main_tab_blue_white" />
 
     <TextView
         style="@style/CommonLineStyle"

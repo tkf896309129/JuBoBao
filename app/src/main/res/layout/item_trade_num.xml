@@ -48,18 +48,26 @@
             android:id="@+id/tv_news_top"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="14dp"
             android:layout_centerVertical="true"
             android:layout_marginLeft="15dp"
             android:layout_toRightOf="@+id/iv_jb_news"
             android:singleLine="true"
-            android:textColor="@color/address_black_key"/>
-
+            android:textColor="@color/address_black_key"
+            android:textSize="14dp"/>
 
     </RelativeLayout>
 
-    <TextView style="@style/CommonLineStyle"/>
-
+    <com.example.huoshangkou.jubowan.view.ScrollGridView
+        android:id="@+id/grid_view_reserve"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:numColumns="2"
+        android:paddingBottom="10dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="10dp"></com.example.huoshangkou.jubowan.view.ScrollGridView>
 
     <RelativeLayout
         android:id="@+id/rl_big_fu"
@@ -76,9 +84,9 @@
             android:layout_marginLeft="15dp"
             android:background="@mipmap/icon_sy_dpzm"
             android:gravity="center"
-            android:textSize="14dp"
             android:text="大牌专卖"
-            android:textColor="@color/white"/>
+            android:textColor="@color/white"
+            android:textSize="14dp"/>
 
         <TextView
             android:id="@+id/tv_dp_des"
@@ -87,8 +95,9 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="10dp"
             android:layout_toRightOf="@+id/tv_dpzm"
-            android:textSize="14dp"
-            android:text="知名厂家 品质卓越"/>
+            android:text="知名厂家 品质卓越"
+            android:textColor="@color/address_black_key"
+            android:textSize="14dp"/>
 
         <TextView
             android:id="@+id/tv_more_dpzm"
@@ -96,9 +105,9 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:layout_marginRight="10dp"/>
+            android:layout_marginRight="10dp"
+            android:textColor="@color/address_black_key"/>
     </RelativeLayout>
-
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -131,8 +140,8 @@
                 android:layout_alignLeft="@+id/img_yp_glass"
                 android:layout_margin="10dp"
                 android:text="原片玻璃"
-                android:textSize="14dp"
-                android:textColor="@color/white"/>
+                android:textColor="@color/white"
+                android:textSize="14dp"/>
         </RelativeLayout>
 
         <LinearLayout
@@ -163,9 +172,9 @@
                     android:layout_alignBottom="@+id/img_fl"
                     android:layout_alignLeft="@+id/img_fl"
                     android:layout_margin="10dp"
-                    android:textSize="14dp"
                     android:text="辅材辅料"
-                    android:textColor="@color/white"/>
+                    android:textColor="@color/white"
+                    android:textSize="14dp"/>
             </RelativeLayout>
 
             <RelativeLayout
@@ -190,8 +199,8 @@
                     android:layout_alignLeft="@+id/img_project_glass"
                     android:layout_margin="10dp"
                     android:text="工程玻璃"
-                    android:textSize="14dp"
-                    android:textColor="@color/white"/>
+                    android:textColor="@color/white"
+                    android:textSize="14dp"/>
             </RelativeLayout>
         </LinearLayout>
     </LinearLayout>

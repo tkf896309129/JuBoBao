@@ -43,8 +43,8 @@ public class ReceiveTieAdapter extends BaseAbstractAdapter<SecondBackTieBean> {
 //            tvReplies.setText(spannableStringBuilder);
 //        } else {
 
-            String nickName = "<font color=\"#1C86EE\">" + bean.getNickname() + "</font>";
-            String nickNamed = "<font color=\"#1C86EE\">" + bean.getNicknamed() + "</font>";
+            String nickName = "<font color="+context.getResources().getColor(R.color.main_tab_blue_all)+">" + bean.getNickname() + "</font>";
+            String nickNamed =  "<font color="+context.getResources().getColor(R.color.main_tab_blue_all)+">" + bean.getNicknamed() + "</font>";
             str = nickName + "回复" + nickNamed + "：" + bean.getRepliesText();
 
             tvReplies.setText(Html.fromHtml(str));

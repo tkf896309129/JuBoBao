@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
+              android:background="@color/gray_bg"
               android:orientation="vertical">
 
     <RelativeLayout
@@ -34,7 +35,7 @@
             android:layout_height="1dp"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="97dp"
-            android:background="@color/white"/>
+            android:background="@color/white_all"/>
 
         <TextView
             android:id="@+id/tv_name"
@@ -44,7 +45,7 @@
             android:layout_marginLeft="15dp"
             android:layout_marginTop="6dp"
             android:text="全球领先的建筑原材料供应链服务平台"
-            android:textColor="@color/white"
+            android:textColor="@color/white_all"
             android:textSize="20dp"/>
 
         <TextView

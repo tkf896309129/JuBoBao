@@ -265,7 +265,7 @@ public class PjDetailsDialog {
                                             }
                                             getStandardDataView(context, classId, modeId, standardIds, tvName, tvPjPrice, imgPj, layoutView, vaIds, recyclerView);
                                             childAt.setBackground(context.getResources().getDrawable(R.drawable.blue_circle_bg));
-                                            childAt.setTextColor(context.getResources().getColor(R.color.white));
+                                            childAt.setTextColor(context.getResources().getColor(R.color.white_all));
                                         } else {
                                             childAt.setBackground(context.getResources().getDrawable(R.drawable.white_circle_bg));
                                             childAt.setTextColor(context.getResources().getColor(R.color.address_black_key));

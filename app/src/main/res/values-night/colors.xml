@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="navpage">#FFE1E8EB</color>
+    <!--主界面底部字体蓝色-->
+    <color name="main_tab_blue">#000000</color>
+    <color name="main_tab_blue_all">#FF058FF9</color>
+    <color name="main_tab_blue_white">#ffffff</color>
+    <color name="main_tab_blue_gray">#bdbdbd</color>
+    <color name="main_tab_blue_dark">#1C1C1E</color>
+    <color name="main_tab_blue_cal">#003964</color>
+    <color name="main_tab_blue_black">#000000</color>
+    <color name="main_tab_blue_tm">#FF058FF9</color>
+    <color name="main_tab_blue_alpha">#D1EBFF</color>
+    <color name="main_tab_blue_deep">#2785D4</color>
+    <!--回帖蓝-->
+    <color name="back_tie_blue">#1C86EE</color>
+    <!--主界面底部字体灰色-->
+    <color name="main_tab_gray">#1C1C1E</color>
+    <color name="gray_color">#ccc</color>
+    <color name="delete_color">#ff0000</color>
+    <color name="delete_bg_color">#ff0000</color>
+    <!--填写清单颜色-->
+    <color name="write_list_color">#FFEFF7FE</color>
+    <color name="white_all">#ffffff</color>
+    <color name="white_gray">#FF767677</color>
+    <color name="gray_all">#dddd</color>
+    <!--线条颜色-->
+    <color name="line_color">#50cccccc</color>
+    <!--白色-->
+    <color name="white">#1C1C1E</color>
+    <color name="white_blue">#FF058FF9</color>
+    <color name="white_dark">#000000</color>
+    <color name="zb_orange">#FFAB2B</color>
+    <color name="yellow_holiday">#FBC839</color>
+    <!--聚玻学院绿色-->
+    <color name="green_school">#6ED133</color>
+    <!--聚玻学院紫色-->
+    <color name="curp_school">#FE4D97</color>
+    <!--聚玻学院黄色-->
+    <color name="yellow_school">#FFAB2B</color>
+    <!--聚玻学院栏色-->
+    <color name="blue_school">#24CFDF</color>
+    <!--黑色-->
+    <color name="black">#ffffff</color>
+    <color name="black_all">#000000</color>
+    <!--完全透明颜色-->
+    <color name="alpha_all">#00000000</color>
+    <!--收货地址黑色字体-->
+    <color name="address_black_key">#ffffff</color>
+    <color name="address_gray_black_key">#ffffff</color>
+    <color name="address_alpha_gray_black_key">#ffffff</color>
+    <!--收货地址淡黑色-->
+    <color name="address_alpha_black">#ffffff</color>
+    <color name="address_alpha_gray_black">#70cccccc</color>
+    <!--加入购物车的淡蓝色-->
+    <color name="alpha_blue_car">#FF00487E</color>
+    <!--灰色背景颜色-->
+    <color name="alpha_gray_bg">#000000</color>
+    <!--维修维保的蓝色-->
+    <color name="repair_blue">#1C1C1E</color>
+    <!--删除订单灰色-->
+    <color name="delete_order_gray">#FFA9A9A9</color>
+    <!--筛选灰色背景-->
+    <color name="tie_choose_gray">#FFF3F3F3</color>
+    <!--红色-->
+    <color name="red">#ff0000</color>
+    <color name="red_white">#ffffff</color>
+    <color name="red_alpha">#FFEC3837</color>
+    <!--选择背景颜色-->
+    <color name="selectBackColor">#000000</color>
+    <!--筛选菜单栏颜色-->
+    <color name="choose_order_bg">#001A2D</color>
+    <!--物流选择背景颜色-->
+    <color name="trans_uncheck_bg">#000000</color>
+    <!--获取验证码灰色背景-->
+    <color name="get_code_gray">#FFD5D5D5</color>
+    <!--维修预付款背景灰色-->
+    <color name="repair_price_gray">#FFEFEFEF</color>
+    <!--认证界面灰色-->
+    <color name="person_gray">#1C1C1E</color>
+    <!--灰色-->
+    <color name="gray">#cccccc</color>
+    <color name="gray_alpha_bg">#75ffffff</color>
+    <color name="deep_blue">#1375C1</color>
+    <!--垫付款报警灰色-->
+    <color name="bj_gray">#FFDADADB</color>
+    <!--仿微信进度框背景-->
+    <color name="wechat_dialog_bg">#FF383838</color>
+    <!--仿微信进度框界面背景-->
+    <color name="wechat_all_bg">#FF7D7D7E</color>
+    <!--总共吗对这两个总共-->
+    <!--透明黑色-->
+    <color name="alpha_black">#40000000</color>
+    <!--输入框背景-->
+    <color name="edit_text_bg">#FFF3F3F3</color>
+    <!--绿色-->
+    <color name="approve_green">#17D165</color>
+    <!--红色-->
+    <color name="approve_red">#F73631</color>
+    <!--灰色背景-->
+    <color name="gray_bg">#000000</color>
+    <color name="big_fu_sell">#1C1C1E</color>
+    <color name="gray_words">#666666</color>
+    <color name="black_gray_bg">#666</color>
+    <color name="green">#00ff00</color>
+    <color name="green_alpha">#6DD230</color>
+    <color name="green_setting">#2CD0A0</color>
+    <color name="main_tab_blue_bottom">#ffffff</color>
+    <!--淡蓝色-->
+    <color name="alpha_blue">#1C1C1E</color>
+    <color name="alpha_blue_2">#FF8AC8FA</color>
+    <!--灰色签到-->
+    <color name="sign_gray_bg">#7D9EC1</color>
+    <!--回复背景颜色-->
+    <color name="common_back_blue">#000000</color>
+    <!--报警颜色_1-->
+    <color name="bj_color_1">#FFF0F0F1</color>
+    <!--报警颜色_2-->
+    <color name="bj_color_2">#FFDCD7C0</color>
+    <!--橙色-->
+    <color name="orange_color">#FFF77D2A</color>
+    <color name="yellow">#FFD39B</color>
+    <color name="yellow_deep">#FFD519</color>
+    <!--考勤外圈颜色-->
+    <color name="sign_out_color">#FFBAD6F2</color>
+    <!--回复灰色-->
+    <color name="back_gray">#000000</color>
+    <!--红包字体颜色-->
+    <color name="packet_word_color">#FFF4E486</color>
+    <!--借款记录三色-->
+    <color name="un_back_price">#51C7E9</color>
+    <color name="had_out_time">#FF5F4A</color>
+    <color name="back_finish">#FF00A778</color>
+    <color name="purpse">#AE73FF</color>
+    <color name="alpha_red">#FF7373</color>
+    <color name="yellow_setting">#FFA800</color>
+    <!--下班-->
+    <color name="woke_over">#12c1f3</color>
+    <!--旷工-->
+    <color name="miss_woke">#f34212</color>
+    <!--值班-->
+    <color name="still_woke">#2212f3</color>
+    <color name="data_blue">#6E6CD4</color>
+    <color name="data_orange">#FF6519</color>
+</resources>

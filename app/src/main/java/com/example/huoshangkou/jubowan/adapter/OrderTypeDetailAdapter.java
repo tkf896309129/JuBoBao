@@ -46,7 +46,7 @@ public class OrderTypeDetailAdapter extends BaseAbstractAdapter<OrderTypeBean> {
 
         if (bean.isCheck()) {
             ivType.setVisibility(View.VISIBLE);
-            tvType.setTextColor(context.getResources().getColor(R.color.main_tab_blue));
+            tvType.setTextColor(context.getResources().getColor(R.color.main_tab_blue_all));
         } else {
             ivType.setVisibility(View.GONE);
             tvType.setTextColor(context.getResources().getColor(R.color.address_black_key));

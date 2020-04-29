@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
+              android:background="@color/gray_bg"
               android:fitsSystemWindows="true"
               android:orientation="vertical">
 
@@ -34,7 +35,9 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
-                    android:layout_marginRight="10dp"/>
+                    android:layout_marginRight="10dp"
+                    android:thumb="@drawable/switch_thumb"
+                    android:track="@drawable/switch_track"/>
 
             </RelativeLayout>
 
@@ -45,6 +48,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:text="说明"
+                android:textColor="@color/address_alpha_black"
                 android:textSize="@dimen/address_key_size"/>
 
             <TextView style="@style/CommonLineStyle"/>
@@ -58,6 +62,8 @@
                 android:hint="请填写意见说明(非必填)"
                 android:paddingLeft="10dp"
                 android:paddingTop="4dp"
+                android:textColor="@color/address_black_key"
+                android:textColorHint="@color/address_alpha_black"
                 android:textSize="@dimen/address_key_size"/>
 
             <TextView style="@style/CommonLineStyle"/>
@@ -69,7 +75,8 @@
 
                 <TextView
                     style="@style/MyApplyLeftTextStyle"
-                    android:text="图片"/>
+                    android:text="图片"
+                    android:textColor="@color/address_black_key"/>
 
                 <ImageView
                     android:id="@+id/iv_apply_camera"
@@ -89,9 +96,6 @@
                 android:background="@color/white"
                 android:numColumns="3"></com.example.huoshangkou.jubowan.view.ScrollGridView>
 
-            <TextView
-                style="@style/CommonLineStyle"
-                android:layout_marginLeft="10dp"/>
 
             <RelativeLayout
                 android:id="@+id/rl_next_choose"

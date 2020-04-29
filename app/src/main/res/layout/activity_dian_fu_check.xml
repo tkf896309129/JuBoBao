@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
+              android:background="@color/gray_bg"
               android:fitsSystemWindows="true"
               android:orientation="vertical">
 
@@ -541,7 +542,8 @@
                                 android:background="@color/white"
                                 android:gravity="center_vertical"
                                 android:paddingLeft="15dp"
-                                android:text="添加抄送人"/>
+                                android:text="添加抄送人"
+                                android:textColor="@color/address_alpha_black"/>
 
                             <ImageView
                                 android:layout_width="wrap_content"
@@ -551,7 +553,6 @@
                                 android:layout_marginRight="15dp"
                                 android:src="@mipmap/gray_right"/>
                         </RelativeLayout>
-
 
 
                         <android.support.v7.widget.RecyclerView
@@ -621,8 +622,6 @@
                     </RelativeLayout>
 
 
-
-
                     <com.example.huoshangkou.jubowan.view.ScrollListView
                         android:id="@+id/lv_check_result"
                         android:layout_width="match_parent"
@@ -683,9 +682,9 @@
             android:layout_width="match_parent"
             android:layout_height="44dp"
             android:layout_alignParentBottom="true"
-            android:background="@color/main_tab_blue"
+            android:background="@color/main_tab_blue_dark"
             android:gravity="center"
             android:text="提交"
-            android:textColor="@color/white"/>
+            android:textColor="@color/white_all"/>
     </RelativeLayout>
 </LinearLayout>

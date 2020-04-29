@@ -9,6 +9,23 @@
     <include layout="@layout/tool_bar_style"></include>
 
 
-    <include layout="@layout/refresh_list_view"></include>
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+       <include layout="@layout/item_no_data"></include>
+
+       <com.scwang.smartrefresh.layout.SmartRefreshLayout
+           android:id="@+id/x_refresh"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+
+           <ListView
+               android:id="@+id/lv_refresh"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"></ListView>
+       </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+   </RelativeLayout>
 
 </LinearLayout>

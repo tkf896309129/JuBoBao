@@ -4,6 +4,7 @@
               android:layout_height="match_parent"
               android:fitsSystemWindows="true"
               android:gravity="center_horizontal"
+              android:background="@color/gray_bg"
               android:orientation="vertical">
 
     <include layout="@layout/tool_bar_style"></include>
@@ -11,7 +12,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white"
         android:gravity="center_vertical"
         android:orientation="vertical"
         android:paddingBottom="10dp"
@@ -29,10 +29,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
+            android:textColor="@color/address_black_key"
             android:layout_marginRight="20dp"
             android:layout_marginTop="4dp"
-            android:background="@drawable/gray_stroke_bg"
+            android:background="@drawable/white_black_bg"
             android:hint="请输入公司名称"
+            android:textColorHint="@color/address_alpha_gray_black"
             android:paddingBottom="6dp"
             android:paddingLeft="10dp"
             android:paddingTop="6dp"
@@ -42,7 +44,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white"
         android:gravity="center_vertical"
         android:orientation="vertical"
         android:paddingBottom="10dp"
@@ -62,9 +63,11 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="20dp"
             android:layout_marginTop="4dp"
-            android:background="@drawable/gray_stroke_bg"
+            android:background="@drawable/white_black_bg"
             android:hint="请输入编号"
             android:paddingBottom="6dp"
+            android:textColorHint="@color/address_alpha_gray_black"
+            android:textColor="@color/address_black_key"
             android:paddingLeft="10dp"
             android:paddingTop="6dp"
             android:textSize="14dp"/>
@@ -78,7 +81,7 @@
         android:background="@drawable/blue_corner_btn"
         android:gravity="center"
         android:text="查询"
-        android:textColor="@color/white"
+        android:textColor="@color/white_all"
         android:textSize="16dp"/>
 
 </LinearLayout>

@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="navpage">#FFE1E8EB</color>
     <!--主界面底部字体蓝色-->
     <color name="main_tab_blue">#FF058FF9</color>
+    <color name="main_tab_blue_all">#FF058FF9</color>
+    <color name="main_tab_blue_white">#FF058FF9</color>
+    <color name="main_tab_blue_gray">#FF058FF9</color>
+    <color name="main_tab_blue_dark">#FF058FF9</color>
+    <color name="main_tab_blue_cal">#FF058FF9</color>
+    <color name="main_tab_blue_black">#FF058FF9</color>
+    <color name="main_tab_blue_bottom">#FF058FF9</color>
     <color name="main_tab_blue_tm">#FF058FF9</color>
     <color name="main_tab_blue_alpha">#D1EBFF</color>
     <color name="main_tab_blue_deep">#2785D4</color>
@@ -14,12 +22,19 @@
     <!--主界面底部字体灰色-->
     <color name="main_tab_gray">#FF878787</color>
     <color name="gray_color">#ccc</color>
+    <color name="delete_color">#ccc</color>
+    <color name="delete_bg_color">#ffffff</color>
     <!--填写清单颜色-->
     <color name="write_list_color">#FFEFF7FE</color>
     <!--线条颜色-->
     <color name="line_color">#50cccccc</color>
     <!--白色-->
     <color name="white">#ffffff</color>
+    <color name="white_blue">#ffffff</color>
+    <color name="white_all">#ffffff</color>
+    <color name="white_gray">#ffffff</color>
+    <color name="gray_all">#dddd</color>
+    <color name="white_dark">#ffffff</color>
     <color name="zb_orange">#FFAB2B</color>
     <color name="yellow_holiday">#FBC839</color>
     <!--聚玻学院绿色-->
@@ -32,6 +47,7 @@
     <color name="blue_school">#24CFDF</color>
     <!--黑色-->
     <color name="black">#000000</color>
+    <color name="black_all">#000000</color>
     <!--完全透明颜色-->
     <color name="alpha_all">#00000000</color>
     <!--收货地址黑色字体-->
@@ -40,6 +56,7 @@
     <color name="address_alpha_gray_black_key">#778CA2</color>
     <!--收货地址淡黑色-->
     <color name="address_alpha_black">#666666</color>
+    <color name="address_alpha_gray_black">#666666</color>
     <!--加入购物车的淡蓝色-->
     <color name="alpha_blue_car">#FFD5EBFB</color>
     <!--灰色背景颜色-->
@@ -52,6 +69,7 @@
     <color name="tie_choose_gray">#FFF3F3F3</color>
     <!--红色-->
     <color name="red">#ff0000</color>
+    <color name="red_white">#ff0000</color>
     <color name="red_alpha">#FFEC3837</color>
     <!--选择背景颜色-->
     <color name="selectBackColor">#EDEDED</color>

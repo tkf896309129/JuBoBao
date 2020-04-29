@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    android:orientation="vertical">
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/gray_bg"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
 
     <include layout="@layout/tool_bar_style"></include>
 
@@ -19,18 +20,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:text="提现姓名" />
+            android:text="提现姓名"
+            android:textColor="@color/address_alpha_black"/>
 
         <TextView
             android:id="@+id/tv_name"
             android:layout_width="match_parent"
+            android:textColor="@color/address_alpha_black"
             android:layout_height="wrap_content"
             android:layout_marginRight="10dp"
             android:gravity="right"/>
 
     </LinearLayout>
 
-    <TextView style="@style/CommonLineStyle" />
+    <TextView style="@style/CommonLineStyle"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -44,17 +47,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:text="支付宝账号" />
+            android:text="支付宝账号"
+            android:textColor="@color/address_alpha_black"/>
 
         <TextView
             android:id="@+id/tv_alipay"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginRight="10dp"
-            android:gravity="right" />
+            android:textColor="@color/address_alpha_black"
+            android:gravity="right"/>
 
     </LinearLayout>
-    <TextView style="@style/CommonLineStyle" />
+
+    <TextView style="@style/CommonLineStyle"/>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -67,14 +74,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:text="手机号" />
+            android:text="手机号"
+            android:textColor="@color/address_alpha_black"/>
 
         <TextView
             android:id="@+id/tv_phone"
             android:layout_width="match_parent"
+            android:textColor="@color/address_alpha_black"
             android:layout_height="wrap_content"
             android:layout_marginRight="10dp"
-            android:gravity="right" />
+            android:gravity="right"/>
 
     </LinearLayout>
 

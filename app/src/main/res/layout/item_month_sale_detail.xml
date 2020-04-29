@@ -10,6 +10,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
+        android:textColor="@color/address_alpha_black"
         android:text="浙江兰州有限公司"/>
 
     <TextView
@@ -17,6 +18,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/tv_name"
+        android:textColor="@color/address_alpha_black"
         android:layout_below="@+id/tv_name"
         android:layout_marginTop="4dp"
         android:text="2019-10-27"/>
@@ -36,6 +38,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/tv_time"
+        android:textColor="@color/address_alpha_black"
         android:layout_below="@+id/tv_time"
         android:layout_marginTop="4dp"
         android:text="所属销售：测试"/>

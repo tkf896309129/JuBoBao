@@ -27,6 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/tv_name"
         android:layout_alignParentRight="true"
+        android:textColor="@color/address_alpha_black"
         android:layout_below="@+id/tv_name"
         android:layout_marginBottom="4dp"
         android:layout_marginRight="70dp"

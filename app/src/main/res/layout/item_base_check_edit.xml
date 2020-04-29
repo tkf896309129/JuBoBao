@@ -22,6 +22,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_alignParentRight="true"
+            android:imeOptions="actionDone"
             android:layout_centerVertical="true"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="20dp"
@@ -31,6 +32,7 @@
             android:gravity="center_vertical"
             android:hint="请填写"
             android:textColor="@color/address_black_key"
+            android:textColorHint="@color/address_alpha_black"
             android:textSize="@dimen/address_key_size"/>
 
         <TextView

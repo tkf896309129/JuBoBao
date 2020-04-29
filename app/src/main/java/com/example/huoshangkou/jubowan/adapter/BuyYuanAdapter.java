@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import com.example.huoshangkou.jubowan.R;
 import com.example.huoshangkou.jubowan.activity.LoginActivity;
+import com.example.huoshangkou.jubowan.activity.function.BuyFunction;
 import com.example.huoshangkou.jubowan.base.BaseAbstractAdapter;
 import com.example.huoshangkou.jubowan.base.ViewHolder;
 import com.example.huoshangkou.jubowan.bean.BuyYaunListBean;
@@ -22,6 +23,7 @@ import com.example.huoshangkou.jubowan.inter.onAnimItemClick;
 import com.example.huoshangkou.jubowan.utils.GlideUtils;
 import com.example.huoshangkou.jubowan.utils.IntentUtils;
 import com.example.huoshangkou.jubowan.utils.LoginUtils;
+import com.example.huoshangkou.jubowan.utils.StringUtils;
 
 import java.util.List;
 
@@ -57,13 +59,21 @@ public class BuyYuanAdapter extends BaseAbstractAdapter<BuyYaunListBean> {
 
         GlideUtils.getInstance().displayImage(bean.getPic(), context, imgPic);
 
+
         TextView tvBrand = holder.getView(R.id.tv_brand);
         tvBrand.setText("品牌：" + bean.getBrandName());
         TextView tvLevel = holder.getView(R.id.tv_level);
         tvLevel.setText("规格：" + bean.getXy());
+        TextView tvSale = holder.getView(R.id.tv_sale);
+        tvSale.setText("销量："+ StringUtils.getZeroStr(bean.getSaleNum())+bean.getNameUnit());
 
-
-
+        TextView tvOrderDetail = holder.getView(R.id.tv_order_detail);
+        tvOrderDetail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                BuyFunction.getInstance().getOrderDetail(context,"0",bean.getID()+"");
+            }
+        });
 
         TextView tvStandard = holder.getView(R.id.tv_standard);
         if(bean.getClassName().equals("Low-E")){
@@ -88,7 +98,7 @@ public class BuyYuanAdapter extends BaseAbstractAdapter<BuyYaunListBean> {
 
         SpannableStringBuilder spannableString = new SpannableStringBuilder();
         spannableString.append(price);
-        spannableString.setSpan(new ForegroundColorSpan(context.getResources().getColor(R.color.main_tab_blue)), 1, linePosition, Spanned.SPAN_EXCLUSIVE_INCLUSIVE);
+        spannableString.setSpan(new ForegroundColorSpan(context.getResources().getColor(R.color.main_tab_blue_all)), 1, linePosition, Spanned.SPAN_EXCLUSIVE_INCLUSIVE);
 
         //字体大小
         AbsoluteSizeSpan sizeSpan = new AbsoluteSizeSpan(28);

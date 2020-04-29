@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    android:orientation="vertical">
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/gray_bg"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
 
     <include layout="@layout/tool_bar_style"></include>
 
@@ -30,8 +31,8 @@
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="10dp"
                     android:text="开始日期"
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/address_key_size" />
+                    android:textColor="@color/address_black_key"
+                    android:textSize="@dimen/address_key_size"/>
 
 
                 <TextView
@@ -39,19 +40,20 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
+                    android:textColor="@color/address_alpha_black"
                     android:layout_marginRight="5dp"
                     android:layout_toLeftOf="@+id/gray_right_1"
-                    android:text="请选择" />
+                    android:text="请选择"/>
 
                 <ImageView
                     android:id="@+id/gray_right_1"
-                    style="@style/PersonGrayRightStyle" />
+                    style="@style/PersonGrayRightStyle"/>
 
                 <TextView
                     style="@style/CommonLineStyle"
                     android:layout_alignParentBottom="true"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp" />
+                    android:layout_marginRight="10dp"/>
             </RelativeLayout>
 
             <RelativeLayout
@@ -64,8 +66,8 @@
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="10dp"
                     android:text="时间段"
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/address_key_size" />
+                    android:textColor="@color/address_black_key"
+                    android:textSize="@dimen/address_key_size"/>
 
 
                 <TextView
@@ -73,17 +75,18 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
+                    android:textColor="@color/address_alpha_black"
                     android:layout_marginRight="5dp"
                     android:layout_toLeftOf="@+id/gray_right_2"
-                    android:text="请选择" />
+                    android:text="请选择"/>
 
                 <ImageView
                     android:id="@+id/gray_right_2"
-                    style="@style/PersonGrayRightStyle" />
+                    style="@style/PersonGrayRightStyle"/>
 
                 <TextView
                     style="@style/CommonLineStyle"
-                    android:layout_alignParentBottom="true" />
+                    android:layout_alignParentBottom="true"/>
             </RelativeLayout>
 
             <RelativeLayout
@@ -96,8 +99,8 @@
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="10dp"
                     android:text="结束时间"
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/address_key_size" />
+                    android:textColor="@color/address_black_key"
+                    android:textSize="@dimen/address_key_size"/>
 
 
                 <TextView
@@ -105,19 +108,20 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
+                    android:textColor="@color/address_alpha_black"
                     android:layout_marginRight="5dp"
                     android:layout_toLeftOf="@+id/gray_right_3"
-                    android:text="请选择" />
+                    android:text="请选择"/>
 
                 <ImageView
                     android:id="@+id/gray_right_3"
-                    style="@style/PersonGrayRightStyle" />
+                    style="@style/PersonGrayRightStyle"/>
 
                 <TextView
                     style="@style/CommonLineStyle"
                     android:layout_alignParentBottom="true"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp" />
+                    android:layout_marginRight="10dp"/>
             </RelativeLayout>
 
             <RelativeLayout
@@ -130,8 +134,8 @@
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="10dp"
                     android:text="时间段"
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/address_key_size" />
+                    android:textColor="@color/address_black_key"
+                    android:textSize="@dimen/address_key_size"/>
 
 
                 <TextView
@@ -139,13 +143,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
+                    android:textColor="@color/address_alpha_black"
                     android:layout_marginRight="5dp"
                     android:layout_toLeftOf="@+id/gray_right_4"
-                    android:text="请选择" />
+                    android:text="请选择"/>
 
                 <ImageView
                     android:id="@+id/gray_right_4"
-                    style="@style/PersonGrayRightStyle" />
+                    style="@style/PersonGrayRightStyle"/>
 
             </RelativeLayout>
 
@@ -162,16 +167,17 @@
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="10dp"
                     android:text="出差时长"
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/address_key_size" />
+                    android:textColor="@color/address_black_key"
+                    android:textSize="@dimen/address_key_size"/>
 
                 <TextView
                     android:id="@+id/tv_work_time"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginRight="20dp"
+                    android:textColor="@color/address_alpha_black"
                     android:background="@drawable/et_blank_bg"
-                    android:gravity="right|center" />
+                    android:gravity="right|center"/>
 
             </LinearLayout>
 
@@ -189,22 +195,25 @@
                     android:background="@drawable/et_blank_bg"
                     android:gravity="top"
                     android:hint="请描述出差事由"
+                    android:textColorHint="@color/address_alpha_gray_black"
+                    android:textColor="@color/address_black_key"
                     android:paddingBottom="5dp"
                     android:paddingLeft="10dp"
                     android:paddingTop="5dp"
                     android:scrollbars="vertical"
-                    android:textSize="@dimen/address_key_size" />
+                    android:textSize="@dimen/address_key_size"/>
 
             </com.example.huoshangkou.jubowan.view.MyLinearLayout>
 
 
             <RelativeLayout style="@style/MainRelativityStyle">
 
-                <TextView style="@style/CommonLineStyle" />
+                <TextView style="@style/CommonLineStyle"/>
 
                 <TextView
                     style="@style/MyApplyLeftTextStyle"
-                    android:text="图片" />
+                    android:textColor="@color/address_alpha_black"
+                    android:text="图片"/>
 
                 <ImageView
                     android:id="@+id/iv_apply_camera"
@@ -213,7 +222,7 @@
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:layout_marginRight="10dp"
-                    android:src="@mipmap/picture" />
+                    android:src="@mipmap/picture"/>
             </RelativeLayout>
 
 
@@ -231,17 +240,18 @@
                 android:layout_marginTop="10dp">
 
                 <TextView
+                    android:textColor="@color/address_alpha_black"
                     style="@style/MyApplyLeftTextStyle"
-                    android:text="选择审批人(必选)" />
+                    android:text="选择审批人(必选)"/>
 
                 <TextView
                     style="@style/CommonLineStyle"
-                    android:layout_alignParentBottom="true" />
+                    android:layout_alignParentBottom="true"/>
 
                 <TextView
                     android:id="@+id/tv_apply_check"
-                    android:layout_marginRight="20dp"
-                    style="@style/MyApplyRightTextStyle" />
+                    style="@style/MyApplyRightTextStyle"
+                    android:layout_marginRight="20dp"/>
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -268,6 +278,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="44dp"
                     android:background="@color/white"
+                    android:textColor="@color/address_alpha_black"
                     android:gravity="center_vertical"
                     android:paddingLeft="15dp"
                     android:text="添加抄送人"/>

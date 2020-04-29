@@ -23,13 +23,12 @@ public class LocalImageHolderView implements Holder<String> {
     @Override
     public View createView(Context context) {
         imageView = new ImageView(context);
-        imageView.setScaleType(ImageView.ScaleType.FIT_XY);
         return imageView;
     }
 
     @Override
     public void UpdateUI(Context context, int position, String data) {
-        GlideUtils.getInstance().displayLongImage(data, context, imageView);
+        GlideUtils.getInstance().displayImage(data, context, imageView);
     }
 
 }

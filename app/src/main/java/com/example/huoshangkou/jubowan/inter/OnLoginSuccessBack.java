@@ -10,7 +10,7 @@ package com.example.huoshangkou.jubowan.inter;
 
 public interface OnLoginSuccessBack {
     //登录成功
-    void onLoginSuccess();
+    void onLoginSuccess(String id,String name,String pic);
 
     //登录失败
     void onLoginFail( );

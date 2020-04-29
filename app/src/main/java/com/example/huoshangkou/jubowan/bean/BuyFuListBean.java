@@ -15,11 +15,20 @@ public class BuyFuListBean implements Serializable {
     private String BrandName;
     private String ClassName;
     private String GuigeName;
-    private String HaveCount;
+    private String Reserve;
     private String ID;
     private String NameUnit;
     private String Pic;
     private String Price;
+    private String SaleNum;
+
+    public String getSaleNum() {
+        return SaleNum;
+    }
+
+    public void setSaleNum(String saleNum) {
+        SaleNum = saleNum;
+    }
 
     public String getBrandName() {
         return BrandName;
@@ -45,12 +54,12 @@ public class BuyFuListBean implements Serializable {
         GuigeName = guigeName;
     }
 
-    public String getHaveCount() {
-        return HaveCount;
+    public String getReserve() {
+        return Reserve;
     }
 
-    public void setHaveCount(String haveCount) {
-        HaveCount = haveCount;
+    public void setReserve(String reserve) {
+        Reserve = reserve;
     }
 
     public String getID() {

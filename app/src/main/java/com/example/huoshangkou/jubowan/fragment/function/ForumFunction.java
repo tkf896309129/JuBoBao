@@ -55,7 +55,7 @@ public class ForumFunction {
         tabForum.setTabMode(TabLayout.MODE_SCROLLABLE);
         //绑定ViewPager
         vpForum.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabForum));
-
+        vpForum.setOffscreenPageLimit(1);
         vpForum.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
@@ -94,7 +94,7 @@ public class ForumFunction {
 
         //初始化Fragment数据
         List<Fragment> fragmentList = new ArrayList<>();
-        for (int i = 0; i <= 10; i++) {
+        for (int i = 0; i < 10; i++) {
             ForumListFragment forumListFragment = ForumListFragment.newInstance();
             String index = "";
             //聚玻早报

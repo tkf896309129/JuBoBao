@@ -23,7 +23,7 @@
         android:gravity="center_vertical"
         android:paddingLeft="10dp"
         android:text="招标中"
-        android:textColor="@color/white"
+        android:textColor="#ffffff"
         android:textSize="12dp"/>
 
     <TextView

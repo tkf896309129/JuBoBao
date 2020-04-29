@@ -25,6 +25,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/et_blank_bg"
+            android:textColor="@color/address_alpha_black"
             android:gravity="right|center_vertical"
             android:paddingRight="10dp"
             android:singleLine="true"

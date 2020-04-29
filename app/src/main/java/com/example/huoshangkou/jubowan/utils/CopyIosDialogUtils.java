@@ -104,7 +104,7 @@ public class CopyIosDialogUtils {
         });
     }
 
-    public void getIosDialog(final Context context, String title,  String confirm,String cancel,final iosDialogClick dialogClick) {
+    public void getIosDialog(final Context context, String title, String confirm, String cancel, final iosDialogClick dialogClick) {
         dialog = new AlertDialog.Builder(context).create();
         dialog.show();
         dialog.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE | WindowManager.LayoutParams.FLAG_ALT_FOCUSABLE_IM);
@@ -254,11 +254,34 @@ public class CopyIosDialogUtils {
     }
 
     public void getErrorDialogNoCancel(Context context, String title, final ErrDialogCallBack dialogClick) {
-
         if (context == null) {
             ToastUtils.getMineToast(title);
             return;
         }
+        errorDialog = new AlertDialog.Builder(context).create();
+        errorDialog.show();
+        errorDialog.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE | WindowManager.LayoutParams.FLAG_ALT_FOCUSABLE_IM);
+        errorDialog.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE);
+        errorDialog.getWindow().setContentView(R.layout.error_hint_dialog);
+        errorDialog.getWindow().setBackgroundDrawableResource(R.color.alpha_all);
+        errorDialog.setCancelable(false);
+        TextView tvSure = (TextView) errorDialog.getWindow().findViewById(R.id.btn_error_sure);
+        TextView tvTitle = (TextView) errorDialog.getWindow().findViewById(R.id.tv_error_title);
+        tvTitle.setText(title);
+        tvSure.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //确定
+                if (dialogClick != null) {
+                    dialogClick.confirm();
+                }
+                //取消
+                errorDialog.cancel();
+            }
+        });
+    }
+
+    public AlertDialog getErrorLoginDialogNoCancel(Context context, String title, final ErrDialogCallBack dialogClick) {
 
         errorDialog = new AlertDialog.Builder(context).create();
         errorDialog.show();
@@ -281,6 +304,7 @@ public class CopyIosDialogUtils {
                 errorDialog.cancel();
             }
         });
+        return errorDialog;
     }
 
     AlertDialog.Builder builderLogin;

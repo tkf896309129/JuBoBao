@@ -6,5 +6,5 @@
         android:topLeftRadius="5dp"
         android:topRightRadius="5dp"></corners>
     <solid
-        android:color="@color/main_tab_blue"></solid>
+        android:color="@color/main_tab_blue_dark"></solid>
 </shape>

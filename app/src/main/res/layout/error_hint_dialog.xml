@@ -22,7 +22,7 @@
             android:gravity="center"
             android:paddingTop="10dp"
             android:text="温馨提示"
-            android:textColor="@color/black"
+            android:textColor="@color/address_black_key"
             android:textSize="20dp" />
 
         <TextView
@@ -35,13 +35,14 @@
             android:layout_marginRight="10dp"
             android:background="@color/alpha_all"
             android:gravity="center"
+            android:textColor="@color/address_black_key"
             android:paddingBottom="20dp"
             android:paddingTop="10dp"
             android:text="请输入手机号码" />
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="1dp"
+            android:layout_height="0.5dp"
             android:layout_above="@+id/ll_button"
             android:background="@color/repair_price_gray" />
 
@@ -60,7 +61,7 @@
                 android:background="@color/alpha_all"
                 android:gravity="center"
                 android:text="确定"
-                android:textColor="@color/main_tab_blue"
+                android:textColor="@color/main_tab_blue_white"
                 android:textSize="16dp" />
 
         </LinearLayout>

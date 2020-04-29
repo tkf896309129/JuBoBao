@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
-    android:fitsSystemWindows="true"
-    android:layout_height="match_parent">
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/gray_bg"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
 
 
     <include layout="@layout/tool_bar_style"></include>
@@ -23,9 +24,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:background="@drawable/gray_stoke"
-        app:tabIndicatorColor="@color/main_tab_blue"
-        app:tabSelectedTextColor="@color/main_tab_blue"
-        app:tabTextColor="@color/black"></android.support.design.widget.TabLayout>
+        app:tabIndicatorColor="@color/main_tab_blue_tm"
+        app:tabSelectedTextColor="@color/main_tab_blue_tm"
+        app:tabTextColor="@color/address_black_key"></android.support.design.widget.TabLayout>
 
     <android.support.v4.view.ViewPager
         android:id="@+id/vp_check_type"

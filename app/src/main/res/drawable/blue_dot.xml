@@ -3,5 +3,5 @@
        android:shape="oval">
 
     <solid
-        android:color="@color/main_tab_blue"></solid>
+        android:color="@color/main_tab_blue_all"></solid>
 </shape>

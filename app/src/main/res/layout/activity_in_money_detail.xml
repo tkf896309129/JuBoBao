@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
+              android:background="@color/gray_bg"
               android:fitsSystemWindows="true"
               android:orientation="vertical">
 
@@ -168,7 +169,7 @@
                     android:orientation="horizontal"
                     android:paddingBottom="15dp"
                     android:paddingTop="15dp">
-                    
+
                     <TextView
                         style="@style/CommonTextStyle"
                         android:layout_width="wrap_content"
@@ -230,17 +231,14 @@
             android:layout_height="50dp"
             android:layout_alignParentBottom="true">
 
-            <TextView
-                style="@style/CommonLineStyle"
-                android:layout_above="@+id/ll_apply_agree"
-                android:background="@color/person_gray"/>
+
 
             <LinearLayout
                 android:id="@+id/ll_apply_agree"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_alignParentBottom="true"
-                android:background="@color/white"
+                android:background="@color/white_dark"
                 android:orientation="horizontal">
 
                 <TextView
@@ -250,7 +248,7 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="同意"
-                    android:textColor="@color/main_tab_blue"
+                    android:textColor="@color/main_tab_blue_all"
                     android:textSize="16dp"/>
 
                 <TextView
@@ -266,7 +264,7 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="不同意"
-                    android:textColor="@color/main_tab_blue"
+                    android:textColor="@color/main_tab_blue_all"
                     android:textSize="16dp"/>
 
             </LinearLayout>

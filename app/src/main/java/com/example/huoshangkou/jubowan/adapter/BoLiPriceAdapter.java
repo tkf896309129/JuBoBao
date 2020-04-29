@@ -64,8 +64,8 @@ public class BoLiPriceAdapter extends RecyclerView.Adapter<BoLiPriceAdapter.MyVi
             tvStandard.setText(msg);
 
             if(position == itemClick){
-                tvStandard.setBackground(context.getResources().getDrawable(R.drawable.blue_corner_btn));
-                tvStandard.setTextColor(context.getResources().getColor(R.color.white));
+                tvStandard.setBackground(context.getResources().getDrawable(R.drawable.blue_all_corner));
+                tvStandard.setTextColor(context.getResources().getColor(R.color.white_all));
             }else{
                 tvStandard.setBackground(context.getResources().getDrawable(R.drawable.gray_corner_bg));
                 tvStandard.setTextColor(context.getResources().getColor(R.color.address_black_key));

@@ -26,7 +26,10 @@
 
     </LinearLayout>
 
-    <TextView style="@style/CommonLineStyle" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/gray_bg"/>
 
 
     <com.example.huoshangkou.jubowan.view.ScrollListView
@@ -36,7 +39,9 @@
 
 
     <!--配送方式-->
-    <RelativeLayout style="@style/MainRelativityStyle">
+    <RelativeLayout
+        android:id="@+id/rl_trans_type"
+        style="@style/MainRelativityStyle">
 
         <TextView
             android:layout_width="wrap_content"
@@ -64,12 +69,14 @@
                 android:background="@drawable/order_trans_drawable"
                 android:button="@null"
                 android:paddingLeft="20dp"
+                android:textColor="@color/address_black_key"
                 android:paddingRight="20dp"
                 android:text="平台物流" />
 
             <RadioButton
                 android:id="@+id/rb_feel"
                 android:layout_width="wrap_content"
+                android:textColor="@color/address_black_key"
                 android:layout_height="30dp"
                 android:layout_marginLeft="10dp"
                 android:background="@drawable/order_trans_drawable"
@@ -88,7 +95,7 @@
 
 
     <LinearLayout
-        android:id="@+id/rl_address_choose"
+        android:id="@+id/ll_address_choose"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_below="@+id/ll_2"
@@ -98,6 +105,17 @@
         android:orientation="horizontal">
 
         <TextView
+            android:id="@+id/tv_address"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:hint="请选择地址"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical|right"
+            android:textColor="@color/address_black_key"
+            android:textSize="@dimen/address_key_size" />
+
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -105,21 +123,13 @@
             android:textColor="@color/address_black_key"
             android:textSize="@dimen/address_key_size" />
 
-        <TextView
-            android:id="@+id/tv_address"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:gravity="center_vertical|right"
-            android:textColor="@color/address_black_key"
-            android:textSize="@dimen/address_key_size" />
-
     </LinearLayout>
 
 
     <!--合计金额-->
-    <RelativeLayout style="@style/MainRelativityStyle">
+    <RelativeLayout
+        android:visibility="gone"
+        style="@style/MainRelativityStyle">
 
         <TextView
             android:layout_width="wrap_content"

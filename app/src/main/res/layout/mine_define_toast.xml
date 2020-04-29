@@ -15,6 +15,6 @@
         android:paddingRight="50dp"
         android:paddingTop="13dp"
         android:text="退出"
-        android:textColor="@color/white" />
+        android:textColor="@color/white_all" />
 
 </LinearLayout>

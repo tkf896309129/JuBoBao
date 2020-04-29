@@ -23,6 +23,8 @@ import android.graphics.Canvas;
 import android.graphics.Rect;
 import android.util.Log;
 
+import com.tencent.mm.opensdk.constants.ConstantsAPI;
+
 public class NativeUtil {
 
 	private static int DEFAULT_QUALITY = 95;
@@ -30,7 +32,6 @@ public class NativeUtil {
 	public static void compressBitmap(Bitmap bit, String fileName,
 			boolean optimize) {
 		compressBitmap(bit, DEFAULT_QUALITY, fileName, optimize);
-
 	}
 
 	public static void compressBitmap(Bitmap bit, int quality, String fileName,

@@ -21,5 +21,4 @@ public class BundleConstant {
     //订单状态
     public final String ORDER_STATE = "order_state";
 
-
 }

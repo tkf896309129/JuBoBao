@@ -100,8 +100,7 @@ public class TieAdapter extends BaseAbstractAdapter<ForumListBean> {
         TextView tvMessage = holder.getView(R.id.tv_conversion_message);
         //锁定中   + list.get(position).getPostTitle()
         String clock = "<font color=\"#FFA07A\">【锁定中】</font>";
-
-        String message = "<font color=\"#000000\">" + bean.getPostTitle() + "</font>";
+        String message = "<font color=\""+context.getResources().getColor(R.color.address_black_key)+"\">" + bean.getPostTitle() + "</font>";
         //已关闭
         String close = "<font color=\"#cccccc\">【已关闭】</font>";
         if (bean.getPostState() == 1) {

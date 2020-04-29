@@ -35,7 +35,7 @@
                 android:layout_marginTop="4dp"
                 android:layout_toRightOf="@+id/iv_check_head"
                 android:text="张晓明"
-                android:textColor="@color/black"
+                android:textColor="@color/address_black_key"
                 android:textSize="@dimen/address_key_size"/>
 
             <ImageView
@@ -57,6 +57,7 @@
                 android:layout_marginTop="2dp"
                 android:layout_toRightOf="@+id/iv_check_head"
                 android:text="asldjladkjas"
+                android:textColor="@color/address_alpha_black"
                 android:textSize="@dimen/address_key_size"/>
 
             <ImageView
@@ -205,7 +206,7 @@
                     android:paddingLeft="6dp"
                     android:paddingRight="6dp"
                     android:text="会议中"
-                    android:textColor="@color/main_tab_blue"
+                    android:textColor="@color/main_tab_blue_all"
                     android:textSize="12dp"
                     android:visibility="gone"/>
 
@@ -224,13 +225,25 @@
                 android:visibility="gone"/>
 
             <ImageView
+                android:id="@+id/iv_chat_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/tv_phone"
+                android:visibility="gone"
+                android:layout_toLeftOf="@+id/iv_phone"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="35dp"
+                android:layout_marginTop="4dp"
+                android:src="@mipmap/chat_message"/>
+
+            <ImageView
                 android:id="@+id/iv_phone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_alignTop="@+id/tv_phone"
                 android:layout_centerVertical="true"
-                android:layout_marginRight="20dp"
+                android:layout_marginRight="35dp"
                 android:layout_marginTop="4dp"
                 android:src="@mipmap/phone"/>
 

@@ -9,6 +9,7 @@
     <com.scwang.smartrefresh.layout.SmartRefreshLayout
         android:id="@+id/x_refresh"
         android:layout_width="match_parent"
+        android:background="@color/gray_bg"
         android:layout_height="match_parent">
 
         <ListView

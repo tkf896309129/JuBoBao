@@ -7,7 +7,8 @@
     <ScrollView
         android:id="@+id/scroll_mine_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/gray_bg">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -16,8 +17,13 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="260dp"
-                android:background="@mipmap/mine_bg">
+                android:layout_height="260dp">
+
+                <ImageView
+                    android:id="@+id/iv_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"/>
 
                 <RelativeLayout
                     android:id="@+id/rl_approve"
@@ -42,7 +48,7 @@
                         android:layout_marginLeft="13dp"
                         android:layout_marginTop="10dp"
                         android:layout_toRightOf="@+id/iv_head_pic"
-                        android:textColor="@color/white"
+                        android:textColor="#ffffff"
                         android:textSize="16dp"/>
 
                     <TextView
@@ -52,7 +58,7 @@
                         android:layout_alignLeft="@+id/tv_approve_state"
                         android:layout_below="@+id/tv_approve_state"
                         android:layout_marginTop="5dp"
-                        android:textColor="@color/white"
+                        android:textColor="#ffffff"
                         android:textSize="14dp"/>
 
                     <TextView
@@ -65,7 +71,7 @@
                         android:layout_toRightOf="@+id/tv_phone"
                         android:drawableRight="@mipmap/white_right"
                         android:text="去认证 "
-                        android:textColor="@color/white"
+                        android:textColor="#ffffff"
                         android:textSize="14dp"/>
                 </RelativeLayout>
 
@@ -80,12 +86,14 @@
 
                 <ImageView
                     android:id="@+id/iv_message_icon"
-                    android:layout_width="15dp"
-                    android:layout_height="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_marginRight="20dp"
                     android:layout_marginTop="44dp"
                     android:src="@mipmap/white_inform"/>
+
+
 
 
                 <LinearLayout
@@ -106,15 +114,17 @@
                         android:orientation="vertical">
 
                         <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@mipmap/new_kq"/>
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/new_kq"/>
 
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
+                            android:gravity="center"
                             android:text="我的考勤"
+                            android:textColor="@color/address_black_key"
                             android:textSize="14dp"/>
                     </LinearLayout>
 
@@ -127,15 +137,16 @@
                         android:orientation="vertical">
 
                         <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@mipmap/new_sp"/>
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/new_sp"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
                             android:text="我的审批"
+                            android:textColor="@color/address_black_key"
                             android:textSize="14dp"/>
                     </LinearLayout>
 
@@ -148,15 +159,16 @@
                         android:orientation="vertical">
 
                         <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@mipmap/service"/>
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/service"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
                             android:text="聚玻服务"
+                            android:textColor="@color/address_black_key"
                             android:textSize="14dp"/>
                     </LinearLayout>
 
@@ -169,15 +181,17 @@
                         android:orientation="vertical">
 
                         <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@mipmap/new_txl"/>
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/new_txl"/>
 
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
-                            android:text="通讯录   "
+                            android:gravity="center"
+                            android:text="通讯录"
+                            android:textColor="@color/address_black_key"
                             android:textSize="14dp"/>
                     </LinearLayout>
 

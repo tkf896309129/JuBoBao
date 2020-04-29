@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
+              android:background="@color/gray_bg"
               android:fitsSystemWindows="true"
               android:orientation="vertical">
 
@@ -16,11 +17,10 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="170dp"
-                android:background="@color/main_tab_blue">
+                android:background="@color/main_tab_blue_dark">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -28,7 +28,7 @@
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="10dp"
                     android:text="待还金额"
-                    android:textColor="@color/white"/>
+                    android:textColor="@color/white_all"/>
 
                 <TextView
                     android:id="@+id/tv_price_unit"
@@ -38,7 +38,7 @@
                     android:layout_marginBottom="4dp"
                     android:layout_marginLeft="15dp"
                     android:text="￥"
-                    android:textColor="@color/white"/>
+                    android:textColor="@color/white_all"/>
 
                 <TextView
                     android:id="@+id/tv_price"
@@ -48,7 +48,7 @@
                     android:layout_marginTop="40dp"
                     android:layout_toRightOf="@+id/tv_price_unit"
                     android:text="196000"
-                    android:textColor="@color/white"
+                    android:textColor="@color/white_all"
                     android:textSize="26dp"/>
 
                 <TextView
@@ -70,7 +70,7 @@
                     android:layout_marginBottom="6dp"
                     android:layout_marginLeft="15dp"
                     android:text="申请时间：2018-08-17"
-                    android:textColor="@color/white"/>
+                    android:textColor="@color/white_all"/>
 
                 <TextView
                     android:id="@+id/tv_back_time"
@@ -80,7 +80,7 @@
                     android:layout_marginBottom="20dp"
                     android:layout_marginLeft="15dp"
                     android:text="还款时间：2018-08-17 至2019-10-18"
-                    android:textColor="@color/white"/>
+                    android:textColor="@color/white_all"/>
 
             </RelativeLayout>
 
@@ -95,7 +95,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
-                    android:text="借款金额"/>
+                    android:text="借款金额"
+                    android:textColor="@color/address_alpha_black"/>
 
                 <TextView
                     android:id="@+id/tv_loan_price"
@@ -113,6 +114,7 @@
                 android:gravity="bottom"
                 android:paddingLeft="15dp"
                 android:text="白条对应订单信息"
+                android:textColor="@color/address_alpha_black"
                 android:textSize="12dp"/>
 
             <LinearLayout
@@ -126,7 +128,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
-                    android:text="订  单  号"/>
+                    android:text="订  单  号"
+                    android:textColor="@color/address_alpha_black"/>
 
                 <TextView
                     android:id="@+id/tv_order_id"
@@ -148,7 +151,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
-                    android:text="数        量"/>
+                    android:text="数        量"
+                    android:textColor="@color/address_alpha_black"/>
 
                 <TextView
                     android:id="@+id/tv_ton_num"
@@ -167,6 +171,7 @@
                 android:gravity="bottom"
                 android:paddingLeft="15dp"
                 android:text="应还款明细"
+                android:textColor="@color/address_alpha_black"
                 android:textSize="12dp"/>
 
             <RelativeLayout
@@ -182,7 +187,8 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="15dp"
-                    android:text="服  务  费"/>
+                    android:text="服  务  费"
+                    android:textColor="@color/address_alpha_black"/>
 
                 <TextView
                     android:id="@+id/tv_service_price"
@@ -202,6 +208,7 @@
                     android:layout_alignParentRight="true"
                     android:layout_marginRight="10dp"
                     android:text="(本金*0.04%*(借款天数-3))"
+                    android:textColor="@color/address_alpha_black"
                     android:textSize="10dp"/>
 
             </RelativeLayout>
@@ -215,7 +222,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
-                    android:text="逾期天数"/>
+                    android:text="逾期天数"
+                    android:textColor="@color/address_alpha_black"/>
 
                 <TextView
                     android:id="@+id/tv_yq_days"
@@ -239,7 +247,8 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="15dp"
-                    android:text="逾  期  费"/>
+                    android:text="逾  期  费"
+                    android:textColor="@color/address_alpha_black"/>
 
                 <TextView
                     android:id="@+id/tv_yq_price"
@@ -258,6 +267,7 @@
                     android:layout_alignParentRight="true"
                     android:layout_marginRight="10dp"
                     android:text="(本金*0.07%*逾期天数)"
+                    android:textColor="@color/address_alpha_black"
                     android:textSize="10dp"/>
             </RelativeLayout>
 
@@ -270,7 +280,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
-                    android:text="优  惠  券"/>
+                    android:text="优  惠  券"
+                    android:textColor="@color/address_alpha_black"/>
 
                 <TextView
                     android:id="@+id/tv_bt_yhj"
@@ -294,7 +305,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
                     android:drawableLeft="@mipmap/icon_xiangqing_jilu"
-                    android:text="  还款记录"/>
+                    android:text="  还款记录"
+                    android:textColor="@color/address_alpha_black"/>
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -318,7 +330,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
                     android:drawableLeft="@mipmap/icon_xiangqin_hetong"
-                    android:text="  查看协议合同"/>
+                    android:text="  查看协议合同"
+                    android:textColor="@color/address_alpha_black"/>
 
                 <ImageView
                     android:layout_width="wrap_content"

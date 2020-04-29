@@ -8,7 +8,7 @@
         android:id="@+id/vp_img"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/black"></com.example.huoshangkou.jubowan.view.PhotoViewPager>
+        android:background="@color/black_all"></com.example.huoshangkou.jubowan.view.PhotoViewPager>
 
     <TextView
         android:id="@+id/tv_pages"
@@ -19,6 +19,6 @@
         android:layout_marginBottom="50dp"
         android:layout_marginTop="10dp"
         android:text="1/4"
-        android:textColor="@color/white" />
+        android:textColor="@color/white_all" />
 
 </RelativeLayout>

@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
+              android:background="@color/gray_bg"
               android:fitsSystemWindows="true"
               android:orientation="vertical">
 
@@ -31,7 +32,7 @@
                     android:gravity="center_vertical"
                     android:paddingLeft="10dp"
                     android:text="客户信息"
-                    android:textColor="@color/black"
+                    android:textColor="@color/address_black_key"
                     android:textSize="16dp"/>
 
                 <LinearLayout
@@ -248,9 +249,9 @@
 
                 <LinearLayout
                     android:id="@+id/ll_hk_sj"
-                    android:visibility="gone"
                     style="@style/MainRelativityStyle"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:visibility="gone">
 
                     <TextView
                         style="@style/CommonTextStyle"
@@ -271,6 +272,7 @@
                         android:hint=" "/>
 
                 </LinearLayout>
+
                 <LinearLayout
                     style="@style/MainRelativityStyle"
                     android:orientation="horizontal"
@@ -306,7 +308,7 @@
                     android:gravity="center_vertical"
                     android:paddingLeft="10dp"
                     android:text="平台信息"
-                    android:textColor="@color/black"
+                    android:textColor="@color/address_black_key"
                     android:textSize="16dp"/>
 
                 <LinearLayout
@@ -542,7 +544,7 @@
                         android:gravity="center_vertical"
                         android:paddingLeft="10dp"
                         android:text="供应商信息"
-                        android:textColor="@color/black"
+                        android:textColor="@color/address_black_key"
                         android:textSize="16dp"/>
 
                     <TextView style="@style/CommonLineStyle"/>
@@ -607,7 +609,7 @@
                         android:gravity="center_vertical"
                         android:paddingLeft="10dp"
                         android:text="其他信息"
-                        android:textColor="@color/black"
+                        android:textColor="@color/address_black_key"
                         android:textSize="16dp"/>
 
                     <RelativeLayout style="@style/MainRelativityStyle">
@@ -715,7 +717,6 @@
 
                     <TextView style="@style/CommonLineStyle"/>
 
-
                 </LinearLayout>
 
                 <TextView
@@ -724,7 +725,8 @@
                     android:layout_marginBottom="5dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="10dp"
-                    android:text="图片"/>
+                    android:text="图片"
+                    android:textColor="@color/address_black_key"/>
 
                 <com.example.huoshangkou.jubowan.view.ScrollGridView
                     android:id="@+id/grid_apply_img"
@@ -733,6 +735,7 @@
                     android:layout_marginBottom="10dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
+                    android:background="@color/gray_bg"
                     android:numColumns="3"></com.example.huoshangkou.jubowan.view.ScrollGridView>
 
                 <LinearLayout
@@ -756,10 +759,10 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
                         android:gravity="right|center_vertical"
                         android:hint=" "
-                        android:paddingBottom="20dp"
-                        android:layout_marginTop="10dp"/>
+                        android:paddingBottom="20dp"/>
 
                 </LinearLayout>
 
@@ -859,14 +862,11 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="同意"
-                android:textColor="@color/main_tab_blue"
+                android:textColor="@color/main_tab_blue_white"
                 android:textSize="16dp"/>
 
             <TextView
-                android:layout_width="1dp"
-                android:layout_height="match_parent"
-                android:layout_margin="5dp"
-                android:background="@color/person_gray"/>
+                style="@style/VerticalLineStyle"/>
 
             <TextView
                 android:id="@+id/tv_apply_disagree"
@@ -875,7 +875,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="不同意"
-                android:textColor="@color/main_tab_blue"
+                android:textColor="@color/main_tab_blue_white"
                 android:textSize="16dp"/>
 
         </LinearLayout>

@@ -1,6 +1,7 @@
 package com.example.huoshangkou.jubowan.fragment;
 
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.LinearLayout;
@@ -87,7 +88,6 @@ public class AboutMeFragment extends BaseFragment {
         type = getArguments().getString(IntentUtils.getInstance().TYPE);
 
 
-
         meAdapter = new AboutMeAdapter(getActivity(), tieList, isMineCommon, R.layout.item_about_me);
         lvRefresh.setAdapter(meAdapter);
         lvRefresh.setDividerHeight(0);
@@ -97,7 +97,7 @@ public class AboutMeFragment extends BaseFragment {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
                 ForumListBean listBean = new ForumListBean();
-                if(tieList.get(position).getPostMode() == null){
+                if (tieList.get(position).getPostMode() == null) {
                     ToastUtils.getMineToast("获取信息失败");
                     return;
                 }
@@ -111,16 +111,15 @@ public class AboutMeFragment extends BaseFragment {
                 listBean.setPics(tieList.get(position).getPostMode().getPics());
                 listBean.setPostState(tieList.get(position).getPostMode().getPostState());
                 listBean.setPostText(tieList.get(position).getPostMode().getPostText());
-        listBean.setCreateTime(tieList.get(position).getPostMode().getCreateTime());
+                listBean.setCreateTime(tieList.get(position).getPostMode().getCreateTime());
 
-        listBean.setNickname(tieList.get(position).getPostNickname());
-        listBean.setUserPic(tieList.get(position).getPostUserPic());
-        listBean.setPostTypeID(tieList.get(position).getID());
+                listBean.setNickname(tieList.get(position).getPostNickname());
+                listBean.setUserPic(tieList.get(position).getPostUserPic());
+                listBean.setPostTypeID(tieList.get(position).getID());
 
-        IntentUtils.getInstance().toActivity(getActivity(), TieDetailsActivity.class, listBean, TieDetailConstant.getInstance().SHARE);
-    }
-});
-
+                IntentUtils.getInstance().toActivity(getActivity(), TieDetailsActivity.class, listBean, TieDetailConstant.getInstance().SHARE);
+            }
+        });
 
         xRefresh.setOnRefreshListener(new OnRefreshListener() {
             @Override
@@ -137,8 +136,6 @@ public class AboutMeFragment extends BaseFragment {
                 getAboutMeData();
             }
         });
-
-
     }
 
     //获取与我相关

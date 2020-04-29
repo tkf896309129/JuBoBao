@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:text="10:23"
-            android:textColor="@color/black"
+            android:textColor="@color/address_black_key"
             android:textSize="20dp"
             android:textStyle="bold"/>
 
@@ -31,7 +31,7 @@
             android:layout_marginTop="2dp"
             android:layout_toLeftOf="@+id/iv_gray_right"
             android:text="中国建设银行(杭州萧山开发区支行)"
-            android:textColor="@color/black"
+            android:textColor="@color/address_black_key"
             android:textSize="16dp"/>
 
         <ImageView
@@ -49,6 +49,7 @@
             android:layout_height="wrap_content"
             android:layout_alignLeft="@+id/tv_sign_name"
             android:textSize="14dp"
+            android:textColor="@color/address_alpha_black"
             android:layout_alignRight="@+id/tv_sign_name"
             android:layout_below="@+id/tv_sign_name"
             android:text="中国浙江省杭州市萧山区建设一路北干科创园附件"/>
@@ -62,7 +63,7 @@
             android:layout_alignRight="@+id/tv_sign_address"
             android:layout_below="@+id/tv_sign_address"
             android:text="读一些无用的书，做一些无用的事，花一些无用的时间，都是为了在一切已知之外，保留一个超越自己的机会吗，人生中一些很了不起的变化，就是 来自这种时刻。"
-            android:textColor="@color/black"/>
+            android:textColor="@color/address_black_key"/>
 
         <com.example.huoshangkou.jubowan.view.ScrollGridView
             android:id="@+id/grid_sign_view"
@@ -84,13 +85,10 @@
             android:layout_alignLeft="@+id/tv_content"
             android:layout_below="@+id/grid_sign_view"
             android:text="填写拜访记录"
-            android:textColor="@color/main_tab_blue"/>
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/main_tab_blue_all"/>
 
-        <TextView
-            style="@style/CommonLineStyle"
-            android:layout_alignLeft="@+id/tv_content"
-            android:layout_below="@+id/tv_write_record"
-            android:layout_marginTop="10dp"/>
+
 
     </RelativeLayout>
 

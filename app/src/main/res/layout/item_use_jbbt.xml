@@ -41,6 +41,7 @@
             android:layout_marginRight="15dp"
             android:layout_marginTop="25dp"
             android:gravity="center"
+            android:textColor="@color/address_alpha_black"
             android:text="您的聚玻白条审核未通过，请您重新填写资料"/>
 
 
@@ -61,16 +62,16 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="取消"
-                android:textColor="@color/main_tab_blue"/>
+                android:textColor="@color/main_tab_blue_white"/>
 
             <TextView
                 android:id="@+id/tv_use_bt"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:textColor="@color/white"
+                android:textColor="@color/white_all"
                 android:layout_weight="1"
-                android:background="@color/main_tab_blue"
+                android:background="@color/main_tab_blue_all"
                 android:text="去申请"/>
         </LinearLayout>
 

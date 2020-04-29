@@ -3,6 +3,7 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:fitsSystemWindows="true"
+              android:background="@color/gray_bg"
               android:orientation="vertical">
 
     <include layout="@layout/tool_bar_style"></include>
@@ -1064,7 +1065,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="10dp"
-                        android:background="@color/alpha_gray_bg"></LinearLayout>
+                        android:background="@color/gray_bg"></LinearLayout>
 
                 </LinearLayout>
 
@@ -1598,7 +1599,7 @@
                         android:layout_marginRight="10dp"
                         android:padding="10dp"
                         android:text="改派"
-                        android:textColor="@color/main_tab_blue"
+                        android:textColor="@color/main_tab_blue_all"
                         android:visibility="gone"/>
                 </RelativeLayout>
 
@@ -1679,14 +1680,11 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="同意"
-                    android:textColor="@color/main_tab_blue"
+                    android:textColor="@color/main_tab_blue_white"
                     android:textSize="16dp"/>
 
                 <TextView
-                    android:layout_width="1dp"
-                    android:layout_height="match_parent"
-                    android:layout_margin="5dp"
-                    android:background="@color/person_gray"/>
+                    style="@style/VerticalLineStyle"/>
 
                 <TextView
                     android:id="@+id/tv_apply_disagree"
@@ -1695,7 +1693,7 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="不同意"
-                    android:textColor="@color/main_tab_blue"
+                    android:textColor="@color/main_tab_blue_white"
                     android:textSize="16dp"/>
 
             </LinearLayout>

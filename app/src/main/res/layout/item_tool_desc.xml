@@ -36,6 +36,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/tv_name"
             android:layout_marginTop="4dp"
+            android:textColor="@color/address_alpha_black"
             android:text="包邮" />
 
         <TextView
@@ -47,7 +48,7 @@
             android:layout_marginRight="10dp"
             android:layout_marginTop="4dp"
             android:text="￥22.22"
-            android:textColor="@color/main_tab_blue" />
+            android:textColor="@color/main_tab_blue_all" />
     </RelativeLayout>
 
 </LinearLayout>

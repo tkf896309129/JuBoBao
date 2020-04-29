@@ -14,6 +14,7 @@ public class ShopCarObjBean {
 
     private List<ShopCarListBean> FlList;
     private List<ShopCarListBean> YpList;
+    private List<ShopCarListBean> YlList;
 
     public List<ShopCarListBean> getFlList() {
         return FlList;
@@ -29,5 +30,13 @@ public class ShopCarObjBean {
 
     public void setYpList(List<ShopCarListBean> ypList) {
         YpList = ypList;
+    }
+
+    public List<ShopCarListBean> getYlList() {
+        return YlList;
+    }
+
+    public void setYlList(List<ShopCarListBean> ylList) {
+        YlList = ylList;
     }
 }

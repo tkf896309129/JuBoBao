@@ -3,6 +3,7 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:fitsSystemWindows="true"
+              android:background="@color/gray_bg"
               android:orientation="vertical">
 
     <include layout="@layout/tool_bar_style"></include>
@@ -13,6 +14,7 @@
         android:layout_height="44dp"
         android:textSize="14dp"
         android:paddingLeft="10dp"
+        android:textColor="@color/address_black_key"
         android:layout_margin="10dp"
         android:background="@drawable/gray_stroke_bg"/>
 

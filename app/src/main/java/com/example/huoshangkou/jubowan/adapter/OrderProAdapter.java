@@ -44,13 +44,13 @@ public class OrderProAdapter extends BaseAbstractAdapter<OrderListTypeBean> {
             tvRepairType.setText("商品详情：" + bean.getClassName() + "/" + bean.getBrandName() + "/"
                     + bean.getLevelName() + "/" + bean.getWeight() + "/" + bean.getXy());
 
-            tvBrand.setText("商品价格：￥" + bean.getOnePrice());
+            tvBrand.setText("参考价格：￥" + bean.getOnePrice());
             tvTime.setText("商品数量：x" + bean.getCount());
             GlideUtils.getInstance().displayImage(bean.getPic(), context, imgPic);
         } else if (bean.getType().equals(OrderTypeConstant.getInstance().FL)) {
             tvRepairType.setText("商品详情：" + bean.getClassName() + "/"
                     + bean.getBrandName() + "/" + bean.getXy());
-            tvBrand.setText("商品价格：￥" + bean.getOnePrice());
+            tvBrand.setText("参考价格：￥" + bean.getOnePrice());
             tvTime.setText("商品数量：x" + bean.getCount());
             GlideUtils.getInstance().displayImage(bean.getPic(), context, imgPic);
         } else if (bean.getType().equals(OrderTypeConstant.getInstance().WX)) {
@@ -69,7 +69,13 @@ public class OrderProAdapter extends BaseAbstractAdapter<OrderListTypeBean> {
             tvRepairType.setText("商品详情：" + bean.getModelTitle() + "/"
                     + bean.getGuiGeVal() + "/" + bean.getVoltage());
 
-            tvBrand.setText("商品单价：￥" + bean.getOnePrice());
+            tvBrand.setText("参考单价：￥" + bean.getOnePrice());
+            tvTime.setText("商品数量：x" + bean.getCount());
+            GlideUtils.getInstance().displayImage(bean.getPic(), context, imgPic);
+        }else if (bean.getType().equals(OrderTypeConstant.getInstance().YL))  {
+            tvRepairType.setText("商品详情：" + bean.getCategoryName() + "/"+ bean.getClassName() + "/"
+                    + bean.getBrandName() + "/" + bean.getLevelName());
+            tvBrand.setText("参考价格：￥" + bean.getOnePrice());
             tvTime.setText("商品数量：x" + bean.getCount());
             GlideUtils.getInstance().displayImage(bean.getPic(), context, imgPic);
         }

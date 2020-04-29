@@ -3,6 +3,7 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:fitsSystemWindows="true"
+              android:background="@color/gray_bg"
               android:orientation="vertical">
 
     <include layout="@layout/tool_bar_style"></include>
@@ -13,6 +14,7 @@
 
 
         <ScrollView
+
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_above="@+id/tv_next">
@@ -48,6 +50,7 @@
                     <EditText
                         android:id="@+id/et_pro_name"
                         android:layout_width="match_parent"
+                        android:textColor="@color/address_black_key"
                         android:layout_height="match_parent"
                         android:background="@drawable/et_blank_bg"
                         android:textSize="14dp"/>
@@ -70,6 +73,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginRight="10dp"
+                        android:textColor="@color/address_black_key"
                         android:background="@drawable/et_blank_bg"
                         android:drawableRight="@mipmap/gray_right"
                         android:gravity="center_vertical|right"
@@ -92,6 +96,7 @@
                         android:id="@+id/et_pro_address"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:textColor="@color/address_black_key"
                         android:background="@drawable/et_blank_bg"
                         android:textSize="14dp"/>
                 </LinearLayout>
@@ -112,6 +117,7 @@
                         android:id="@+id/et_pro_days"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:textColor="@color/address_black_key"
                         android:background="@drawable/et_blank_bg"
                         android:inputType="number"
                         android:textSize="14dp"/>
@@ -133,6 +139,7 @@
                         android:id="@+id/et_cx_yq"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:textColor="@color/address_black_key"
                         android:background="@drawable/et_blank_bg"
                         android:textSize="14dp"/>
                 </LinearLayout>
@@ -153,6 +160,7 @@
                     <TextView
                         android:id="@+id/tv_bao_req"
                         android:layout_width="wrap_content"
+                        android:textColor="@color/address_black_key"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"/>
 
@@ -214,6 +222,7 @@
 
                     <TextView
                         android:id="@+id/et_link_man"
+                        android:textColor="@color/address_black_key"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@drawable/et_blank_bg"
@@ -237,6 +246,7 @@
                         android:id="@+id/et_link_phone"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:textColor="@color/address_black_key"
                         android:background="@drawable/et_blank_bg"
                         android:gravity="center_vertical"
                         android:textSize="14dp"/>
@@ -257,6 +267,7 @@
                     <TextView
                         android:id="@+id/et_link_address"
                         android:layout_width="match_parent"
+                        android:textColor="@color/address_black_key"
                         android:layout_height="match_parent"
                         android:background="@drawable/et_blank_bg"
                         android:gravity="center_vertical"
@@ -296,6 +307,7 @@
                         <EditText
                             android:id="@+id/et_brand"
                             android:layout_width="match_parent"
+                            android:textColor="@color/address_black_key"
                             android:layout_height="match_parent"
                             android:background="@drawable/et_blank_bg"
                             android:textSize="14dp"/>
@@ -316,6 +328,7 @@
                         <EditText
                             android:id="@+id/et_door_color"
                             android:layout_width="match_parent"
+                            android:textColor="@color/address_black_key"
                             android:layout_height="match_parent"
                             android:background="@drawable/et_blank_bg"
                             android:textSize="14dp"/>
@@ -336,6 +349,7 @@
 
                         <EditText
                             android:id="@+id/et_fl_five"
+                            android:textColor="@color/address_black_key"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@drawable/et_blank_bg"
@@ -357,6 +371,7 @@
                         <EditText
                             android:id="@+id/et_gy_yq"
                             android:layout_width="match_parent"
+                            android:textColor="@color/address_black_key"
                             android:layout_height="match_parent"
                             android:background="@drawable/et_blank_bg"
                             android:textSize="14dp"/>
@@ -377,6 +392,7 @@
                         <EditText
                             android:id="@+id/et_glass_thick"
                             android:layout_width="match_parent"
+                            android:textColor="@color/address_black_key"
                             android:layout_height="match_parent"
                             android:background="@drawable/et_blank_bg"
                             android:inputType="numberDecimal"
@@ -398,6 +414,7 @@
                         <EditText
                             android:id="@+id/et_other_requair"
                             android:layout_width="match_parent"
+                            android:textColor="@color/address_black_key"
                             android:layout_height="match_parent"
                             android:background="@drawable/et_blank_bg"
                             android:textSize="14dp"/>
@@ -419,6 +436,7 @@
                             android:id="@+id/tv_finish_time"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:textColor="@color/address_black_key"
                             android:background="@drawable/et_blank_bg"
                             android:gravity="center_vertical"/>
                     </LinearLayout>
@@ -486,6 +504,7 @@
                         <EditText
                             android:id="@+id/et_dczjlx"
                             android:layout_width="match_parent"
+                            android:textColor="@color/address_black_key"
                             android:layout_height="match_parent"
                             android:background="@drawable/et_blank_bg"
                             android:textSize="14dp"/>
@@ -506,6 +525,7 @@
                         <EditText
                             android:id="@+id/et_fd_zhl"
                             android:layout_width="match_parent"
+                            android:textColor="@color/address_black_key"
                             android:layout_height="match_parent"
                             android:background="@drawable/et_blank_bg"
                             android:inputType="number"
@@ -527,6 +547,7 @@
                         <EditText
                             android:id="@+id/et_js_intro"
                             android:layout_width="match_parent"
+                            android:textColor="@color/address_black_key"
                             android:layout_height="match_parent"
                             android:background="@drawable/et_blank_bg"
                             android:textSize="14dp"/>
@@ -567,6 +588,7 @@
                         <EditText
                             android:id="@+id/et_color"
                             android:layout_width="match_parent"
+                            android:textColor="@color/address_black_key"
                             android:layout_height="match_parent"
                             android:background="@drawable/et_blank_bg"
                             android:textSize="14dp"/>
@@ -588,6 +610,7 @@
                             android:id="@+id/et_tou_guan"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:textColor="@color/address_black_key"
                             android:background="@drawable/et_blank_bg"
                             android:inputType="number"
                             android:textSize="14dp"/>
@@ -608,6 +631,7 @@
                         <EditText
                             android:id="@+id/et_k_value"
                             android:layout_width="match_parent"
+                            android:textColor="@color/address_black_key"
                             android:layout_height="match_parent"
                             android:background="@drawable/et_blank_bg"
                             android:inputType="number"
@@ -629,6 +653,7 @@
                         <EditText
                             android:id="@+id/et_zy_xs"
                             android:layout_width="match_parent"
+                            android:textColor="@color/address_black_key"
                             android:layout_height="match_parent"
                             android:background="@drawable/et_blank_bg"
                             android:inputType="number"
@@ -650,6 +675,7 @@
                         <EditText
                             android:id="@+id/et_fan_indoor"
                             android:layout_width="match_parent"
+                            android:textColor="@color/address_black_key"
                             android:layout_height="match_parent"
                             android:background="@drawable/et_blank_bg"
                             android:inputType="number"
@@ -672,6 +698,7 @@
                             android:id="@+id/et_fan_outdoor"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:textColor="@color/address_black_key"
                             android:background="@drawable/et_blank_bg"
                             android:inputType="number"
                             android:textSize="14dp"/>
@@ -711,6 +738,7 @@
 
                         <EditText
                             android:id="@+id/et_xczl"
+                            android:textColor="@color/address_black_key"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@drawable/et_blank_bg"
@@ -733,6 +761,7 @@
                             android:id="@+id/et_mf_system"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:textColor="@color/address_black_key"
                             android:background="@drawable/et_blank_bg"
                             android:textSize="14dp"/>
                     </LinearLayout>
@@ -768,6 +797,7 @@
 
                         <TextView
                             android:layout_width="wrap_content"
+                            android:textColor="@color/address_black_key"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="4dp"
                             android:layout_marginRight="20dp"
@@ -794,6 +824,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_alignParentRight="true"
+                            android:textColor="@color/address_black_key"
                             android:layout_marginRight="10dp"
                             android:drawableRight="@mipmap/gray_right"
                             android:gravity="center_vertical"/>
@@ -819,6 +850,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textColor="@color/address_black_key"
                             android:layout_alignParentRight="true"
                             android:layout_marginRight="10dp"
                             android:drawableRight="@mipmap/gray_right"/>
@@ -849,6 +881,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_alignParentRight="true"
+                            android:textColor="@color/address_black_key"
                             android:layout_marginRight="10dp"
                             android:drawableRight="@mipmap/gray_right"
                             android:gravity="center_vertical"/>
@@ -874,6 +907,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textColor="@color/address_black_key"
                             android:layout_alignParentRight="true"
                             android:layout_marginRight="10dp"
                             android:drawableRight="@mipmap/gray_right"/>
@@ -902,6 +936,7 @@
                         <TextView
                             android:id="@+id/tv_choose_yuan_3"
                             android:layout_width="wrap_content"
+                            android:textColor="@color/address_black_key"
                             android:layout_height="wrap_content"
                             android:layout_alignParentRight="true"
                             android:layout_centerVertical="true"
@@ -929,6 +964,7 @@
 
                         <TextView
                             android:layout_width="wrap_content"
+                            android:textColor="@color/address_black_key"
                             android:layout_height="wrap_content"
                             android:layout_alignParentRight="true"
                             android:layout_marginRight="10dp"
@@ -936,11 +972,9 @@
                     </RelativeLayout>
 
                     <TextView
-                        style="@style/CommonLineStyle"
-                        android:layout_marginLeft="10dp"/>
-
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"/>
                 </LinearLayout>
-
 
             </LinearLayout>
         </ScrollView>
@@ -950,9 +984,9 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_alignParentBottom="true"
-            android:background="@color/main_tab_blue"
+            android:background="@color/main_tab_blue_dark"
             android:gravity="center"
             android:text="下一步"
-            android:textColor="@color/white"/>
+            android:textColor="@color/white_all"/>
     </RelativeLayout>
 </LinearLayout>

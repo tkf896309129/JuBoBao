@@ -8,6 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/common_back_blue"
+        android:textColor="@color/address_alpha_black"
         android:padding="6dp" />
 
 

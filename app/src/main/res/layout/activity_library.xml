@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
+              android:background="@color/gray_bg"
               android:orientation="vertical">
 
     <RelativeLayout
@@ -35,7 +36,7 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="36dp"
             android:text="数字图书馆"
-            android:textColor="@color/white"
+            android:textColor="@color/white_all"
             android:textSize="28dp"/>
 
         <TextView

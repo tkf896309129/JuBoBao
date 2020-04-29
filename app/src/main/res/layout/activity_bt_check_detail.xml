@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
+              android:background="@color/gray_bg"
               android:fitsSystemWindows="true"
               android:orientation="vertical">
 
@@ -118,7 +119,8 @@
                         android:layout_marginRight="10dp"
                         android:drawableRight="@mipmap/gray_right"
                         android:gravity="right|center_vertical"
-                        android:hint="请选择 "/>
+                        android:hint="请选择 "
+                        android:textColorHint="@color/address_alpha_gray_black"/>
 
                 </LinearLayout>
 
@@ -146,7 +148,8 @@
                         android:layout_marginRight="10dp"
                         android:drawableRight="@mipmap/gray_right"
                         android:gravity="right|center_vertical"
-                        android:hint="请选择 "/>
+                        android:hint="请选择 "
+                        android:textColorHint="@color/address_alpha_gray_black"/>
 
                 </LinearLayout>
 
@@ -209,7 +212,8 @@
                         android:layout_marginRight="10dp"
                         android:drawableRight="@mipmap/gray_right"
                         android:gravity="right|center_vertical"
-                        android:hint="请选择 "/>
+                        android:hint="请选择 "
+                        android:textColorHint="@color/address_alpha_gray_black"/>
 
                 </LinearLayout>
 
@@ -238,7 +242,8 @@
                         android:gravity="center_vertical"
                         android:hint="请填写"
                         android:inputType="numberDecimal"
-                        android:paddingLeft="10dp"/>
+                        android:paddingLeft="10dp"
+                        android:textColorHint="@color/address_alpha_gray_black"/>
 
                 </LinearLayout>
 
@@ -248,8 +253,8 @@
                     android:id="@+id/ll_dk_money"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:visibility="gone"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:visibility="gone">
 
                     <LinearLayout
                         style="@style/MainRelativityStyle"
@@ -549,6 +554,7 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
+                    android:background="@color/gray_bg"
                     android:layout_height="50dp"></LinearLayout>
             </LinearLayout>
         </ScrollView>
@@ -558,9 +564,9 @@
             android:layout_width="match_parent"
             android:layout_height="44dp"
             android:layout_alignParentBottom="true"
-            android:background="@color/main_tab_blue"
+            android:background="@color/main_tab_blue_dark"
             android:gravity="center"
             android:text="提交"
-            android:textColor="@color/white"/>
+            android:textColor="@color/white_all"/>
     </RelativeLayout>
 </LinearLayout>

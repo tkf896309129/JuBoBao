@@ -20,6 +20,7 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 
+import com.example.huoshangkou.jubowan.R;
 import com.example.huoshangkou.jubowan.utils.LogUtils;
 import com.example.huoshangkou.jubowan.utils.TwoPointUtils;
 
@@ -68,7 +69,7 @@ public class StudyBendLine extends View {
     private void initPaint() {
         //画线的画笔
         linePaint = new Paint();
-        linePaint.setColor(Color.parseColor("#FF058FF9"));
+        linePaint.setColor(getResources().getColor(R.color.main_tab_blue_white));
         linePaint.setAntiAlias(true);
         linePaint.setTextSize(dp2px(getContext(), 12));
         linePaint.setStrokeWidth(dp2px(getContext(), 1));
@@ -78,7 +79,7 @@ public class StudyBendLine extends View {
 //        shadowPaint.setAntiAlias(true);
         //画最下方文字的画笔
         textPaint = new Paint();
-        textPaint.setColor(Color.parseColor("#999999"));
+        textPaint.setColor(getResources().getColor(R.color.main_tab_blue_white));
         textPaint.setAntiAlias(true);
         textPaint.setTextSize(dp2px(getContext(), 11));
 
@@ -99,11 +100,11 @@ public class StudyBendLine extends View {
         buttomHeiht = dp2px(35);//线距离底部高度
 
         mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-        mPaint.setColor(Color.parseColor("#FF058FF9"));
+        mPaint.setColor(getResources().getColor(R.color.main_tab_blue_white));
         mPaint.setStrokeWidth(dp2px(getContext(), 2));
         mPaint.setStyle(Paint.Style.STROKE);
         mPaint.setStrokeCap(Paint.Cap.ROUND);
-        mPaint.setColor(Color.parseColor("#FF058FF9"));
+        mPaint.setColor(getResources().getColor(R.color.main_tab_blue_white));
     }
 
     @Override
@@ -177,11 +178,11 @@ public class StudyBendLine extends View {
         if (xyList == null || xyList.size() == 0) {
             return;
         }
-        mPaint.setColor(Color.parseColor("#FF058FF9"));
+        mPaint.setColor(getResources().getColor(R.color.main_tab_blue_all));
         mPaint.setStrokeWidth(dp2px(getContext(), 2));
         mPaint.setStyle(Paint.Style.STROKE);
         mPaint.setStrokeCap(Paint.Cap.ROUND);
-        mPaint.setColor(Color.parseColor("#FF058FF9"));
+        mPaint.setColor(getResources().getColor(R.color.main_tab_blue_all));
         List<PointF> NewPoints = new ArrayList<>();
         NewPoints.addAll(xyList);
         float lX = 0;
@@ -210,10 +211,10 @@ public class StudyBendLine extends View {
             LogUtils.e(x + "横坐标");
             Rect rectf = new Rect();
             if (i == touchIndex) {
-                textPaint.setColor(Color.parseColor("#FF058FF9"));
+                textPaint.setColor(getResources().getColor(R.color.main_tab_blue_all));
                 canvas.drawCircle(x - rectf.width() / 2, sumHeight - buttomHeiht + 60, 40, circlePaint);
             } else {
-                textPaint.setColor(Color.parseColor("#000000"));
+                textPaint.setColor(getResources().getColor(R.color.address_black_key));
             }
             textPaint.getTextBounds(dataList.get(i), 0, dataList.get(i).length(), rectf);
 
@@ -238,7 +239,7 @@ public class StudyBendLine extends View {
             int height = rect.height();//文本的高度。
             linePaint.setColor(Color.parseColor("#FFD519"));
             canvas.drawRect(x + dp2px(5), (y - height - dp2px(10)), (x + with + dp2px(19)), y - dp2px(3), linePaint);
-            linePaint.setColor(Color.parseColor("#000000"));
+            linePaint.setColor(getResources().getColor(R.color.address_black_key));
             canvas.drawText(calPoint(timeList.get(touchIndex)), x + dp2px(12), y - dp2px(6), linePaint);//画最上面字体
             canvas.drawCircle(x, y, dp2px(3), circlePaint2);
         }
@@ -267,8 +268,8 @@ public class StudyBendLine extends View {
      * @param canvas
      */
     private void drawLine(Canvas canvas) {
-        mPaint.setColor(Color.parseColor("#dddddd"));
-        textPaint.setColor(Color.parseColor("#000000"));
+        mPaint.setColor(getResources().getColor(R.color.address_alpha_black));
+        textPaint.setColor(getResources().getColor(R.color.address_black_key));
         mPaint.setStrokeWidth(dp2px(0.5f));
         int signleTime = 0;
         if (maxTime > 10) {
@@ -283,7 +284,7 @@ public class StudyBendLine extends View {
             float y = (sumHeight - (oneHeight * signleTime * (i + 1)));
             canvas.drawText(calPoint((i + 1) * signleTime), 0, y - buttomHeiht - rect.height() / 2 - dp2px(4), textPaint);
         }
-        canvas.drawLine(oneWidth * 2 - 5, sumHeight - buttomHeiht, oneWidth * 2 - 5, (sumHeight - (oneHeight * signleTime * (4 + 1))) - buttomHeiht - rect.height() / 2 - dp2px(4), mPaint);
+        canvas.drawLine(startX, sumHeight - buttomHeiht, startX, (sumHeight - (oneHeight * signleTime * (4 + 1))) - buttomHeiht - rect.height() / 2 - dp2px(4), mPaint);
     }
 
     private int touchIndex = 1;

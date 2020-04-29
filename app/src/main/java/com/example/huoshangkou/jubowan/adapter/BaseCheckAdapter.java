@@ -6,6 +6,7 @@ import android.text.Editable;
 import android.text.InputType;
 import android.text.TextUtils;
 import android.text.TextWatcher;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -135,7 +136,14 @@ public class BaseCheckAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
             EditText etContent = editViewHolder.etContent;
             //文本监听
             etContent.clearFocus();
-            etContent.setText(list.get(position).getContent());
+            switch (list.get(position).getEditType()) {
+                case 1:
+                    etContent.setInputType(InputType.TYPE_CLASS_PHONE);
+                    break;
+                case 2:
+                    etContent.setInputType(InputType.TYPE_CLASS_TEXT);
+                    break;
+            }
 
             if (etContent.getTag() instanceof TextWatcher) {
                 etContent.removeTextChangedListener((TextWatcher) (etContent.getTag()));
@@ -163,20 +171,14 @@ public class BaseCheckAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
             etContent.addTextChangedListener(oneNameWatcher);
             etContent.setTag(oneNameWatcher);
 
-            switch (list.get(position).getEditType()) {
-                case 1:
-                    etContent.setInputType(InputType.TYPE_CLASS_PHONE);
-                    break;
-                case 2:
-                    etContent.setInputType(InputType.TYPE_CLASS_TEXT);
-                    break;
-            }
+
             String content = "";
             if(StringUtils.isNoEmpty(list.get(position).getContent()) && list.get(position).getContent().equals("0.0")){
                 content = "0";
             }else {
                 content = list.get(position).getContent();
             }
+
 //            LogUtils.e(content+"");
             etContent.setText(content);
             if (list.get(position).isHide()) {

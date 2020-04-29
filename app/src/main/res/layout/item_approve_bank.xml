@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
               android:id="@+id/ll_lick"
-    android:orientation="vertical">
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
 
     <LinearLayout
-        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:background="@color/white"
         android:orientation="horizontal"
         android:paddingBottom="10dp"
@@ -17,23 +17,25 @@
 
         <TextView
             android:id="@+id/tv_rzdw"
+            android:textColor="@color/address_alpha_black"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="公司名称：" />
+            android:text="公司名称："/>
 
         <TextView
             android:id="@+id/tv_company_name"
             android:layout_width="wrap_content"
+            android:textColor="@color/address_alpha_black"
             android:layout_height="wrap_content"
             android:layout_marginRight="14dp"
-            android:text="" />
+            android:text=""/>
 
     </LinearLayout>
 
     <TextView
         style="@style/CommonLineStyle"
         android:layout_marginLeft="14dp"
-        android:layout_marginRight="14dp" />
+        android:layout_marginRight="14dp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -47,21 +49,23 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="开户银行：" />
+            android:textColor="@color/address_alpha_black"
+            android:text="开户银行："/>
 
         <TextView
             android:id="@+id/tv_bank"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="14dp"
-            android:text="" />
+            android:textColor="@color/address_alpha_black"
+            android:text=""/>
 
     </LinearLayout>
 
     <TextView
         style="@style/CommonLineStyle"
         android:layout_marginLeft="14dp"
-        android:layout_marginRight="14dp" />
+        android:layout_marginRight="14dp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -74,15 +78,17 @@
 
         <TextView
             android:layout_width="wrap_content"
+            android:textColor="@color/address_alpha_black"
             android:layout_height="wrap_content"
-            android:text="银行账号：" />
+            android:text="银行账号："/>
 
         <TextView
             android:id="@+id/tv_bank_account"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="14dp"
-            android:inputType="phone" />
+            android:textColor="@color/address_alpha_black"
+            android:inputType="phone"/>
 
     </LinearLayout>
 
@@ -90,14 +96,13 @@
     <TextView
         style="@style/CommonLineStyle"
         android:layout_marginLeft="14dp"
-        android:layout_marginRight="14dp" />
+        android:layout_marginRight="14dp"/>
 
 
     <RelativeLayout
         android:id="@+id/rl_edit"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-
         android:background="@color/white">
 
         <TextView
@@ -112,7 +117,7 @@
             android:gravity="center"
             android:text=" 编辑"
             android:textColor="@color/address_black_key"
-            android:textSize="@dimen/address_edit_size" />
+            android:textSize="@dimen/address_edit_size"/>
 
         <TextView
             android:id="@+id/iv_delete"
@@ -125,7 +130,7 @@
             android:gravity="center"
             android:text=" 删除"
             android:textColor="@color/address_black_key"
-            android:textSize="@dimen/address_edit_size" />
+            android:textSize="@dimen/address_edit_size"/>
 
     </RelativeLayout>
 

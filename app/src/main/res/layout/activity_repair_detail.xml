@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    android:orientation="vertical">
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/gray_bg"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
 
     <include layout="@layout/tool_bar_style"></include>
 
@@ -24,7 +25,7 @@
                     style="@style/CommonTextStyle"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="20dp"
-                    android:text="订单编号" />
+                    android:text="订单编号"/>
 
                 <TextView
                     android:id="@+id/tv_order_num"
@@ -34,12 +35,12 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="10dp"
                     android:layout_toRightOf="@+id/tv_order"
-                    android:gravity="right" />
+                    android:gravity="right"/>
 
             </RelativeLayout>
 
             <!--分割线-->
-            <TextView style="@style/CommonLineStyle" />
+            <TextView style="@style/CommonLineStyle"/>
 
             <!--下单时间-->
             <RelativeLayout style="@style/MainRelativityStyle">
@@ -49,7 +50,7 @@
                     style="@style/CommonTextStyle"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="20dp"
-                    android:text="下单时间" />
+                    android:text="下单时间"/>
 
                 <TextView
                     android:id="@+id/tv_order_time"
@@ -59,12 +60,12 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="10dp"
                     android:layout_toRightOf="@+id/tv_time"
-                    android:gravity="right" />
+                    android:gravity="right"/>
 
             </RelativeLayout>
 
             <!--分割线-->
-            <TextView style="@style/CommonLineStyle" />
+            <TextView style="@style/CommonLineStyle"/>
 
             <!--订单描述-->
             <RelativeLayout
@@ -79,7 +80,7 @@
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_marginLeft="20dp"
-                    android:src="@mipmap/no_pic" />
+                    android:src="@mipmap/no_pic"/>
 
 
                 <!--品牌信息-->
@@ -97,7 +98,7 @@
                         android:layout_height="0dp"
                         android:layout_weight="1"
                         android:text="故障类别："
-                        android:textSize="@dimen/order_detail_size" />
+                        android:textSize="@dimen/order_detail_size"/>
 
                     <TextView
                         android:id="@+id/tv_brand"
@@ -108,7 +109,7 @@
                         android:layout_weight="1"
                         android:gravity="center"
                         android:text="机械品牌："
-                        android:textSize="@dimen/order_detail_size" />
+                        android:textSize="@dimen/order_detail_size"/>
 
                     <TextView
                         android:id="@+id/tv_buy_time"
@@ -119,7 +120,7 @@
                         android:layout_weight="1"
                         android:gravity="center"
                         android:text="购买时间："
-                        android:textSize="@dimen/order_detail_size" />
+                        android:textSize="@dimen/order_detail_size"/>
 
 
                 </LinearLayout>
@@ -139,7 +140,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:background="@color/gray_bg"
-                    android:padding="10dp" />
+                    android:padding="10dp"/>
             </LinearLayout>
 
             <android.support.v7.widget.RecyclerView
@@ -161,17 +162,17 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:text="维修预付款" />
+                    android:text="维修预付款"/>
 
                 <TextView
                     android:id="@+id/tv_repair_price"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/main_tab_blue" />
+                    android:textColor="@color/main_tab_blue"/>
 
             </LinearLayout>
 
-            <TextView style="@style/CommonLineStyle" />
+            <TextView style="@style/CommonLineStyle"/>
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -189,9 +190,9 @@
                         android:layout_marginRight="10dp"
                         android:background="@drawable/gray_stroke_bg"
                         android:gravity="center"
-                        android:visibility="gone"
                         android:text="联系客服"
-                        android:textColor="@color/address_black_key" />
+                        android:textColor="@color/address_black_key"
+                        android:visibility="gone"/>
 
                     <TextView
                         android:id="@+id/tv_delete"
@@ -201,8 +202,8 @@
                         android:background="@drawable/gray_stroke_bg"
                         android:gravity="center"
                         android:text="删除订单"
-                        android:visibility="gone"
-                        android:textColor="@color/address_black_key" />
+                        android:textColor="@color/address_black_key"
+                        android:visibility="gone"/>
 
                     <TextView
                         android:id="@+id/tv_pay"
@@ -212,8 +213,8 @@
                         android:background="@drawable/blue_stroke_bg"
                         android:gravity="center"
                         android:text="立即支付"
-                        android:visibility="gone"
-                        android:textColor="@color/main_tab_blue" />
+                        android:textColor="@color/main_tab_blue_white"
+                        android:visibility="gone"/>
 
                     <TextView
                         android:id="@+id/tv_pay_list"
@@ -223,8 +224,8 @@
                         android:background="@drawable/blue_stroke_bg"
                         android:gravity="center"
                         android:text="维修清单"
-                        android:visibility="gone"
-                        android:textColor="@color/main_tab_blue" />
+                        android:textColor="@color/main_tab_blue_white"
+                        android:visibility="gone"/>
 
                     <TextView
                         android:id="@+id/tv_common"
@@ -233,9 +234,9 @@
                         android:layout_marginRight="15dp"
                         android:background="@drawable/blue_corner_btn"
                         android:gravity="center"
-                        android:visibility="gone"
                         android:text="评价订单"
-                        android:textColor="@color/white" />
+                        android:textColor="@color/white_all"
+                        android:visibility="gone"/>
 
                     <TextView
                         android:id="@+id/tv_check_serve_list"
@@ -245,19 +246,19 @@
                         android:background="@drawable/blue_stroke_bg"
                         android:gravity="center"
                         android:text="查看服务单"
-                        android:textColor="@color/main_tab_blue"
-                        android:visibility="gone" />
+                        android:textColor="@color/main_tab_blue_all"
+                        android:visibility="gone"/>
 
                     <TextView
                         android:id="@+id/tv_write_list"
                         android:layout_width="80dp"
                         android:layout_height="30dp"
                         android:layout_marginRight="15dp"
-                        android:background="@drawable/blue_corner_btn"
+                        android:background="@drawable/blue_all_corner"
                         android:gravity="center"
                         android:text="填写服务单"
-                        android:textColor="@color/white"
-                        android:visibility="gone" />
+                        android:textColor="@color/white_all"
+                        android:visibility="gone"/>
 
                 </LinearLayout>
 
@@ -269,19 +270,19 @@
                     android:layout_marginLeft="20dp"
                     android:gravity="center_vertical"
                     android:text=""
-                    android:textColor="@color/main_tab_blue" />
+                    android:textColor="@color/main_tab_blue"/>
             </RelativeLayout>
 
             <TextView
                 style="@style/CommonLineStyle"
-                android:layout_marginTop="10dp" />
+                android:layout_marginTop="10dp"/>
 
 
             <!--联系人信息-->
             <include layout="@layout/item_receive_message"></include>
 
             <!--分割线-->
-            <TextView style="@style/CommonLineStyle" />
+            <TextView style="@style/CommonLineStyle"/>
 
             <!--评价信息-->
             <include layout="@layout/item_common_layout"></include>
@@ -293,7 +294,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:paddingBottom="10dp"
-                android:paddingTop="10dp" />
+                android:paddingTop="10dp"/>
 
         </LinearLayout>
 

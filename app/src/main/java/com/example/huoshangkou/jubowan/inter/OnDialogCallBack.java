@@ -1,5 +1,6 @@
 package com.example.huoshangkou.jubowan.inter;
 
+import android.app.AlertDialog;
 import android.widget.PopupWindow;
 
 /**
@@ -12,6 +13,6 @@ import android.widget.PopupWindow;
 
 public interface OnDialogCallBack {
 
-    void addWorkExp(String content,PopupWindow popupSearchWindow );
+    void addWorkExp(String content,AlertDialog popupSearchWindow );
 
 }

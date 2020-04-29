@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <include layout="@layout/tool_bar_iamge"></include>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/ll_bottom"></android.support.v7.widget.RecyclerView>
+
+        <LinearLayout
+            android:id="@+id/ll_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/grid_choose"
+                android:background="@color/gray_all"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp">
+
+                <ImageView
+                    android:id="@+id/iv_voice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:src="@mipmap/chat_voice"/>
+
+                <EditText
+                    android:id="@+id/et_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@+id/iv_face"
+                    android:layout_toRightOf="@+id/iv_voice"
+                    android:background="@drawable/white_corner"
+                    android:maxHeight="80dp"
+                    android:paddingBottom="6dp"
+                    android:paddingLeft="4dp"
+                    android:paddingTop="6dp"
+                    android:textSize="14dp"/>
+
+                <ImageView
+                    android:id="@+id/iv_face"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:layout_toLeftOf="@+id/iv_add"
+                    android:src="@mipmap/chat_face"/>
+
+                <ImageView
+                    android:id="@+id/iv_add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@mipmap/chat_add"/>
+
+                <TextView
+                    android:id="@+id/tv_send"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="-10dp"
+                    android:layout_toRightOf="@+id/iv_face"
+                    android:background="@drawable/blue_all_corner"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:paddingTop="4dp"
+                    android:text="发送"
+                    android:textColor="@color/white_all"
+                    android:textSize="14dp"
+                    android:visibility="gone"/>
+
+            </RelativeLayout>
+
+            <GridView
+                android:id="@+id/grid_choose"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@color/gray_bg"
+                android:gravity="center"
+                android:numColumns="4"
+                android:visibility="gone"
+                android:windowSoftInputMode="adjustPan|stateHidden"></GridView>
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

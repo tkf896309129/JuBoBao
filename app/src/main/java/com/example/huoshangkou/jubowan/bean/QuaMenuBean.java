@@ -117,9 +117,27 @@ public class QuaMenuBean {
             private int Id;
             private String Name;
             private String Icon;
+            private int img;
             private int Tier;
             private int ParentId;
             private boolean IsDel;
+            private int unRead;
+
+            public int getUnRead() {
+                return unRead;
+            }
+
+            public void setUnRead(int unRead) {
+                this.unRead = unRead;
+            }
+
+            public int getImg() {
+                return img;
+            }
+
+            public void setImg(int img) {
+                this.img = img;
+            }
 
             public String get__type() {
                 return __type;

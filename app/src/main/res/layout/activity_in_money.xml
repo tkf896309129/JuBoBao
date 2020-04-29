@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
+              android:background="@color/gray_bg"
               android:fitsSystemWindows="true"
               android:orientation="vertical">
 
@@ -163,11 +164,40 @@
             <TextView
                 style="@style/CommonLineStyle"/>
 
+            <LinearLayout
+                style="@style/MainRelativityStyle"
+                android:layout_height="100dp"
+                android:orientation="horizontal">
 
+                <TextView
+                    style="@style/CommonTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="top"
+                    android:text="备注："/>
+
+                <EditText
+                    android:id="@+id/et_remark"
+                    style="@style/CommonTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:textColorHint="@color/address_alpha_gray_black"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/et_blank_bg"
+                    android:gravity="top"
+                    android:hint="请填写"
+                    android:paddingLeft="10dp"/>
+
+            </LinearLayout>
+
+            <TextView style="@style/CommonLineStyle"/>
             <RelativeLayout style="@style/MainRelativityStyle">
 
                 <TextView
                     style="@style/MyApplyLeftTextStyle"
+
                     android:text="图片"/>
 
                 <ImageView
@@ -189,33 +219,7 @@
                 android:layout_marginRight="10dp"
                 android:numColumns="3"></com.example.huoshangkou.jubowan.view.ScrollGridView>
 
-            <LinearLayout
-                style="@style/MainRelativityStyle"
-                android:orientation="horizontal">
 
-                <TextView
-                    style="@style/CommonTextStyle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="10dp"
-                    android:gravity="center_vertical"
-                    android:text="备注："/>
-
-                <EditText
-                    android:id="@+id/et_remark"
-                    style="@style/CommonTextStyle"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:background="@drawable/et_blank_bg"
-                    android:gravity="center_vertical"
-                    android:hint="请填写"
-                    android:paddingLeft="10dp"/>
-
-            </LinearLayout>
-
-            <TextView style="@style/CommonLineStyle"/>
 
             <LinearLayout
                 android:id="@+id/ll_check"
@@ -261,6 +265,7 @@
                         android:background="@color/white"
                         android:gravity="center_vertical"
                         android:paddingLeft="15dp"
+                        android:textColor="@color/address_alpha_black"
                         android:text="添加抄送人"/>
 
                     <ImageView

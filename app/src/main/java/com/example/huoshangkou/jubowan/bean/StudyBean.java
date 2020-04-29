@@ -116,6 +116,25 @@ public class StudyBean {
             private Object Audio;
             private String CreateTime;
             private int CompanyId;
+            private int FileLevel;
+            private String Color;
+
+
+            public String getColor() {
+                return Color;
+            }
+
+            public void setColor(String color) {
+                Color = color;
+            }
+
+            public int getFileLevel() {
+                return FileLevel;
+            }
+
+            public void setFileLevel(int fileLevel) {
+                FileLevel = fileLevel;
+            }
 
             public String getPicture() {
                 return Picture;

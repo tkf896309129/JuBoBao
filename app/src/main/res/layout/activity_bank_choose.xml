@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
+              android:background="@color/gray_bg"
               android:fitsSystemWindows="true"
               android:orientation="vertical">
 
@@ -10,24 +11,24 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white">
+        android:background="@color/white_gray">
 
         <ImageView
             android:id="@+id/iv_bg"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="200dp"
             android:layout_centerHorizontal="true"
-            android:src="@mipmap/score_bg"/>
+            android:src="@drawable/score_bg"/>
 
         <ImageView
             android:id="@+id/iv_score_bg"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="68dp"
+            android:layout_height="68dp"
             android:layout_alignRight="@+id/iv_bg"
             android:layout_marginRight="14dp"
             android:layout_marginTop="8dp"
             android:rotation="45"
-            android:src="@mipmap/score_jb"/>
+            android:src="@drawable/score_jb"/>
 
         <TextView
             android:id="@+id/tv_score_no"
@@ -39,7 +40,7 @@
             android:gravity="center"
             android:paddingRight="14dp"
             android:rotation="43"
-            android:textColor="#E80010"/>
+            android:textColor="@color/red_white"/>
 
     </RelativeLayout>
 

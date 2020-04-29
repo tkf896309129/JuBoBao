@@ -3,6 +3,7 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:fitsSystemWindows="true"
+              android:background="@color/gray_bg"
               android:orientation="vertical">
 
 
@@ -29,7 +30,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:textColor="@color/white"
+            android:textColor="@color/white_all"
             android:textSize="18dp"/>
 
 
@@ -129,6 +130,7 @@
         <RelativeLayout
             android:id="@+id/rl_common_back"
             style="@style/MainRelativityStyle"
+            android:background="@color/white_dark"
             android:layout_alignParentBottom="true">
 
             <TextView style="@style/CommonLineStyle"/>
@@ -139,7 +141,9 @@
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
                 android:layout_toLeftOf="@+id/tv_replies"
-                android:background="@drawable/gray_stroke_bg"
+                android:textColorHint="@color/address_alpha_black"
+                android:textColor="@color/address_black_key"
+                android:background="@drawable/white_corner_stroke"
                 android:hint="随便说点啥~"
                 android:paddingLeft="5dp"
                 android:textSize="14dp"/>
@@ -156,7 +160,7 @@
                 android:background="@drawable/replies_gray_bg"
                 android:gravity="center"
                 android:text="回复"
-                android:textColor="@color/white"
+                android:textColor="@color/white_all"
                 android:textSize="17dp"/>
 
         </RelativeLayout>

@@ -16,6 +16,7 @@ import com.example.huoshangkou.jubowan.bean.BaseCheckBean;
 import com.example.huoshangkou.jubowan.utils.DateUtils;
 import com.example.huoshangkou.jubowan.utils.MoneyUtils;
 import com.example.huoshangkou.jubowan.utils.StringUtils;
+import com.example.huoshangkou.jubowan.utils.ToastUtils;
 
 import java.util.List;
 
@@ -43,11 +44,12 @@ public class BaseCheckDetailAdapter extends BaseAbstractAdapter<BaseCheckBean> {
             llDetail.setVisibility(View.VISIBLE);
         }
         tvHint.setText(bean.getHintType());
+
         if (bean.getHintType().contains("日期")) {
             if (StringUtils.isNoEmpty(bean.getContent()) && bean.getContent().contains("Date")) {
                 tvContent.setText(DateUtils.getFormDesData(bean.getContent()));
             } else {
-                tvContent.setText(bean.getContent());
+                tvContent.setText(StringUtils.getNoEmptyStr(bean.getContent()));
             }
         } else if (bean.getHintType().contains("发票")) {
             switch (bean.getContent()) {
@@ -66,19 +68,19 @@ public class BaseCheckDetailAdapter extends BaseAbstractAdapter<BaseCheckBean> {
         } else if (bean.getEditType() == 1) {
             tvContent.setText(MoneyUtils.getInstance().getFormPrice(bean.getContent()));
         } else {
-            tvContent.setText(bean.getContent());
+            tvContent.setText(StringUtils.getNoEmptyStr(bean.getContent()));
         }
         //标题
         if (bean.getType() == 6) {
             tvHint.setTextSize(16);
             TextPaint tp = tvHint.getPaint();
             tp.setFakeBoldText(true);
+            tvContent.setText("");
         } else {
             tvHint.setTextSize(14);
             TextPaint tp = tvHint.getPaint();
             tp.setFakeBoldText(false);
         }
-
 
     }
 }

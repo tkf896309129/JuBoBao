@@ -3,20 +3,24 @@
               xmlns:app="http://schemas.android.com/apk/res-auto"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
+              android:background="@color/gray_bg"
               android:fitsSystemWindows="true"
               android:orientation="vertical">
 
     <include layout="@layout/tool_bar_style"></include>
-
+    
     <android.support.design.widget.TabLayout
         android:id="@+id/tab_repair"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        app:tabIndicatorColor="@color/main_tab_blue"
-        app:tabSelectedTextColor="@color/main_tab_blue"></android.support.design.widget.TabLayout>
+        android:background="@color/white"
+        app:tabIndicatorColor="@color/main_tab_blue_all"
+        app:tabTextColor="@color/address_black_key"
+        app:tabSelectedTextColor="@color/main_tab_blue_tm"></android.support.design.widget.TabLayout>
 
     <android.support.v4.view.ViewPager
         android:id="@+id/vp_repair"
+        android:background="@color/gray_bg"
         android:layout_width="match_parent"
         android:layout_height="match_parent"></android.support.v4.view.ViewPager>
 

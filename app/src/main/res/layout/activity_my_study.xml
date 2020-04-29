@@ -1,11 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
+              android:background="@color/gray_bg"
               android:fitsSystemWindows="true"
               android:orientation="vertical">
 
-    <include layout="@layout/tool_bar_style"></include>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/main_tab_blue_dark">
+
+        <LinearLayout
+            android:id="@+id/ll_back"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/back"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:drawableRight="@mipmap/white_dwon"
+            android:gravity="center"
+            android:maxLength="10"
+            android:textColor="@color/white_all"
+            android:textSize="18dp"/>
+
+
+        <TextView
+            android:id="@+id/tv_right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:textColor="@color/white_all"/>
+    </RelativeLayout>
+
 
     <com.scwang.smartrefresh.layout.SmartRefreshLayout
         android:id="@+id/smart"
@@ -17,5 +58,4 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"></ListView>
     </com.scwang.smartrefresh.layout.SmartRefreshLayout>
-
 </LinearLayout>

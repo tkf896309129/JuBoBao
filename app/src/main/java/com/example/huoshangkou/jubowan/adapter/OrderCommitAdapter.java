@@ -65,17 +65,23 @@ public class OrderCommitAdapter extends BaseAbstractAdapter<ShopCarListBean> {
             tvBrand.setText("类别：" + bean.getClassName());
             tvStandard.setText("品牌：" + bean.getBrandName());
             tvLevel.setText("规格：" + bean.getGuigeName());
+        } else if (bean.getType().equals(ShopCarFunction.getInstance().YUAN_LIAO)) {
+            tvBrand.setText("品牌：" + bean.getBrandName());
+            tvLevel.setText("级别：" + bean.getLevelName());
+            tvStandard.setText("类别：" + bean.getCategoryName());
+            tvClass.setText("品类：" + bean.getClassName());
+//            tvThick.setText("厚度：" + bean.getWeight() + "mm");
         }
 
 
         if (bean.getType().equals(ShopCarFunction.getInstance().YUAN)) {
-            String price = "￥" + bean.getPrice()+"/吨";
+            String price = "￥" + bean.getPrice() + "/吨";
             int colorPosition = (price).indexOf(".");
             int linePosition = price.indexOf("/");
 
             SpannableStringBuilder spannableString = new SpannableStringBuilder();
             spannableString.append(price);
-            spannableString.setSpan(new ForegroundColorSpan(context.getResources().getColor(R.color.main_tab_blue)), 1, linePosition, Spanned.SPAN_EXCLUSIVE_INCLUSIVE);
+            spannableString.setSpan(new ForegroundColorSpan(context.getResources().getColor(R.color.main_tab_blue_all)), 1, linePosition, Spanned.SPAN_EXCLUSIVE_INCLUSIVE);
 
             //字体大小
             AbsoluteSizeSpan sizeSpan = new AbsoluteSizeSpan(28);
@@ -85,14 +91,14 @@ public class OrderCommitAdapter extends BaseAbstractAdapter<ShopCarListBean> {
 
             tvPrice.setText(spannableString);
             //辅材
-        } else if (bean.getType().equals(ShopCarFunction.getInstance().FU)) {
+        } else if (bean.getType().equals(ShopCarFunction.getInstance().FU) || bean.getType().equals(ShopCarFunction.getInstance().YUAN_LIAO)) {
             String price = "￥" + bean.getPrice() + "/" + bean.getNameUnit();
             int colorPosition = (price).indexOf(".");
             int linePosition = price.indexOf("/");
 
             SpannableStringBuilder spannableString = new SpannableStringBuilder();
             spannableString.append(price);
-            spannableString.setSpan(new ForegroundColorSpan(context.getResources().getColor(R.color.main_tab_blue)), 1, linePosition, Spanned.SPAN_EXCLUSIVE_INCLUSIVE);
+            spannableString.setSpan(new ForegroundColorSpan(context.getResources().getColor(R.color.main_tab_blue_all)), 1, linePosition, Spanned.SPAN_EXCLUSIVE_INCLUSIVE);
 
             //字体大小
             AbsoluteSizeSpan sizeSpan = new AbsoluteSizeSpan(28);

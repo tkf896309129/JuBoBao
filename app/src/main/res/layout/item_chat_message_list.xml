@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mcxtzhang.swipemenulib.SwipeMenuLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                            android:id="@+id/swip_chat"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="66dp"
+                                            android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/rl_message"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/iv_head"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/gray_corner_bg"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="18dp"
+            android:src="@mipmap/tz_wxdd_icon"/>
+
+        <TextView
+            android:id="@+id/tv_red_num"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignRight="@+id/iv_head"
+            android:layout_alignTop="@+id/iv_head"
+            android:layout_marginRight="-5dp"
+            android:layout_marginTop="-5dp"
+            android:background="@drawable/red_dot_bg"
+            android:gravity="center"
+            android:text="22"
+            android:textColor="@color/white_all"
+            android:textSize="10dp"/>
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/iv_head"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/iv_head"
+            android:singleLine="true"
+            android:text="浙江火山口网络群"
+            android:textColor="@color/address_black_key"/>
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv_name"
+            android:layout_below="@+id/tv_name"
+            android:layout_marginTop="10dp"
+            android:singleLine="true"
+            android:text="运营事业部：你今天吃饭了吗"
+            android:textColor="@color/address_alpha_black"
+            android:textSize="12dp"/>
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/tv_name"
+            android:layout_marginRight="15dp"
+            android:text="时间"
+            android:textColor="@color/address_alpha_black"
+            android:textSize="10dp"/>
+
+        <TextView
+            style="@style/CommonLineStyle"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="15dp"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/tv_delete"
+        android:layout_width="62dp"
+        android:layout_height="match_parent"
+        android:background="@color/gray_bg"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/delete_chat"/>
+    </LinearLayout>
+</com.mcxtzhang.swipemenulib.SwipeMenuLayout>

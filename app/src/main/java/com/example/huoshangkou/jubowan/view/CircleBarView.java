@@ -53,8 +53,8 @@ public class CircleBarView extends View {
     private void init(Context context, AttributeSet attrs) {
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.CircleBarView);
 
-        progressColor = typedArray.getColor(R.styleable.CircleBarView_progress_color,context.getResources().getColor(R.color.main_tab_blue));
-        bgColor = typedArray.getColor(R.styleable.CircleBarView_bg_color,context.getResources().getColor(R.color.main_tab_blue_alpha));
+        progressColor = typedArray.getColor(R.styleable.CircleBarView_progress_color, context.getResources().getColor(R.color.main_tab_blue_all));
+        bgColor = typedArray.getColor(R.styleable.CircleBarView_bg_color, context.getResources().getColor(R.color.main_tab_blue_alpha));
         startAngle = typedArray.getFloat(R.styleable.CircleBarView_start_angle, -90);
         sweepAngle = typedArray.getFloat(R.styleable.CircleBarView_sweep_angle, 360);
         barWidth = typedArray.getDimension(R.styleable.CircleBarView_bar_width, DpOrPxUtils.dip2px(context, 10));
@@ -89,7 +89,6 @@ public class CircleBarView extends View {
         int width = measureSize(defaultSize, widthMeasureSpec);
         int min = Math.min(width, height);// 获取View最短边的长度
         setMeasuredDimension(min, min);// 强制改View为以最短边为长度的正方形
-
         if (min >= barWidth * 2) {
             mRectF.set(barWidth / 2, barWidth / 2, min - barWidth / 2, min - barWidth / 2);
         }
@@ -152,7 +151,7 @@ public class CircleBarView extends View {
      * @param progressNum 进度条数值
      * @param time        动画持续时间
      */
-    public void setProgressNum(float progressNum, int time,float maxNum) {
+    public void setProgressNum(float progressNum, int time, float maxNum) {
         this.progressNum = progressNum;
         this.maxNum = maxNum;
         anim.setDuration(time);

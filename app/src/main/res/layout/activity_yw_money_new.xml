@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
+              android:background="@color/gray_bg"
               android:fitsSystemWindows="true"
               android:orientation="vertical">
 
@@ -42,7 +43,8 @@
                         android:layout_height="match_parent"
                         android:layout_marginLeft="10dp"
                         android:gravity="center_vertical"
-                        android:text="打款客户"/>
+                        android:text="打款客户"
+                        android:textColor="@color/address_black_key"/>
 
                     <TextView
                         android:id="@+id/tv_dk_customer"
@@ -53,7 +55,8 @@
                         android:layout_marginRight="10dp"
                         android:drawableRight="@mipmap/gray_right"
                         android:gravity="right|center_vertical"
-                        android:hint="请选择 "/>
+                        android:hint="请选择 "
+                        android:textColorHint="@color/address_alpha_gray_black"/>
 
                 </LinearLayout>
 
@@ -69,7 +72,8 @@
                         android:layout_height="match_parent"
                         android:layout_marginLeft="10dp"
                         android:gravity="center_vertical"
-                        android:text="客户类型"/>
+                        android:text="客户类型"
+                        android:textColor="@color/address_black_key"/>
 
                     <RadioGroup
                         android:id="@+id/rg_customer_type"
@@ -108,10 +112,10 @@
                 <TextView style="@style/CommonLineStyle"/>
 
                 <RelativeLayout
-                    android:visibility="gone"
                     android:id="@+id/rl_mys"
                     style="@style/MainRelativityStyle"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:visibility="gone">
 
                     <TextView
                         style="@style/CommonTextStyle"
@@ -148,7 +152,8 @@
                         android:layout_height="match_parent"
                         android:layout_marginLeft="10dp"
                         android:gravity="center_vertical"
-                        android:text="账户类型"/>
+                        android:text="账户类型"
+                        android:textColor="@color/address_black_key"/>
 
                     <RadioGroup
                         android:id="@+id/rg_zh_type"
@@ -188,9 +193,9 @@
 
                 <RelativeLayout
                     android:id="@+id/ll_dkr"
-                    android:visibility="gone"
                     style="@style/MainRelativityStyle"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:visibility="gone">
 
                     <TextView
                         android:id="@+id/tv_dkr"
@@ -231,7 +236,8 @@
                         android:layout_height="match_parent"
                         android:layout_marginLeft="10dp"
                         android:gravity="center_vertical"
-                        android:text="打款方式"/>
+                        android:text="打款方式"
+                        android:textColor="@color/address_black_key"/>
 
                     <TextView
                         android:id="@+id/tv_dk_type"
@@ -242,7 +248,8 @@
                         android:layout_marginRight="10dp"
                         android:drawableRight="@mipmap/gray_right"
                         android:gravity="right|center_vertical"
-                        android:hint="请选择 "/>
+                        android:hint="请选择 "
+                        android:textColorHint="@color/address_alpha_gray_black"/>
 
                 </LinearLayout>
 
@@ -258,7 +265,8 @@
                         android:layout_height="match_parent"
                         android:layout_marginLeft="10dp"
                         android:gravity="center_vertical"
-                        android:text="打款金额："/>
+                        android:text="打款金额："
+                        android:textColor="@color/address_black_key"/>
 
                     <EditText
                         android:id="@+id/et_dk_money"
@@ -271,7 +279,8 @@
                         android:gravity="center_vertical"
                         android:hint="请填写"
                         android:inputType="numberDecimal"
-                        android:paddingLeft="10dp"/>
+                        android:paddingLeft="10dp"
+                        android:textColorHint="@color/address_alpha_gray_black"/>
 
                 </LinearLayout>
 
@@ -283,12 +292,14 @@
                     android:orientation="horizontal">
 
                     <TextView
+                        android:id="@+id/textView7"
                         style="@style/CommonTextStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="10dp"
                         android:gravity="center_vertical"
-                        android:text="客户货款性质"/>
+                        android:text="客户货款性质"
+                        android:textColor="@color/address_black_key"/>
 
                     <TextView
                         android:id="@+id/tv_dk_xz"
@@ -299,7 +310,8 @@
                         android:layout_marginRight="10dp"
                         android:drawableRight="@mipmap/gray_right"
                         android:gravity="right|center_vertical"
-                        android:hint="请选择 "/>
+                        android:hint="请选择 "
+                        android:textColorHint="@color/address_alpha_gray_black"/>
 
                 </LinearLayout>
 
@@ -365,7 +377,8 @@
                         android:layout_marginRight="10dp"
                         android:drawableRight="@mipmap/gray_right"
                         android:gravity="right|center_vertical"
-                        android:hint="请选择 "/>
+                        android:hint="请选择 "
+                        android:textColorHint="@color/address_alpha_gray_black"/>
 
                 </LinearLayout>
 
@@ -393,7 +406,8 @@
                         android:layout_marginRight="10dp"
                         android:drawableRight="@mipmap/gray_right"
                         android:gravity="right|center_vertical"
-                        android:hint="请选择 "/>
+                        android:hint="请选择 "
+                        android:textColorHint="@color/address_alpha_gray_black"/>
 
                 </LinearLayout>
 
@@ -427,7 +441,8 @@
                             android:layout_marginRight="10dp"
                             android:drawableRight="@mipmap/gray_right"
                             android:gravity="right|center_vertical"
-                            android:hint="请选择 "/>
+                            android:hint="请选择 "
+                            android:textColorHint="@color/address_alpha_gray_black"/>
 
                     </LinearLayout>
 
@@ -455,7 +470,8 @@
                             android:layout_marginRight="10dp"
                             android:drawableRight="@mipmap/gray_right"
                             android:gravity="right|center_vertical"
-                            android:hint="请选择 "/>
+                            android:hint="请选择 "
+                            android:textColorHint="@color/address_alpha_gray_black"/>
 
                     </LinearLayout>
 
@@ -483,7 +499,8 @@
                             android:background="@drawable/et_blank_bg"
                             android:gravity="center_vertical"
                             android:hint="请填写"
-                            android:paddingLeft="10dp"/>
+                            android:paddingLeft="10dp"
+                            android:textColorHint="@color/address_alpha_gray_black"/>
 
                     </LinearLayout>
 
@@ -512,7 +529,8 @@
                             android:gravity="center_vertical"
                             android:hint="请填写"
                             android:inputType="numberDecimal"
-                            android:paddingLeft="10dp"/>
+                            android:paddingLeft="10dp"
+                            android:textColorHint="@color/address_alpha_black"/>
 
                     </LinearLayout>
 
@@ -540,7 +558,8 @@
                             android:layout_marginRight="10dp"
                             android:drawableRight="@mipmap/gray_right"
                             android:gravity="right|center_vertical"
-                            android:hint="请选择 "/>
+                            android:hint="请选择 "
+                            android:textColorHint="@color/address_alpha_gray_black"/>
 
                     </LinearLayout>
 
@@ -637,7 +656,8 @@
                             android:layout_marginRight="10dp"
                             android:drawableRight="@mipmap/gray_right"
                             android:gravity="right|center_vertical"
-                            android:hint="请选择 "/>
+                            android:hint="请选择 "
+                            android:textColorHint="@color/address_alpha_gray_black"/>
 
                     </LinearLayout>
 
@@ -662,6 +682,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginLeft="10dp"
+                            android:textColorHint="@color/address_alpha_gray_black"
                             android:layout_marginRight="10dp"
                             android:drawableRight="@mipmap/gray_right"
                             android:gravity="right|center_vertical"
@@ -727,6 +748,8 @@
                             android:layout_marginLeft="10dp"
                             android:layout_marginRight="10dp"
                             android:drawableRight="@mipmap/gray_right"
+                            android:textColorHint="@color/address_alpha_gray_black"
+                            android:textColor="@color/address_black_key"
                             android:gravity="right|center_vertical"
                             android:hint="请选择 "/>
 
@@ -753,6 +776,8 @@
                             android:layout_height="match_parent"
                             android:layout_marginLeft="10dp"
                             android:layout_marginRight="10dp"
+                            android:textColorHint="@color/address_alpha_gray_black"
+                            android:textColor="@color/address_black_key"
                             android:background="@drawable/et_blank_bg"
                             android:gravity="center_vertical"
                             android:hint="请填写"
@@ -783,6 +808,8 @@
                             android:layout_height="match_parent"
                             android:layout_marginLeft="10dp"
                             android:layout_marginRight="10dp"
+                            android:textColorHint="@color/address_alpha_gray_black"
+                            android:textColor="@color/address_black_key"
                             android:drawableRight="@mipmap/gray_right"
                             android:gravity="right|center_vertical"
                             android:hint="请选择 "/>
@@ -909,7 +936,8 @@
                                     android:background="@color/white"
                                     android:gravity="center_vertical"
                                     android:paddingLeft="15dp"
-                                    android:text="添加抄送人"/>
+                                    android:text="添加抄送人"
+                                    android:textColor="@color/address_alpha_black"/>
 
                                 <ImageView
                                     android:layout_width="wrap_content"
@@ -1045,6 +1073,7 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
                         android:drawableRight="@mipmap/gray_right"
+                        android:textColorHint="@color/address_alpha_gray_black"
                         android:gravity="right|center_vertical"
                         android:hint="请选择 "/>
 
@@ -1077,7 +1106,9 @@
                         android:gravity="top|left"
                         android:hint="请填写"
                         android:paddingBottom="30dp"
-                        android:paddingLeft="10dp"/>
+                        android:paddingLeft="10dp"
+                        android:textColor="@color/address_black_key"
+                        android:textColorHint="@color/address_alpha_gray_black"/>
 
                 </LinearLayout>
 

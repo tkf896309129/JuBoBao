@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
+              android:background="@color/gray_bg"
               android:fitsSystemWindows="true"
               android:orientation="vertical">
 
@@ -37,6 +38,7 @@
                         android:layout_marginLeft="15dp"
                         android:layout_marginTop="10dp"
                         android:text="支付金额"
+                        android:textColor="@color/address_alpha_black"
                         android:textSize="12dp"/>
 
                     <TextView
@@ -46,7 +48,7 @@
                         android:layout_alignBottom="@+id/tv_price"
                         android:layout_marginLeft="15dp"
                         android:text="￥"
-                        android:textColor="@color/main_tab_blue"
+                        android:textColor="@color/main_tab_blue_all"
                         android:textSize="18dp"/>
 
                     <EditText
@@ -59,7 +61,7 @@
                         android:layout_toRightOf="@+id/tv_unit"
                         android:background="@drawable/et_blank_bg"
                         android:inputType="numberDecimal"
-                        android:textColor="@color/main_tab_blue"
+                        android:textColor="@color/main_tab_blue_white"
                         android:textSize="22dp"/>
 
                     <ImageView
@@ -187,23 +189,23 @@
 
                     <TextView
                         android:id="@+id/tv_bt_yhj"
-                        android:drawableRight="@mipmap/gray_right"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
                         android:layout_marginRight="15dp"
+                        android:drawableRight="@mipmap/gray_right"
                         android:textColor="@color/address_black_key"/>
 
                 </RelativeLayout>
 
                 <RelativeLayout
-                    android:visibility="gone"
                     android:id="@+id/rl_rz_company"
                     android:layout_width="match_parent"
                     android:layout_height="44dp"
                     android:layout_marginTop="10dp"
                     android:background="@color/white"
-                    android:gravity="center_vertical">
+                    android:gravity="center_vertical"
+                    android:visibility="gone">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -238,6 +240,8 @@
                         android:background="@drawable/et_blank_bg"
                         android:hint="请输入验证码"
                         android:paddingLeft="15dp"
+                        android:textColor="@color/address_black_key"
+                        android:textColorHint="@color/address_alpha_black"
                         android:textSize="14dp"/>
 
                     <TextView
@@ -247,12 +251,12 @@
                         android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"
                         android:layout_marginRight="15dp"
-                        android:background="@drawable/blue_corner_btn"
+                        android:background="@drawable/blue_all_corner"
                         android:gravity="center"
                         android:paddingLeft="10dp"
                         android:paddingRight="10dp"
                         android:text="获取验证码"
-                        android:textColor="@color/white"
+                        android:textColor="@color/white_all"
                         android:textSize="14dp"/>
 
                 </RelativeLayout>
@@ -272,14 +276,14 @@
                         android:button="@drawable/bt_gou_check"
                         android:gravity="center_vertical"
                         android:text=" 我已同意并阅读"
-                        android:textColor="#999999"/>
+                        android:textColor="@color/address_alpha_black"/>
 
                     <TextView
                         android:id="@+id/tv_pay_rule"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="《聚玻白条支付协议》"
-                        android:textColor="@color/main_tab_blue"/>
+                        android:textColor="@color/main_tab_blue_all"/>
 
 
                 </LinearLayout>
@@ -293,9 +297,13 @@
             android:layout_width="match_parent"
             android:layout_height="44dp"
             android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
             android:background="@color/main_tab_blue"
             android:gravity="center"
             android:text="确认付款"
-            android:textColor="@color/white"/>
+            android:textColor="@color/white_all"/>
     </RelativeLayout>
+
+
 </LinearLayout>

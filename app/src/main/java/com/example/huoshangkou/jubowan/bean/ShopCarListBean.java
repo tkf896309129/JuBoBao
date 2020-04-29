@@ -17,6 +17,8 @@ public class ShopCarListBean implements Serializable{
     private String ClassName;
     private String GuigeName;
     private String HaveCount;
+    private String CategoryName;
+    private String Reserve;
     private String ID;
     private String LevelName;
     private String MoxiName;
@@ -28,6 +30,22 @@ public class ShopCarListBean implements Serializable{
     private String Weight;
     private String Xy;
     private boolean isCheck = false;
+
+    public String getCategoryName() {
+        return CategoryName;
+    }
+
+    public void setCategoryName(String categoryName) {
+        CategoryName = categoryName;
+    }
+
+    public String getReserve() {
+        return Reserve;
+    }
+
+    public void setReserve(String reserve) {
+        Reserve = reserve;
+    }
 
     public String getType() {
         return type;

@@ -1,22 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:id="@+id/ll_no_data"
-    android:gravity="center"
-    android:visibility="gone"
-    android:orientation="vertical">
+              android:id="@+id/ll_no_data"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/gray_bg"
+              android:gravity="center"
+              android:orientation="vertical"
+              android:visibility="gone">
 
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@mipmap/wuxinxi_icon" />
+        android:src="@mipmap/wuxinxi_icon"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="暂时没有相关数据" />
+        android:text="暂时没有相关数据"
+        android:textColor="@color/address_black_key"/>
 
 </LinearLayout>

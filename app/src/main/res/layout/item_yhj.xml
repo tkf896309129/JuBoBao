@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
+              android:background="@color/white"
               android:layout_height="match_parent"
               android:gravity="center">
 
@@ -19,7 +20,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="28dp"
             android:text="6天白条免息券"
-            android:textColor="@color/white"
+            android:textColor="@color/white_all"
             android:textSize="22dp"/>
 
         <ImageView
@@ -46,7 +47,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="4dp"
             android:text="期限：2019.1.1~2019.3.31"
-            android:textColor="@color/white"
+            android:textColor="@color/white_all"
             android:textSize="12dp"/>
 
         <TextView
@@ -56,7 +57,7 @@
             android:layout_below="@+id/tv_times"
             android:layout_centerHorizontal="true"
             android:text="每笔白条券只能使用一张"
-            android:textColor="@color/white"
+            android:textColor="@color/white_all"
             android:textSize="12dp"/>
 
         <TextView
@@ -66,7 +67,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="14dp"
             android:text="解释权归浙江火山口网络科技有限公司所有"
-            android:textColor="@color/white"
+            android:textColor="@color/white_all"
             android:textSize="12dp"/>
 
     </RelativeLayout>

@@ -7,9 +7,9 @@
 
     <ImageView
         android:id="@+id/img_guide"
+        android:scaleType="fitXY"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@mipmap/home_splash"
-        android:scaleType="centerCrop"/>
+        android:src="@mipmap/home_splash"/>
 
 </LinearLayout>

@@ -8,13 +8,14 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/alpha_blue_corner"
         android:gravity="center_vertical"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
         android:paddingBottom="8dp"
         android:paddingLeft="10dp"
+        android:textColor="@color/address_alpha_black"
         android:paddingTop="8dp"
         android:text="维修工程师交通费、食宿费用和零部件更换费用由需方负责！！"></TextView>
 

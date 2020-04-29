@@ -13,14 +13,13 @@ import java.io.Serializable;
 public class OrderListTypeBean implements Serializable {
 
     private String type;
-
     private String BuyDate;
     private String Descript;
     private String GuiGe;
     private String MaintainName;
     private String Pics;
-
     private String BrandName;
+    private String CategoryName;
     private String ClassName;
     private String ColorName;
     private String Count;
@@ -30,13 +29,19 @@ public class OrderListTypeBean implements Serializable {
     private String Weight;
     private String Xy;
     private String wlprice;
-
-
     private String ClassTitle;
     private String Electricity;
     private String GuiGeVal;
     private String ModelTitle;
     private String Voltage;
+
+    public String getCategoryName() {
+        return CategoryName;
+    }
+
+    public void setCategoryName(String categoryName) {
+        CategoryName = categoryName;
+    }
 
     public String getGuiGe() {
         return GuiGe;

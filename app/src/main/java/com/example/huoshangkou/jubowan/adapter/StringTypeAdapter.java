@@ -40,8 +40,8 @@ public class StringTypeAdapter extends BaseAbstractAdapter<OrderTypeBean> {
         tvType.setText(bean.getType());
 
         if (position == itemClickPosition) {
-            tvType.setTextColor(context.getResources().getColor(R.color.main_tab_blue));
-            tvType.setBackgroundColor(context.getResources().getColor(R.color.white));
+            tvType.setTextColor(context.getResources().getColor(R.color.main_tab_blue_all));
+            tvType.setBackgroundColor(context.getResources().getColor(R.color.white_dark));
         } else {
             tvType.setTextColor(context.getResources().getColor(R.color.address_black_key));
             tvType.setBackgroundColor(context.getResources().getColor(R.color.choose_order_bg));

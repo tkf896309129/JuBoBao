@@ -9,7 +9,7 @@
         android:layout_marginLeft="6dp"
         android:layout_marginRight="6dp"
         android:layout_marginTop="15dp"
-        android:background="@drawable/white_corner"
+        android:background="@drawable/white_black_bg"
         android:padding="10dp">
 
         <ImageView
@@ -31,7 +31,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="剩余"
-                android:textColor="@color/white"
+                android:textColor="@color/white_all"
                 android:textSize="14dp"/>
 
             <TextView
@@ -42,14 +42,14 @@
                 android:paddingLeft="2dp"
                 android:paddingRight="2dp"
                 android:text="49"
-                android:textColor="@color/white"
+                android:textColor="@color/white_all"
                 android:textSize="14dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="天"
-                android:textColor="@color/white"
+                android:textColor="@color/white_all"
                 android:textSize="14dp"/>
 
         </LinearLayout>
@@ -61,7 +61,7 @@
             android:layout_alignTop="@+id/tv_zb_time"
             android:layout_marginLeft="4dp"
             android:text="已招标"
-            android:textColor="@color/main_tab_blue"
+            android:textColor="@color/main_tab_blue_all"
             android:textSize="12dp"/>
 
         <TextView
@@ -72,6 +72,7 @@
             android:layout_below="@+id/tv_pro_name"
             android:layout_marginTop="9dp"
             android:text="2019/04/08"
+            android:textColor="@color/address_alpha_black"
             android:textSize="12dp"/>
 
         <TextView
@@ -100,9 +101,8 @@
             android:paddingTop="1dp"
             android:singleLine="true"
             android:text="玻璃幕墙项目"
-            android:textColor="@color/main_tab_blue"
+            android:textColor="@color/main_tab_blue_all"
             android:textSize="12dp"/>
-
 
         <TextView
             android:id="@+id/tv_area"
@@ -111,6 +111,7 @@
             android:layout_below="@+id/tv_zb_name"
             android:layout_marginTop="4dp"
             android:text="5500.00㎡-5888.00㎡"
+            android:textColor="@color/address_alpha_black"
             android:textSize="12dp"/>
     </RelativeLayout>
 </LinearLayout>

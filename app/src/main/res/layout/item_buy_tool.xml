@@ -25,7 +25,7 @@
             android:background="@color/deep_blue"
             android:gravity="center"
             android:text="切割机"
-            android:textColor="@color/white"/>
+            android:textColor="@color/white_all"/>
 
     </RelativeLayout>
 

@@ -9,6 +9,7 @@
         android:id="@+id/tv_company"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:textColor="@color/address_black_key"
         android:gravity="center_vertical"
         android:paddingLeft="20dp" />
 

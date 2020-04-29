@@ -10,6 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
+        android:textColor="@color/address_alpha_black"
         android:layout_marginTop="14dp"
         android:text="浙江火山口网络科技有限公司"/>
 
@@ -18,6 +19,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
+        android:textColor="@color/address_alpha_black"
         android:layout_marginTop="4dp"
         android:text="销售员：王浩"/>
 
@@ -26,6 +28,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
+        android:textColor="@color/address_alpha_black"
         android:layout_marginTop="4dp"
         android:text="销售员：王浩"/>
 
@@ -35,6 +38,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_marginLeft="10dp"
+        android:textColor="@color/address_alpha_black"
         android:layout_marginTop="4dp"
         android:text="2019-10-10"/>
 

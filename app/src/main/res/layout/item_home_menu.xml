@@ -24,6 +24,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:textSize="14dp"
+            android:textColor="@color/address_black_key"
             android:text="@string/buy_yuan"/>
 
     </LinearLayout>

@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+              android:background="@color/white"
     android:orientation="vertical">
 
     <LinearLayout
@@ -29,7 +30,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:text="采蘑菇的小姑娘"
-                android:textColor="@color/main_tab_blue" />
+                android:textColor="@color/main_tab_blue_all" />
         </LinearLayout>
 
 
@@ -41,6 +42,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginTop="10dp"
+            android:textColor="@color/address_black_key"
             android:lineSpacingExtra="4dp"
             android:text="理解不了我也没有办法啊，真的是日乐购了啊，我靠了啊 好烦啊 真的烦死了" />
 
@@ -54,6 +56,7 @@
             android:background="@color/back_gray"
             android:paddingBottom="10dp"
             android:paddingLeft="6dp"
+            android:textColor="@color/address_alpha_black"
             android:paddingTop="10dp"
             android:text="我：书读的少，怪我咯，没办我是无所谓的 哈哈哈" />
 
@@ -61,6 +64,7 @@
 
     <TextView
         android:id="@+id/tv_time"
+        android:textColor="@color/address_alpha_black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"

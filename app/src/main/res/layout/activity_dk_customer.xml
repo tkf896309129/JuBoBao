@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
+              android:background="@color/gray_bg"
               android:fitsSystemWindows="true"
               android:orientation="vertical">
 
@@ -33,10 +34,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginBottom="1dp"
+                android:textColorHint="@color/address_alpha_black"
+                android:textColor="@color/address_black_key"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="1dp"
-                android:background="@drawable/et_blank_bg"
+                android:background="@drawable/white_black_bg"
                 android:hint="搜索"
                 android:textSize="14dp"/>
         </LinearLayout>
@@ -48,10 +51,10 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="10dp"
-            android:background="@drawable/blue_corner_btn"
+            android:background="@drawable/blue_all_corner"
             android:gravity="center"
             android:text="搜索"
-            android:textColor="@color/white"/>
+            android:textColor="@color/white_all"/>
 
     </RelativeLayout>
 

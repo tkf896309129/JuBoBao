@@ -29,6 +29,7 @@
             android:layout_alignParentRight="true"
             android:layout_marginRight="10dp"
             android:drawableRight="@mipmap/gray_right"
+            android:textColor="@color/address_alpha_black"
             android:text="全国认证认可信息公共服务平台"
             android:textSize="12dp"/>
     </RelativeLayout>

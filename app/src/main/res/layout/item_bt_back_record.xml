@@ -54,7 +54,8 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="15dp"
-                android:text="应还本金"/>
+                android:text="应还本金"
+                android:textColor="@color/address_alpha_black"/>
 
             <TextView
                 android:id="@+id/tv_back_bj"
@@ -76,7 +77,8 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="15dp"
-                android:text="服务费"/>
+                android:text="服务费"
+                android:textColor="@color/address_alpha_black"/>
 
             <TextView
                 android:id="@+id/tv_service_price"
@@ -98,7 +100,8 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="15dp"
-                android:text="逾期费"/>
+                android:text="逾期费"
+                android:textColor="@color/address_alpha_black"/>
 
             <TextView
                 android:id="@+id/tv_yq_price"
@@ -120,7 +123,8 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="15dp"
-                android:text="本次还款金额"/>
+                android:text="本次还款金额"
+                android:textColor="@color/address_alpha_black"/>
 
             <TextView
                 android:id="@+id/tv_now_price"
@@ -132,6 +136,7 @@
                 android:text="8000.00"
                 android:textColor="@color/address_black_key"/>
         </RelativeLayout>
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="32dp">
@@ -141,7 +146,8 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="15dp"
-                android:text="还款状态"/>
+                android:text="还款状态"
+                android:textColor="@color/address_alpha_black"/>
 
             <TextView
                 android:id="@+id/tv_state"
@@ -150,7 +156,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="15dp"
-                android:textColor="@color/main_tab_blue"/>
+                android:textColor="@color/main_tab_blue_all"/>
         </RelativeLayout>
 
 

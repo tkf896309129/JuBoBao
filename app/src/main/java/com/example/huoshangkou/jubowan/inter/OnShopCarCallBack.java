@@ -1,6 +1,7 @@
 package com.example.huoshangkou.jubowan.inter;
 
 import com.example.huoshangkou.jubowan.bean.ShopCarBean;
+import com.example.huoshangkou.jubowan.bean.ShopCarListNewBean;
 
 /**
  * 作者：唐先生
@@ -12,7 +13,7 @@ import com.example.huoshangkou.jubowan.bean.ShopCarBean;
 
 public interface OnShopCarCallBack {
 
-    void onSuccess(ShopCarBean shopCarBean);
+    void onSuccess(ShopCarListNewBean shopCarBean);
 
     void onFail();
 

@@ -8,6 +8,7 @@ import android.widget.TextView;
 import com.example.huoshangkou.jubowan.R;
 import com.example.huoshangkou.jubowan.base.BaseAbstractAdapter;
 import com.example.huoshangkou.jubowan.base.ViewHolder;
+import com.example.huoshangkou.jubowan.bean.SelectManBean;
 import com.example.huoshangkou.jubowan.bean.SyYuanListBean;
 import com.example.huoshangkou.jubowan.utils.GlideUtils;
 import com.example.huoshangkou.jubowan.utils.StringUtils;
@@ -30,7 +31,7 @@ public class SyYuanAdapter extends ContactListAdapter {
 
     private String type = "";
 
-    public SyYuanAdapter(Context _context, int _resource, List<ContactItemInterface> _items, String type) {
+    public SyYuanAdapter(Context _context, int _resource, List<SelectManBean> _items, String type) {
         super(_context, _resource, _items);
         this.type = type;
     }

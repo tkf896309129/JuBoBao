@@ -26,8 +26,7 @@
             android:layout_marginLeft="10dp"
             android:layout_toRightOf="@+id/iv_head_pic"
             android:text="帅的想哭"
-            android:textColor="@color/main_tab_blue" />
-
+            android:textColor="@color/main_tab_blue_all" />
 
         <TextView
             android:id="@+id/tv_floor_position"
@@ -36,6 +35,7 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="10dp"
+            android:textColor="@color/address_alpha_black"
             android:text="1楼" />
 
     </RelativeLayout>
@@ -46,6 +46,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
+        android:textColor="@color/address_black_key"
         android:layout_marginRight="10dp"
         android:text="奥斯电话费垃圾少部分哈市百布拉斯来说部分拉伸的办法了爱上的刻录机发生了看见的发布啦水电费辣的很方便" />
 
@@ -65,6 +66,7 @@
         <TextView
             android:id="@+id/tv_time"
             android:layout_width="wrap_content"
+            android:textColor="@color/address_alpha_black"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginLeft="10dp"
@@ -78,6 +80,7 @@
             android:layout_centerVertical="true"
             android:layout_marginRight="10dp"
             android:layout_toLeftOf="@+id/ll_zan_num"
+            android:textColor="@color/address_alpha_black"
             android:drawableLeft="@mipmap/huifu_icon"
             android:text="  回复" />
 
@@ -109,6 +112,7 @@
                 android:id="@+id/tv_zan_num"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/address_alpha_black"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="4dp"
                 android:layout_marginRight="10dp"

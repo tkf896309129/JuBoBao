@@ -10,6 +10,7 @@
         android:layout_height="60dp"
         android:background="@color/choose_order_bg"
         android:gravity="center"
+        android:textColor="@color/address_black_key"
         android:text="品类"
         android:textSize="@dimen/pro_choose_type" />
 

@@ -6,39 +6,40 @@
               android:background="@color/gray_bg">
 
     <com.scwang.smartrefresh.layout.SmartRefreshLayout
-    android:layout_width="match_parent"
-    android:id="@+id/smart"
-    android:layout_height="match_parent">
-
-    <FrameLayout
+        android:id="@+id/smart"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/gray_bg">
+        android:background="@color/gray_bg"
+        android:layout_height="match_parent">
 
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/list_view"
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior"></android.support.v7.widget.RecyclerView>
-        <!--</LinearLayout>-->
+            android:background="@color/gray_bg">
 
-        <RelativeLayout
-            android:id="@+id/rl_home_top"
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:layout_alignParentBottom="true">
-
-            <TextView
-                android:id="@+id/tv_home_title"
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/list_view"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_alignParentBottom="true"
-                android:gravity="center"
-                android:text="@string/business_home"
-                android:textColor="@color/white"
-                android:textSize="18dp"/>
-        </RelativeLayout>
-    </FrameLayout>
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"></android.support.v7.widget.RecyclerView>
+            <!--</LinearLayout>-->
+
+            <RelativeLayout
+                android:id="@+id/rl_home_top"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_alignParentBottom="true">
+
+                <TextView
+                    android:id="@+id/tv_home_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center"
+                    android:text="@string/business_home"
+                    android:textColor="@color/white"
+                    android:textSize="18dp"/>
+            </RelativeLayout>
+        </FrameLayout>
     </com.scwang.smartrefresh.layout.SmartRefreshLayout>
 
 </LinearLayout>

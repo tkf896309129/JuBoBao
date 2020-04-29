@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
+              android:background="@color/gray_bg"
               android:fitsSystemWindows="true"
               android:orientation="vertical">
 
@@ -46,6 +47,7 @@
                     android:background="@drawable/et_blank_bg"
                     android:gravity="center_vertical|right"
                     android:paddingRight="10dp"
+                    android:textColor="@color/address_alpha_black"
                     android:textSize="14dp"/>
             </LinearLayout>
 
@@ -68,6 +70,7 @@
                     android:background="@drawable/et_blank_bg"
                     android:gravity="center_vertical|right"
                     android:paddingRight="10dp"
+                    android:textColor="@color/address_alpha_black"
                     android:textSize="14dp"/>
             </LinearLayout>
 
@@ -90,6 +93,7 @@
                     android:background="@drawable/et_blank_bg"
                     android:gravity="center_vertical|right"
                     android:paddingRight="10dp"
+                    android:textColor="@color/address_alpha_black"
                     android:textSize="14dp"/>
             </LinearLayout>
 
@@ -112,6 +116,7 @@
                     android:background="@drawable/et_blank_bg"
                     android:gravity="center_vertical|right"
                     android:paddingRight="10dp"
+                    android:textColor="@color/address_alpha_black"
                     android:textSize="14dp"/>
             </LinearLayout>
 
@@ -134,6 +139,7 @@
                     android:background="@drawable/et_blank_bg"
                     android:gravity="center_vertical|right"
                     android:paddingRight="10dp"
+                    android:textColor="@color/address_alpha_black"
                     android:textSize="14dp"/>
             </LinearLayout>
 
@@ -157,6 +163,7 @@
                     android:background="@drawable/et_blank_bg"
                     android:gravity="center_vertical|right"
                     android:paddingRight="10dp"
+                    android:textColor="@color/address_alpha_black"
                     android:textSize="14dp"/>
             </LinearLayout>
 
@@ -179,6 +186,7 @@
                     android:background="@drawable/et_blank_bg"
                     android:gravity="center_vertical|right"
                     android:paddingRight="10dp"
+                    android:textColor="@color/address_alpha_black"
                     android:textSize="14dp"/>
             </LinearLayout>
 
@@ -198,9 +206,11 @@
                     android:id="@+id/tv_link_phone"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+
                     android:background="@drawable/et_blank_bg"
                     android:gravity="center_vertical|right"
                     android:paddingRight="10dp"
+                    android:textColor="@color/address_alpha_black"
                     android:textSize="14dp"/>
             </LinearLayout>
 
@@ -223,6 +233,7 @@
                     android:background="@drawable/et_blank_bg"
                     android:gravity="center_vertical|right"
                     android:paddingRight="10dp"
+                    android:textColor="@color/address_alpha_black"
                     android:textSize="14dp"/>
             </LinearLayout>
 
@@ -263,6 +274,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@drawable/et_blank_bg"
+                        android:textColor="@color/address_alpha_black"
                         android:gravity="center_vertical|right"
                         android:paddingRight="10dp"/>
                 </LinearLayout>
@@ -284,6 +296,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@drawable/et_blank_bg"
+                        android:textColor="@color/address_alpha_black"
                         android:gravity="center_vertical|right"
                         android:paddingRight="10dp"/>
                 </LinearLayout>
@@ -305,6 +318,7 @@
                         android:id="@+id/tv_five_gold"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:textColor="@color/address_alpha_black"
                         android:background="@drawable/et_blank_bg"
                         android:gravity="center_vertical|right"
                         android:paddingRight="10dp"/>
@@ -326,6 +340,7 @@
                         android:id="@+id/tv_gy_yq"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:textColor="@color/address_alpha_black"
                         android:background="@drawable/et_blank_bg"
                         android:gravity="center_vertical|right"
                         android:paddingRight="10dp"/>
@@ -346,6 +361,7 @@
                     <TextView
                         android:id="@+id/tv_glass_thick"
                         android:layout_width="match_parent"
+                        android:textColor="@color/address_alpha_black"
                         android:layout_height="match_parent"
                         android:background="@drawable/et_blank_bg"
                         android:gravity="center_vertical|right"
@@ -368,6 +384,7 @@
                         android:id="@+id/tv_other_requir"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:textColor="@color/address_alpha_black"
                         android:background="@drawable/et_blank_bg"
                         android:gravity="center_vertical|right"
                         android:paddingRight="10dp"/>
@@ -389,6 +406,7 @@
                         android:id="@+id/tv_finish_time"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:textColor="@color/address_alpha_black"
                         android:background="@drawable/et_blank_bg"
                         android:gravity="center_vertical|right"
                         android:paddingRight="10dp"/>
@@ -436,6 +454,7 @@
                         android:layout_height="match_parent"
                         android:background="@drawable/et_blank_bg"
                         android:gravity="center_vertical|right"
+                        android:textColor="@color/address_alpha_black"
                         android:paddingRight="10dp"
                         android:textSize="14dp"/>
                 </LinearLayout>
@@ -456,6 +475,7 @@
                         android:id="@+id/tv_fd_zhl"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:textColor="@color/address_alpha_black"
                         android:background="@drawable/et_blank_bg"
                         android:gravity="center_vertical|right"
                         android:paddingRight="10dp"
@@ -479,6 +499,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@drawable/et_blank_bg"
+                        android:textColor="@color/address_alpha_black"
                         android:gravity="center_vertical|right"
                         android:paddingRight="10dp"
                         android:textSize="14dp"/>
@@ -521,6 +542,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@drawable/et_blank_bg"
+                        android:textColor="@color/address_alpha_black"
                         android:gravity="center_vertical|right"
                         android:paddingRight="10dp"
                         android:textSize="14dp"/>
@@ -544,6 +566,7 @@
                         android:layout_height="match_parent"
                         android:background="@drawable/et_blank_bg"
                         android:gravity="center_vertical|right"
+                        android:textColor="@color/address_alpha_black"
                         android:paddingRight="10dp"
                         android:textSize="14dp"/>
                 </LinearLayout>
@@ -565,6 +588,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@drawable/et_blank_bg"
+                        android:textColor="@color/address_alpha_black"
                         android:gravity="center_vertical|right"
                         android:paddingRight="10dp"
                         android:textSize="14dp"/>
@@ -586,6 +610,7 @@
                         android:id="@+id/tv_zy_xs"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:textColor="@color/address_alpha_black"
                         android:background="@drawable/et_blank_bg"
                         android:gravity="center_vertical|right"
                         android:paddingRight="10dp"
@@ -609,10 +634,13 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@drawable/et_blank_bg"
+                        android:textColor="@color/address_alpha_black"
                         android:gravity="center_vertical|right"
                         android:paddingRight="10dp"
                         android:textSize="14dp"/>
-                </LinearLayout>  <LinearLayout
+                </LinearLayout>
+
+                <LinearLayout
                     style="@style/MainRelativityStyle"
                     android:gravity="center_vertical"
                     android:orientation="horizontal">
@@ -629,6 +657,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@drawable/et_blank_bg"
+                        android:textColor="@color/address_alpha_black"
                         android:gravity="center_vertical|right"
                         android:paddingRight="10dp"
                         android:textSize="14dp"/>
@@ -673,6 +702,7 @@
                         android:background="@drawable/et_blank_bg"
                         android:gravity="center_vertical|right"
                         android:paddingRight="10dp"
+                        android:textColor="@color/address_alpha_black"
                         android:textSize="14dp"/>
                 </LinearLayout>
 
@@ -694,6 +724,7 @@
                         android:layout_height="match_parent"
                         android:background="@drawable/et_blank_bg"
                         android:gravity="center_vertical|right"
+                        android:textColor="@color/address_alpha_black"
                         android:paddingRight="10dp"
                         android:textSize="14dp"/>
                 </LinearLayout>
@@ -721,6 +752,7 @@
                     android:background="@drawable/et_blank_bg"
                     android:gravity="center_vertical|right"
                     android:paddingRight="10dp"
+                    android:textColor="@color/address_alpha_black"
                     android:textSize="14dp"/>
             </LinearLayout>
 
@@ -745,6 +777,7 @@
                     android:background="@drawable/et_blank_bg"
                     android:gravity="center_vertical|right"
                     android:paddingRight="10dp"
+                    android:textColor="@color/address_alpha_black"
                     android:textSize="14dp"/>
             </LinearLayout>
 
@@ -769,6 +802,7 @@
                     android:background="@drawable/et_blank_bg"
                     android:gravity="center_vertical|right"
                     android:paddingRight="10dp"
+                    android:textColor="@color/address_alpha_black"
                     android:textSize="14dp"/>
             </LinearLayout>
 
@@ -778,14 +812,15 @@
                 android:layout_height="match_parent"
                 android:layout_marginTop="10dp"
                 android:numColumns="3"></com.example.huoshangkou.jubowan.view.ScrollGridView>
+
             <TextView
                 android:id="@+id/tv_next"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:background="@color/main_tab_blue"
+                android:background="@color/main_tab_blue_dark"
                 android:gravity="center"
                 android:text="下一步"
-                android:textColor="@color/white"
+                android:textColor="@color/white_all"
                 android:visibility="gone"/>
         </LinearLayout>
     </ScrollView>

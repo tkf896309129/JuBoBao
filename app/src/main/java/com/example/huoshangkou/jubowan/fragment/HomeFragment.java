@@ -1,8 +1,8 @@
 package com.example.huoshangkou.jubowan.fragment;
 
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
@@ -35,10 +35,8 @@ import com.example.huoshangkou.jubowan.fragment.function.HomeFunction;
 import com.example.huoshangkou.jubowan.inter.OnLoginSuccessBack;
 import com.example.huoshangkou.jubowan.inter.StringCallBack;
 import com.example.huoshangkou.jubowan.utils.CopyIosDialogUtils;
-import com.example.huoshangkou.jubowan.utils.DateUtils;
 import com.example.huoshangkou.jubowan.utils.IntentUtils;
 import com.example.huoshangkou.jubowan.utils.LogUtils;
-import com.example.huoshangkou.jubowan.utils.OkhttpCallBack;
 import com.example.huoshangkou.jubowan.utils.OkhttpUtil;
 import com.example.huoshangkou.jubowan.utils.SharedPreferencesUtils;
 import com.example.huoshangkou.jubowan.utils.SmartUtils;
@@ -106,7 +104,7 @@ public class HomeFragment extends BaseFragment {
         tradeList = new ArrayList<>();
         homeTitleBeanList = new ArrayList<>();
         smartRefreshLayout.setEnableLoadMore(false);
-        rlHomeTop.setBackgroundColor(Color.parseColor("#FF058FF9"));
+        rlHomeTop.setBackgroundColor(getResources().getColor(R.color.main_tab_blue_dark));
         rlHomeTop.getBackground().setAlpha(0);
         Bundle arguments = getArguments();
         json = arguments.getString("args");
@@ -116,6 +114,7 @@ public class HomeFragment extends BaseFragment {
 //        account = "15172486580";
 //        psw = "4QrcOUm6Wau+VuBX8g+IPg==";
         getHomeData("");
+        getHolidayDialog();
         //关于我们
         SharedPreferencesUtils.getInstance().put(getActivity(), SharedKeyConstant.getInstance().RULE_URL, "http://www.atjubo.com/serviceagree/webapp/views/JBW.aspx");
         //抢红包界面
@@ -154,7 +153,7 @@ public class HomeFragment extends BaseFragment {
             public void onSuccess(String str) {
                 LogUtils.e(str);
 //                String str = response.body().string();
-                getHolidayDialog();
+
                 if (StringUtils.isNoEmpty(str)) {
                     NewHomeBean homeBean = null;
                     try {
@@ -173,18 +172,11 @@ public class HomeFragment extends BaseFragment {
                         LogUtils.e("步骤3");
                     }
                 }
-                if (smartRefreshLayout == null) {
-                    return;
-                }
                 SmartUtils.finishSmart(smartRefreshLayout);
             }
 
             @Override
             public void onFail() {
-                getHolidayDialog();
-                if (smartRefreshLayout == null) {
-                    return;
-                }
                 SmartUtils.finishSmart(smartRefreshLayout);
             }
         });
@@ -388,7 +380,7 @@ public class HomeFragment extends BaseFragment {
                 LoginFunction.getInstance().setLogin(getContext(), account, psw, new OnLoginSuccessBack() {
                     //登录成功回调
                     @Override
-                    public void onLoginSuccess() {
+                    public void onLoginSuccess(String id,String name,String pic) {
                         //保存当前登录手机号
                         SharedPreferencesUtils.getInstance().put(getContext(), SharedKeyConstant.getInstance().CURRENT_PHONE, account);
                         SharedPreferencesUtils.getInstance().put(getContext(), SharedKeyConstant.getInstance().LOGIN_STATE, SharedValueConstant.getInstance().LOGIN_SUCCESS);

@@ -3,7 +3,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@color/alpha_all">
-    
+
     <ImageView
         android:id="@+id/iv_update_cancel"
         android:layout_width="30dp"
@@ -28,10 +28,10 @@
         android:id="@+id/ll_update"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true">
+        android:gravity="center_vertical"
+        android:orientation="vertical">
 
         <LinearLayout
             android:id="@+id/up_dialog"
@@ -47,7 +47,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:textColor="@color/address_black_key"
+                android:textColor="@color/black_all"
                 android:textStyle="bold"/>
 
             <LinearLayout
@@ -84,7 +84,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="right"
                 android:paddingRight="10dp"
-                android:textColor="@color/address_black_key"/>
+                android:textColor="@color/black_all"/>
             <!--<TextView-->
             <!--android:id="@+id/tv_update_now"-->
             <!--android:layout_width="180dp"-->
@@ -109,7 +109,7 @@
                 android:background="@drawable/yellow_holiday_corner"
                 android:gravity="center"
                 android:text="确定"
-                android:textColor="@color/address_black_key"/>
+                android:textColor="@color/black_all"/>
         </LinearLayout>
     </LinearLayout>
 </RelativeLayout>

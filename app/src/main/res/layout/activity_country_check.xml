@@ -3,6 +3,7 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:fitsSystemWindows="true"
+              android:background="@color/gray_bg"
               android:orientation="vertical">
 
     <include layout="@layout/tool_bar_iamge"></include>
@@ -26,7 +27,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:text="中国建材领域权威检测机构，国家 玻璃质量监督检验中心"
-            android:textColor="@color/white"
+            android:textColor="@color/white_all"
             android:textSize="20dp"/>
 
         <TextView
@@ -38,7 +39,7 @@
             android:layout_marginRight="20dp"
             android:layout_marginTop="4dp"
             android:text="Authoritative Indpection Institutions in the Field of BuildingMaterials in China, National Glass Quality Supervision and Indpection Center"
-            android:textColor="#dddd"/>
+            android:textColor="@color/gray_all"/>
 
     </RelativeLayout>
         

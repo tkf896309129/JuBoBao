@@ -3,6 +3,7 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:fitsSystemWindows="true"
+              android:background="@color/gray_bg"
               android:orientation="vertical">
 
     <include layout="@layout/tool_bar_style"></include>
@@ -27,7 +28,9 @@
                     android:layout_height="44dp"
                     android:gravity="bottom"
                     android:paddingBottom="10dp"
+                    android:background="@color/gray_bg"
                     android:paddingLeft="15dp"
+                    android:textColor="@color/address_alpha_black"
                     android:text="请绑定企业银行账户"/>
 
                 <LinearLayout
@@ -253,7 +256,7 @@
                     android:button="@drawable/bt_gou_check"
                     android:gravity="center_vertical"
                     android:text=" 我已阅读并同意"
-                    android:textColor="#999999"/>
+                    android:textColor="@color/address_alpha_black"/>
 
                 <TextView
                     android:id="@+id/tv_xy_one"
@@ -262,7 +265,7 @@
                     android:layout_marginLeft="18dp"
                     android:layout_marginTop="10dp"
                     android:text="《e签宝用户协议》"
-                    android:textColor="@color/main_tab_blue"/>
+                    android:textColor="@color/main_tab_blue_all"/>
 
                 <TextView
                     android:id="@+id/tv_xy_two"
@@ -271,7 +274,7 @@
                     android:layout_marginLeft="18dp"
                     android:layout_marginTop="4dp"
                     android:text="《数字证书服务协议》"
-                    android:textColor="@color/main_tab_blue"/>
+                    android:textColor="@color/main_tab_blue_all"/>
 
             </LinearLayout>
         </ScrollView>
@@ -283,10 +286,11 @@
             android:layout_alignParentBottom="true"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
+            android:layout_marginBottom="20dp"
             android:background="@drawable/blue_corner_btn"
             android:gravity="center"
             android:text="下一步"
-            android:textColor="@color/white"/>
+            android:textColor="@color/white_all"/>
 
     </RelativeLayout>
 </LinearLayout>

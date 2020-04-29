@@ -55,7 +55,7 @@ public class OrderFunction {
 
         changeAdapter = new FragmentChangeAdapter(fragmentManager, fragmentList);
         vpOrder.setAdapter(changeAdapter);
-
+        vpOrder.setOffscreenPageLimit(5);
         vpOrder.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabOrder));
 
         tabOrder.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {

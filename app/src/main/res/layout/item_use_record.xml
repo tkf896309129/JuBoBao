@@ -39,6 +39,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignLeft="@+id/tv_order_id"
+            android:textColor="@color/address_alpha_black"
             android:layout_below="@+id/tv_order_id"
             android:layout_marginTop="10dp"
             android:text="2018-07-25"/>
@@ -48,6 +49,7 @@
             android:id="@+id/tv_price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/address_alpha_black"
             android:layout_alignParentRight="true"
             android:layout_alignTop="@+id/iv_state"
             android:layout_marginRight="15dp"

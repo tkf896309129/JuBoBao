@@ -33,7 +33,6 @@ public class AboutMeAdapter extends BaseAbstractAdapter<RepliesListBean> {
 
     @Override
     public void convert(ViewHolder holder, RepliesListBean bean, int position) {
-
         LinearLayout llTopTitle = holder.getView(R.id.ll_top_title);
         if (isMineCommon) {
             llTopTitle.setVisibility(View.GONE);
@@ -78,7 +77,7 @@ public class AboutMeAdapter extends BaseAbstractAdapter<RepliesListBean> {
                 forumType = "维修专区";
                 break;
         }
-        tvTime.setText(forumType +"  "+ DateUtils.getFormMinuteData(bean.getCreateTime()));
+        tvTime.setText(forumType + "  " + DateUtils.getFormMinuteData(bean.getCreateTime()));
 
     }
 }

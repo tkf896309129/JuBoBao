@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/gray_bg"
-    android:fitsSystemWindows="true"
-    android:orientation="vertical">
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/gray_bg"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical">
 
 
     <RelativeLayout
@@ -15,47 +15,57 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
+            android:textColor="@color/address_alpha_black"
             android:layout_marginLeft="20dp"
-            android:text="厚度(mm)" />
+            android:text="厚度(mm)"/>
 
 
         <EditText
             android:id="@+id/et_thick"
             style="@style/CommonTextStyle"
-            android:inputType="numberDecimal"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="120dp"
             android:background="@drawable/et_blank_bg"
+            android:textColorHint="@color/address_alpha_black"
+            android:textColor="@color/address_black_key"
             android:gravity="left|center_vertical"
-            android:hint="请输入厚度" />
+            android:hint="请输入厚度"
+            android:inputType="numberDecimal"
+            android:maxLength="10"/>
     </RelativeLayout>
 
-    <TextView style="@style/CommonLineStyle" />
+    <TextView style="@style/CommonLineStyle"/>
 
     <RelativeLayout style="@style/MainRelativityStyle">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/address_alpha_black"
             android:layout_centerVertical="true"
             android:layout_marginLeft="20dp"
-            android:text="面积(㎡)" />
-
+            android:text="面积(㎡)"/>
 
         <EditText
             android:id="@+id/et_area"
             style="@style/CommonTextStyle"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:inputType="numberDecimal"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:textColorHint="@color/address_alpha_black"
+            android:textColor="@color/address_black_key"
+            android:layout_alignParentTop="true"
             android:layout_marginLeft="120dp"
             android:background="@drawable/et_blank_bg"
             android:gravity="left|center_vertical"
-            android:hint="请输入面积" />
+            android:hint="请输入面积"
+            android:inputType="numberDecimal"
+            android:maxLength="10"/>
     </RelativeLayout>
 
-    <TextView style="@style/CommonLineStyle" />
+    <TextView style="@style/CommonLineStyle"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -64,9 +74,9 @@
         android:background="@color/white"
         android:gravity="center"
         android:text="面积值"
-        android:textColor="@color/main_tab_blue" />
+        android:textColor="@color/main_tab_blue_white"/>
 
-    <TextView style="@style/CommonLineStyle" />
+    <TextView style="@style/CommonLineStyle"/>
 
 
     <LinearLayout
@@ -90,16 +100,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="0.0"
-                android:textColor="@color/red" />
+                android:textColor="@color/red"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="吨"
-                android:textColor="@color/address_black_key" />
+                android:textColor="@color/address_black_key"/>
         </LinearLayout>
 
-        <TextView style="@style/VerticalLineStyle" />
+        <TextView style="@style/VerticalLineStyle"/>
 
         <LinearLayout
             android:layout_width="0dp"
@@ -115,16 +125,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="0.0"
-                android:textColor="@color/red" />
+                android:textColor="@color/red"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="重量箱"
-                android:textColor="@color/address_black_key" />
+                android:textColor="@color/address_black_key"/>
         </LinearLayout>
 
-        <TextView style="@style/VerticalLineStyle" />
+        <TextView style="@style/VerticalLineStyle"/>
 
         <LinearLayout
             android:layout_width="0dp"
@@ -140,19 +150,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="0.0"
-                android:textColor="@color/red" />
+                android:textColor="@color/red"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="公斤"
-                android:textColor="@color/address_black_key" />
+                android:textColor="@color/address_black_key"/>
         </LinearLayout>
 
-        <TextView style="@style/VerticalLineStyle" />
+        <TextView style="@style/VerticalLineStyle"/>
 
     </LinearLayout>
 
-    <TextView style="@style/CommonLineStyle" />
+    <TextView style="@style/CommonLineStyle"/>
 
 </LinearLayout>

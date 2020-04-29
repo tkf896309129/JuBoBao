@@ -16,6 +16,7 @@
             android:layout_marginLeft="10dp"
             android:background="@color/white"
             android:gravity="center"
+            android:textColor="@color/address_black_key"
             android:paddingBottom="14dp"
             android:paddingTop="14dp"
             android:text="品类"

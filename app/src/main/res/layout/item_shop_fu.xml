@@ -66,6 +66,7 @@
 
     <!--合计金额-->
     <RelativeLayout
+        android:visibility="gone"
         style="@style/MainRelativityStyle">
 
         <TextView

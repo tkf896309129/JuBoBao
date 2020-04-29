@@ -3,9 +3,26 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">@color/red</item>
+        <item name="colorPrimaryDark">@color/red</item>
+        <item name="colorAccent">@color/red</item>
+    </style>
+    <style name="MySwitch" parent="Theme.AppCompat.Light">
+        <!-- Active thumb color & Active track color(30% transparency) switch 打开时的拇指按钮的颜色 轨迹颜色默认为30%这个颜色 -->
+        <item name="colorControlActivated">@color/main_tab_blue_all</item>
+
+        <!-- Inactive thumb color switch关闭时的拇指按钮的颜色 -->
+        <item name="colorSwitchThumbNormal">@color/gray_all</item>
+
+        <!-- Inactive track color(30% transparency) switch关闭时的轨迹的颜色 30%这个颜色 -->
+        <item name="android:colorForeground">@color/colorAccent</item>
+
+        <!--使用方法： 在布局文件中给需要自定义控件中增加app:theme="@style/MySwitch"-->
+    </style>
+
+    <style name="Widget.CalendarView.Custom" parent="android:Widget.CalendarView">
+        <item name="android:focusedMonthDateColor">@color/address_black_key</item>
+        <item name="android:weekNumberColor">@color/red</item>
     </style>
 
     <style name="DefaultDialog" parent="android:style/Theme.Dialog">
@@ -69,11 +86,12 @@
         <attr name="prefer" format="integer"/>
     </declare-styleable>
 
-    <style name="AppTheme.NoActionBarWithBackGround">
-        <item name="windowActionBar">false</item>//取消Actionbar
-        <item name="windowNoTitle">true</item>
+    <style name="AppTheme.NoActionBarWithBackGround" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--<item name="windowActionBar">true</item>//取消Actionbar-->
+        <!--<item name="windowNoTitle">true</item>-->
         <!--<item name="android:windowDisablePreview">true</item>-->
-        <item name="android:windowFullscreen">true</item>//设置全屏
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowIsTranslucent">false</item>
         <item name="android:windowBackground">@mipmap/home_splash</item>//设置背景
     </style>
 
@@ -100,13 +118,13 @@
     <!--通用的线条风格-->
     <style name="CommonLineStyle">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">0.5dp</item>
+        <item name="android:layout_height">0.1dp</item>
         <item name="android:background">@color/line_color</item>
     </style>
 
     <!--竖直的线-->
     <style name="VerticalLineStyle">
-        <item name="android:layout_width">0.5dp</item>
+        <item name="android:layout_width">0.2dp</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:background">@color/line_color</item>
     </style>
@@ -117,13 +135,12 @@
         <item name="android:windowExitAnimation">@anim/push_bottom_out</item>
     </style>
 
-
     <!--相册选择风格-->
     <style name="PhotoSelectStyle">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">50dp</item>
         <item name="android:gravity">center</item>
-        <item name="android:textColor">@color/main_tab_blue</item>
+        <item name="android:textColor">@color/main_tab_blue_white</item>
         <item name="android:textSize">16dp</item>
     </style>
 
@@ -168,6 +185,7 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_centerVertical">true</item>
         <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:textColor">@color/address_alpha_black</item>
         <item name="android:textSize">15dp</item>
     </style>
 
@@ -212,13 +230,13 @@
         <item name="android:layout_marginRight">20dp</item>
         <item name="android:src">@mipmap/gray_right</item>
     </style>
-
     <!--普通的文字风格-->
     <style name="CommonTextStyle">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">@color/address_black_key</item>
         <item name="android:textSize">@dimen/address_key_size</item>
+        <item name="android:textColorHint">@color/address_alpha_black</item>
     </style>
 
     <!-- 选择照片底部弹出层 -->
@@ -227,16 +245,13 @@
         <item name="android:windowExitAnimation">@anim/push_bottom_out</item>
     </style>
 
-
     <style name="TabLayoutTextStyle">
         <item name="android:textSize">16dp</item>
     </style>
-
 
     <!--带边框的图片    <item name="android:background">@drawable/stroke_blue_rec</item>-->
     <style name="StrokeImage">
         <item name="android:padding">0.1dp</item>
     </style>
-
 
 </resources>

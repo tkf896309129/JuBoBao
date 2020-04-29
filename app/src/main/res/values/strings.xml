@@ -180,6 +180,7 @@
     <string name="stop">stop</string>
     <string name="stop_recording">stop recording</string>
     <string name="zero">0</string>
+    <string name="test_custom_action">欢迎来到聚玻网</string>
 
     <string-array name="trackig_mode_array">
         <item>Normal</item>

@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
+              android:background="@color/gray_bg"
               android:fitsSystemWindows="true"
               android:orientation="vertical">
 
@@ -28,7 +29,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:textColor="@color/white"
+            android:textColor="@color/white_all"
             android:textSize="18dp"/>
 
         <TextView
@@ -45,30 +46,31 @@
             android:paddingRight="10dp"
             android:paddingTop="2dp"
             android:text="补签"
-            android:textColor="@color/white"
+            android:textColor="@color/white_all"
             android:textSize="12dp"
             android:visibility="gone"/>
     </RelativeLayout>
+
 
     <TextView
         android:id="@+id/tv_time"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white"
         android:drawableLeft="@mipmap/sign_time"
         android:paddingBottom="10dp"
+        android:background="@color/white"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
         android:paddingTop="10dp"
         android:textColor="@color/address_black_key"
         android:textSize="14dp"/>
 
-    <TextView style="@style/CommonLineStyle"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@color/white">
+
 
         <TextView
             android:id="@+id/tv_content"
@@ -92,7 +94,7 @@
             android:gravity="right|center_vertical"
             android:paddingRight="20dp"
             android:text="地点微调"
-            android:textColor="@color/main_tab_blue"
+            android:textColor="@color/main_tab_blue_all"
             android:textSize="14dp"/>
 
     </RelativeLayout>
@@ -182,6 +184,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="10dp"
                 android:text="拜访对象"
+                android:textColor="@color/address_black_key"
                 android:textSize="14dp"/>
 
             <TextView
@@ -222,7 +225,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="上报"
-                    android:textColor="@color/white"
+                    android:textColor="@color/white_all"
                     android:textSize="18dp"/>
 
                 <TextView
@@ -231,7 +234,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="2dp"
                     android:text="18:22"
-                    android:textColor="@color/white"
+                    android:textColor="@color/white_all"
                     android:textSize="22dp"
                     android:textStyle="bold"/>
             </LinearLayout>

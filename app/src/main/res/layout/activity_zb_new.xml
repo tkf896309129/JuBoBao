@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
+              android:background="@color/gray_bg"
               android:fitsSystemWindows="true"
               android:orientation="vertical">
 
@@ -9,6 +10,7 @@
 
     <LinearLayout
         style="@style/MainRelativityStyle"
+        android:background="@color/white"
         android:orientation="horizontal">
 
         <!--选择专区-->
@@ -60,8 +62,8 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:background="@color/gray_bg"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/gray_bg">
 
         <com.scwang.smartrefresh.layout.SmartRefreshLayout
             android:id="@+id/smart"
@@ -79,19 +81,19 @@
 
         <LinearLayout
             android:id="@+id/ll_put_zb"
-            android:visibility="gone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
             android:layout_marginBottom="66dp"
             android:layout_marginRight="40dp"
-            android:gravity="center">
+            android:gravity="center"
+            android:visibility="gone">
 
             <ImageView
                 android:layout_width="wrap_content"
-                android:scaleType="fitXY"
                 android:layout_height="wrap_content"
+                android:scaleType="fitXY"
                 android:src="@mipmap/zb_post"/>
         </LinearLayout>
     </RelativeLayout>

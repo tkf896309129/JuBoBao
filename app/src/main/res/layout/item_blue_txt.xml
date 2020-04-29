@@ -6,7 +6,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="44dp"
+        android:layout_height="wrap_content"
         android:background="@color/white">
 
         <TextView
@@ -17,6 +17,7 @@
             android:background="@color/white"
             android:gravity="center"
             android:paddingBottom="14dp"
+            android:textColor="@color/address_black_key"
             android:paddingTop="14dp"
             android:text="品类"
             android:textSize="@dimen/pro_choose_type"/>

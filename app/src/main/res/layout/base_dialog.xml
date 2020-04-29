@@ -42,6 +42,7 @@
         android:layout_height="50dp"
         android:layout_alignParentBottom="true"
         android:background="@color/white"
+        android:textColor="@color/address_black_key"
         android:gravity="center"
         android:text="取消"/>
 </RelativeLayout>

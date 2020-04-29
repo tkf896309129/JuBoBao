@@ -6,6 +6,7 @@
 
     <RelativeLayout
         android:id="@+id/rl_detail"
+        android:background="@color/white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingBottom="15dp"
@@ -21,11 +22,12 @@
 
         <TextView
             android:id="@+id/tv_content"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
+            android:textColor="@color/address_alpha_black"
             android:layout_toRightOf="@+id/tv_hint"
             android:gravity="right"
             android:text="路费"/>

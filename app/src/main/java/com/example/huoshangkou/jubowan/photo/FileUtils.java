@@ -8,17 +8,25 @@ package com.example.huoshangkou.jubowan.photo;
  * 创建时间：2016-12-22  14:35
  */
 
+import java.io.BufferedReader;
+import java.io.ByteArrayInputStream;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+
 import android.graphics.Bitmap;
 import android.os.Environment;
+import android.util.Log;
 
 public class FileUtils {
 
     public static String SDPATH = Environment.getExternalStorageDirectory()
             + "/pos/";
+
     public static File saveBitmap(Bitmap bm, String picName) {
         File f = null;
         try {
@@ -41,6 +49,7 @@ public class FileUtils {
         }
         return f;
     }
+
     public static File createSDDir(String dirName) throws IOException {
         File dir = new File(SDPATH + dirName);
         if (Environment.getExternalStorageState().equals(
@@ -50,12 +59,26 @@ public class FileUtils {
         }
         return dir;
     }
+
+    public static void makeRootDirectory(String filePath) {
+        File file = null;
+        try {
+            file = new File(filePath);
+            if (!file.exists()) {
+                file.mkdir();
+            }
+        } catch (Exception e) {
+            Log.i("error:", e+"");
+        }
+    }
+
     public static boolean isFileExist(String fileName) {
         File file = new File(SDPATH + fileName);
         file.isFile();
         System.out.println(file.exists());
         return file.exists();
     }
+
     public static void delFile(String fileName) {
         File file = new File(SDPATH + fileName);
         if (file.isFile()) {
@@ -63,6 +86,7 @@ public class FileUtils {
         }
         file.exists();
     }
+
     public static void deleteDir() {
         File dir = new File(SDPATH);
         if (dir == null || !dir.exists() || !dir.isDirectory())
@@ -75,6 +99,7 @@ public class FileUtils {
         }
         dir.delete();
     }
+
     public static boolean fileIsExists(String path) {
         try {
             File f = new File(path);
@@ -85,5 +110,32 @@ public class FileUtils {
             return false;
         }
         return true;
+    }
+
+    public static void writeInputFile(File file, String content) {
+        try {
+            FileOutputStream fileInputStream = new FileOutputStream(file);
+            fileInputStream.write(content.getBytes());
+            fileInputStream.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    public static String readInputFile(File file) {
+        String content = "";
+        try {
+            FileInputStream inputStreamFile = new FileInputStream(file);
+            InputStreamReader inputStream = new InputStreamReader(inputStreamFile);
+            BufferedReader bufferedReader = new BufferedReader(inputStream);
+            String line;
+            while ((line = bufferedReader.readLine()) != null) {
+                content += line + "\n";
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return content;
     }
 }

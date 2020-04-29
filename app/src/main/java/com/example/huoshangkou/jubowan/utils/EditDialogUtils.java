@@ -1,11 +1,14 @@
 package com.example.huoshangkou.jubowan.utils;
 
+import android.app.AlertDialog;
 import android.content.Context;
 import android.graphics.drawable.BitmapDrawable;
 import android.text.InputType;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -37,36 +40,36 @@ public class EditDialogUtils {
     }
 
     //弹出输入框
-    public void showEditTextDialog(final String type, Context context, View v, String title, final OnAddWorkCallBack callBack) {
+    public void showEditTextDialog(final String type, Context context, String title, final OnAddWorkCallBack callBack) {
         InputUtils.getInstance().inputKeyUtils(context);
-        View view = LayoutInflater.from(context).inflate(R.layout.item_edit_dialog, null);
-        TextView tvConfirm = (TextView) view.findViewById(R.id.tv_sure);
-        TextView tvCancel = (TextView) view.findViewById(R.id.tv_cancel);
-        final EditText etContent = (EditText) view.findViewById(R.id.et_text);
+
+
+        final AlertDialog errorDialog = new AlertDialog.Builder(context).create();
+        errorDialog.show();
+        errorDialog.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE | WindowManager.LayoutParams.FLAG_ALT_FOCUSABLE_IM);
+        errorDialog.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE);
+        errorDialog.getWindow().setContentView(R.layout.item_edit_dialog);
+        errorDialog.getWindow().setBackgroundDrawableResource(R.color.alpha_all);
+        errorDialog.setCancelable(false);
+        Window window = errorDialog.getWindow();
+
+        TextView tvConfirm = window.findViewById(R.id.tv_sure);
+        TextView tvCancel = window.findViewById(R.id.tv_cancel);
+        final EditText etContent = window.findViewById(R.id.et_text);
         if (type.equals("num")) {
 //            etContent.setInputType(InputType.TYPE_CLASS_NUMBER);
         } else {
             etContent.setInputType(InputType.TYPE_CLASS_TEXT);
         }
         //设置标题
-        TextView tvTitle = (TextView) view.findViewById(R.id.tv_title);
+        TextView tvTitle = window.findViewById(R.id.tv_title);
         tvTitle.setText(title);
 
-
-        final PopupWindow popupSearchWindow = new PopupWindow(view, LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT, true);
-
-        //让Popupwindow上面的控件获取焦点
-        popupSearchWindow.setFocusable(true);
-        //防止其他的控件没有焦点
-        popupSearchWindow.setBackgroundDrawable(new BitmapDrawable());
-        popupSearchWindow.setOutsideTouchable(true);
-        //在底部显示Popupwindow
-        popupSearchWindow.showAtLocation(v, Gravity.CENTER, 0, 10);
 
         tvCancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                popupSearchWindow.dismiss();
+                errorDialog.dismiss();
             }
         });
 
@@ -75,7 +78,7 @@ public class EditDialogUtils {
             public void onClick(View view) {
                 String content = etContent.getText().toString().trim();
                 if (!StringUtils.isNoEmpty(content)) {
-                    ToastUtils.getMineToast("请输入");
+                    ToastUtils.getMineToast("请输入内容");
                     return;
                 }
 
@@ -85,7 +88,7 @@ public class EditDialogUtils {
                 }
 
                 callBack.addWorkExp(content);
-                popupSearchWindow.dismiss();
+                errorDialog.dismiss();
             }
         });
     }
@@ -94,7 +97,14 @@ public class EditDialogUtils {
     //弹出输入框
     public void showEditTextCancelDialog(final String type, Context context, View v, String title, final OnDialogCallBack callBack) {
         InputUtils.getInstance().inputKeyUtils(context);
-        View view = LayoutInflater.from(context).inflate(R.layout.item_edit_dialog, null);
+        final AlertDialog errorDialog = new AlertDialog.Builder(context).create();
+        errorDialog.show();
+        errorDialog.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE | WindowManager.LayoutParams.FLAG_ALT_FOCUSABLE_IM);
+        errorDialog.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE);
+        errorDialog.getWindow().setContentView(R.layout.item_edit_dialog);
+        errorDialog.getWindow().setBackgroundDrawableResource(R.color.alpha_all);
+        errorDialog.setCancelable(false);
+        Window view = errorDialog.getWindow();
         TextView tvConfirm = (TextView) view.findViewById(R.id.tv_sure);
         TextView tvCancel = (TextView) view.findViewById(R.id.tv_cancel);
         final EditText etContent = (EditText) view.findViewById(R.id.et_text);
@@ -108,20 +118,10 @@ public class EditDialogUtils {
         tvTitle.setText(title);
 
 
-        final PopupWindow popupSearchWindow = new PopupWindow(view, LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT, true);
-
-        //让Popupwindow上面的控件获取焦点
-        popupSearchWindow.setFocusable(true);
-        //防止其他的控件没有焦点
-        popupSearchWindow.setBackgroundDrawable(new BitmapDrawable());
-        popupSearchWindow.setOutsideTouchable(true);
-        //在底部显示Popupwindow
-        popupSearchWindow.showAtLocation(v, Gravity.CENTER, 0, 10);
-
         tvCancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                popupSearchWindow.dismiss();
+                errorDialog.dismiss();
             }
         });
 
@@ -139,7 +139,7 @@ public class EditDialogUtils {
                     return;
                 }
 
-                callBack.addWorkExp(content,popupSearchWindow);
+                callBack.addWorkExp(content, errorDialog);
 
             }
         });

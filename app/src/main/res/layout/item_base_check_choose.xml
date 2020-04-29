@@ -27,6 +27,7 @@
             android:layout_toRightOf="@+id/tv_choose_left"
             android:drawableRight="@mipmap/gray_right"
             android:gravity="right|center_vertical"
+            android:textColorHint="@color/address_alpha_black"
             android:hint="请选择  "
             android:textColor="@color/address_black_key"
             android:textSize="@dimen/address_key_size"/>

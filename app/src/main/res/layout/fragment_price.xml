@@ -13,6 +13,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/address_alpha_black"
             android:layout_centerVertical="true"
             android:layout_marginLeft="20dp"
             android:text="元/吨" />
@@ -25,6 +26,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="120dp"
+            android:textColorHint="@color/address_alpha_black"
+            android:textColor="@color/address_black_key"
             android:background="@drawable/et_blank_bg"
             android:gravity="left|center_vertical"
             android:hint="请输入价格"
@@ -40,7 +43,7 @@
         android:background="@color/white"
         android:gravity="center"
         android:text="面积值"
-        android:textColor="@color/main_tab_blue" />
+        android:textColor="@color/main_tab_blue_white" />
 
     <TextView style="@style/CommonLineStyle" />
 
