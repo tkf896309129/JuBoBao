@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="D:\AndroidStudioProject\JuBoBao\PushSDK\libs"><file name="alicloud-android-sdk-httpdns-1.0.7.jar" path="D:\AndroidStudioProject\JuBoBao\PushSDK\libs\alicloud-android-sdk-httpdns-1.0.7.jar"/><file name="alipaySdk-20160809.jar" path="D:\AndroidStudioProject\JuBoBao\PushSDK\libs\alipaySdk-20160809.jar"/></source></dataSet><dataSet config="debug"><source path="D:\AndroidStudioProject\JuBoBao\PushSDK\build-types\debug\jniLibs"/></dataSet></merger>
